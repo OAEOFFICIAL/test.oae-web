@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Arabic", "totalAvailable": 10 },
+  "questions": [
+    { "id":"arab-001","year":"jamb2019","question":"The Arabic greeting 'Assalamu Alaikum' means","options":["Good morning","Peace be upon you","Welcome","How are you?"],"answer":1,"explanation":"Assalamu Alaikum (Peace be upon you) is the traditional Islamic greeting.","topic":"Greetings" },
+    { "id":"arab-002","year":"jamb2018","question":"Which of these is a feminine noun in Arabic?","options":["Kitaab (book)","Qalem (pen)","Sayyara (car)","Baab (door)"],"answer":2,"explanation":"Sayyara (car) is a feminine noun in Arabic.","topic":"Noun Gender" },
+    { "id":"arab-003","year":"jamb2017","question":"The number 5 in Arabic is","options":["Talata","Arba'a","Khamsa","Sitta"],"answer":2,"explanation":"Khamsa is the Arabic word for five.","topic":"Numbers" },
+    { "id":"arab-004","year":"jamb2016","question":"'Ma ismuka?' in Arabic means","options":["Where are you?","What is your name?","How are you?","Do you speak Arabic?"],"answer":1,"explanation":"Ma ismuka means 'What is your name?' in Arabic.","topic":"Basic Conversations" },
+    { "id":"arab-005","year":"jamb2015","question":"The plural form of 'rajul' (man) is","options":["rajula","rijal","ragul","rujul"],"answer":1,"explanation":"Rijal is the plural form of rajul (man).","topic":"Pluralization" },
+    { "id":"arab-006","year":"jamb2014","question":"Which word means 'school' in Arabic?","options":["Maktab","Madrasa","Jami'a","Kanisa"],"answer":1,"explanation":"Madrasa means school in Arabic.","topic":"Vocabulary" },
+    { "id":"arab-007","year":"jamb2013","question":"The Arabic letter 'alif' represents","options":["a sound","the first letter","a vowel mark","all of the above"],"answer":1,"explanation":"Alif is the first letter of the Arabic alphabet.","topic":"Alphabet" },
+    { "id":"arab-008","year":"jamb2012","question":"'Shukran' means","options":["Please","Sorry","Thank you","Welcome"],"answer":2,"explanation":"Shukran means 'Thank you' in Arabic.","topic":"Polite Expressions" },
+    { "id":"arab-009","year":"jamb2011","question":"The present tense verb 'I study' in Arabic is","options":["Darastu","Yadrasu","Adrusu","Darasa"],"answer":2,"explanation":"Adrusu means 'I study' in present tense.","topic":"Verb Conjugation" },
+    { "id":"arab-010","year":"jamb2010","question":"Which season is 'Sayf' in Arabic?","options":["Winter","Spring","Summer","Autumn"],"answer":2,"explanation":"Sayf means summer in Arabic.","topic":"Seasons" }
+  ]
+}

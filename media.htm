@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OAE Media TV</title>
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <link rel="stylesheet" href="Assets/css/navbar-footer.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <a class="brand" href="Index.htm" aria-label="OAE home">
+      <div class="logo"><img src="OAE.png" alt="OAE Logo" class="logo-img"></div>
+    </a>
+    
+    <div class="nav-actions" style="flex:1;justify-content:flex-end">
+      <div class="search" role="search" aria-label="Search OAE">
+        <input id="site-search" type="search" placeholder="Search lessons, exams, careers..." aria-label="Search input" />
+        <button id="search-btn" title="Search">Search</button>
+      </div>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="Index.htm">Home</a>
+        <a class="nav-link" href="learning-hub.htm">Learning Hub</a>
+        <a class="nav-link" href="exams.htm">Exams</a>
+        <a class="nav-link" href="tech-careers.htm">Tech Careers</a>
+        <a class="nav-link" href="media.htm">Media TV</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Open menu" onclick="openMobileMenu()">☰</button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" style="position:fixed;right:0;top:0;height:100%;width:68%;max-width:380px;box-shadow:-8px 0 36px rgba(10,30,20,0.12);z-index:1001;padding:26px 22px;border-radius:8px;box-sizing:border-box">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div class="logo"><img src="OAE.png" alt="OAE Logo" class="logo-img"></div>
+      <button onclick="closeMobileMenu()" style="background:none;border:none;font-size:20px;cursor:pointer">✕</button>
+    </div>
+
+    <hr style="margin:12px 0;border:none;border-top:1px solid #eee" />
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="Index.htm" class="menu-item">Home</a>
+      <a href="learning-hub.htm" class="menu-item">Learning Hub</a>
+      <a href="exams.htm" class="menu-item">Exams</a>
+      <a href="tech-careers.htm" class="menu-item">Tech Careers</a>
+      <a href="media.htm" class="menu-item">Media TV</a>
+    </div>
+  </div>
+
+  <main class="section">
+    <h2>OAE Media TV</h2>
+    <p class="muted">Short lessons and clips. Video hosting will be added soon.</p>
+    <div style="display:grid;gap:12px;margin-top:12px">
+      <div class="feature"><h3>Short Lessons</h3><p class="muted">Bite-sized explainer videos.</p></div>
+      <div class="feature"><h3>Motivation</h3><p class="muted">Motivational clips for learners.</p></div>
+    </div>
+  </main>
+
+  
+
+  <script src="Assets/js/home.js" defer></script>
+  <script src="Assets/js/navbar.js" defer></script>
+
+
+
+
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

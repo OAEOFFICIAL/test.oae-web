@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"commerce", "totalAvailable": 10 },
+  "questions": [
+    { "id":"com-001","year":"jamb2019","question":"Commerce deals with","options":["Production only","Trade and services","Biology","Computation"],"answer":1,"explanation":"Commerce deals with trade and services.","topic":"Business & Trade"},
+    { "id":"com-002","year":"jamb2018","question":"Import means","options":["sell abroad","bring goods in","produce locally","transport goods"],"answer":1,"explanation":"Import is bringing goods into a country.","topic":"International Trade"},
+    { "id":"com-003","year":"jamb2017","question":"Bank overdraft is a type of","options":["asset","liability","equity","expense"],"answer":1,"explanation":"Overdraft is a short-term liability.","topic":"Finance & Banking"},
+    { "id":"com-004","year":"jamb2016","question":"Invoice is issued by","options":["buyer","seller","bank","insurer"],"answer":1,"explanation":"Seller issues invoice to buyer.","topic":"Business Documents"},
+    { "id":"com-005","year":"jamb2015","question":"Trade union represents","options":["employers","workers","government","consumers"],"answer":1,"explanation":"Trade unions represent workers.","topic":"Industrial Relations"},
+    { "id":"com-006","year":"jamb2014","question":"Wholesaler sells mainly to","options":["final consumers","retailers","exporters","producers"],"answer":1,"explanation":"Wholesalers sell to retailers.","topic":"Distribution"},
+    { "id":"com-007","year":"jamb2013","question":"Depreciation is","options":["increase in value","fall in value of asset","tax paid","profit"],"answer":1,"explanation":"Depreciation reduces asset value.","topic":"Business Finance"},
+    { "id":"com-008","year":"jamb2012","question":"Insurance provides","options":["risk transfer","investment returns","production","marketing"],"answer":0,"explanation":"Insurance transfers risk to insurer.","topic":"Finance & Banking"},
+    { "id":"com-009","year":"jamb2011","question":"Market segmentation divides market by","options":["one product","distinct groups","single buyer","identical needs"],"answer":1,"explanation":"Segmentation groups consumers by characteristics.","topic":"Marketing"},
+    { "id":"com-010","year":"jamb2010","question":"Retailer sells to","options":["wholesaler","consumer","manufacturer","government"],"answer":1,"explanation":"Retailers sell to final consumers.","topic":"Distribution"}
+  ]
+}

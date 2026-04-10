@@ -1,0 +1,132 @@
+{
+  "english": {
+    "questionCap": 60,
+    "topics": [
+      "Comprehension & Summary",
+      "Prescribed Novel Extracts",
+      "Lexis & Structure",
+      "Oral Forms"
+    ]
+  },
+  "mathematics": {
+    "questionCap": 40,
+    "topics": [
+      "Number & Numeration",
+      "Algebra",
+      "Geometry & Trigonometry",
+      "Calculus",
+      "Statistics"
+    ]
+  },
+  "physics": {
+    "questionCap": 40,
+    "topics": [
+      "Mechanics",
+      "Heat & Thermodynamics",
+      "Waves & Optics",
+      "Electricity & Magnetism",
+      "Modern Physics"
+    ]
+  },
+  "chemistry": {
+    "questionCap": 40,
+    "topics": [
+      "Atomic Structure & Bonding",
+      "States of Matter",
+      "Stoichiometry & Equilibrium",
+      "Acids, Bases & Salts",
+      "Organic Chemistry",
+      "Analytical Chemistry"
+    ]
+  },
+  "biology": {
+    "questionCap": 40,
+    "topics": [
+      "Cell Biology",
+      "Genetics & Evolution",
+      "Ecology",
+      "Physiology (Plants & Animals)",
+      "Diversity of Life"
+    ]
+  },
+  "literature": {
+    "questionCap": 40,
+    "topics": [
+      "Poetry",
+      "Prose",
+      "Drama",
+      "Literary Appreciation",
+      "General Principles"
+    ]
+  },
+  "government": {
+    "questionCap": 40,
+    "topics": [
+      "Political Systems",
+      "Governance & Democracy",
+      "Constitutional Law",
+      "International Relations",
+      "Political Ideologies"
+    ]
+  },
+  "history": {
+    "questionCap": 40,
+    "topics": [
+      "African History",
+      "World History",
+      "Colonial & Post-Colonial Studies",
+      "Social & Cultural History",
+      "Historiography"
+    ]
+  },
+  "economics": {
+    "questionCap": 40,
+    "topics": [
+      "Microeconomics",
+      "Macroeconomics",
+      "Economic Systems",
+      "International Economics",
+      "Development Economics"
+    ]
+  },
+  "accounting": {
+    "questionCap": 40,
+    "topics": [
+      "Basic Accounting Concepts",
+      "Ledger & Trial Balance",
+      "Final Accounts",
+      "Cost Accounting",
+      "Management Accounting"
+    ]
+  },
+  "commerce": {
+    "questionCap": 40,
+    "topics": [
+      "Business Enterprise",
+      "Marketing",
+      "Finance & Banking",
+      "Trade & Commerce",
+      "Entrepreneurship"
+    ]
+  },
+  "crs": {
+    "questionCap": 40,
+    "topics": [
+      "Old Testament",
+      "New Testament",
+      "Christian Ethics",
+      "Church History",
+      "Comparative Religion"
+    ]
+  },
+  "irs": {
+    "questionCap": 40,
+    "topics": [
+      "Islamic Studies",
+      "Qur'anic Studies",
+      "Islamic History",
+      "Islamic Ethics",
+      "Islamic Jurisprudence"
+    ]
+  }
+}

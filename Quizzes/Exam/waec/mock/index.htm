@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAE Quiz Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
+    <link rel="stylesheet" href="/Assets/css/waec-quiz.css">
+</style>
+</head>
+<body>
+    <!-- Quiz Navbar - WHITE BACKGROUND -->
+    <nav class="quiz-navbar">
+        <!-- Logo -->
+        <div class="quiz-logo">
+            <a href="/Index.htm">
+               <img class="logo-quiz" src="/oae.png" alt="OAE">
+            </a>
+        </div>
+
+        <!-- Quiz Search - Visible on all devices -->
+        <div class="quiz-search-section">
+            <div class="quiz-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search quizzes, subjects, years, topics...">
+                <button class="quiz-search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation Links - Desktop only -->
+        <div class="quiz-nav-container">
+            <ul class="quiz-nav-links">
+                <li>
+                    <a href="#">
+                        Quizzes <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Types</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/index.htm">All Quizzes <i class="fas fa-globe"></i></a></li>
+                                <li><a href="#">Popular Quizzes <i class="fas fa-fire"></i></a></li>
+                                <li><a href="#">Recently Added <i class="fas fa-clock"></i></a></li>
+                                <li><a href="#">Recommended for You <i class="fas fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Subjects <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Subjects</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li><a href="#">Mathematics <i class="fas fa-calculator"></i></a></li>
+                                <li><a href="#">English Language <i class="fas fa-language"></i></a></li>
+                                <li><a href="#">Biology <i class="fas fa-dna"></i></a></li>
+                                <li><a href="#">Chemistry <i class="fas fa-flask"></i></a></li>
+                                <li><a href="#">Physics <i class="fas fa-atom"></i></a></li>
+                                <li><a href="#">Government <i class="fas fa-landmark"></i></a></li>
+                                <li><a href="#">Literature <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#">Economics <i class="fas fa-chart-line"></i></a></li>
+                                <li><a href="#">CRS / IRS <i class="fas fa-church"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Exams <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Exam Practice</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/Exam/jamb/index.htm">JAMB CBT Practice <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="#">WAEC Practice <i class="fas fa-certificate"></i></a></li>
+                                <li><a href="#">NECO Practice <i class="fas fa-award"></i></a></li>
+                                <li><a href="#">Post-UTME Practice <i class="fas fa-university"></i></a></li>
+                                <li><a href="#">Mock Exams <i class="fas fa-clipboard-check"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Join/Dashboard Button - Desktop only -->
+        <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+        
+        <!-- Hamburger Menu - Mobile only -->
+        <button class="quiz-hamburger" id="quizHamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu - Contains navigation items (NO SEARCH) -->
+        <div class="quiz-mobile-menu" id="quizMobileMenu">
+            <ul class="quiz-mobile-links">
+                <!-- NO SEARCH BAR HERE - It's already in the navbar -->
+                
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-question-circle"></i> Quizzes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/index.htm"><i class="fas fa-globe"></i> All Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-fire"></i> Popular Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Recently Added</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Recommended for You</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-book"></i> Subjects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                        <li><a href="#"><i class="fas fa-language"></i> English Language</a></li>
+                        <li><a href="#"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="#"><i class="fas fa-flask"></i> Chemistry</a></li>
+                        <li><a href="#"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="#"><i class="fas fa-landmark"></i> Government</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-graduation-cap"></i> Exams</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/Exam/jamb/index.htm"><i class="fas fa-laptop-code"></i> JAMB CBT Practice</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> WAEC Practice</a></li>
+                        <li><a href="#"><i class="fas fa-award"></i> NECO Practice</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> Post-UTME Practice</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Mock Exams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="quiz-join-mobile" id="quizJoinMobile">
+                        <i class="fas fa-user-plus"></i> Join OAE
+                    </button>
+                </li>
+                <li>
+                    <button class="quiz-demo" id="quizDemo">
+                        <i class="fas fa-user-circle"></i> Demo: User Dashboard
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; padding: 60px 20px; text-align: center;">
+            <div class="hero-content">
+                <h1 style="font-size: 2.5rem; margin-bottom: 20px; font-weight: 700;"><i class="fas fa-clipboard-check"></i> WAEC Mock Exams</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Prepare for your WAEC exams with our comprehensive mock tests. Experience real exam conditions with timed sessions, detailed explanations, and performance analytics.
+                </p>
+                <div class="hero-stats" style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-size: 2rem; font-weight: bold; color: #e8f5e8;">50+</div>
+                        <div class="stat-label" style="font-size: 0.9rem; opacity: 0.8;">Mock Exams</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-size: 2rem; font-weight: bold; color: #e8f5e8;">120min</div>
+                        <div class="stat-label" style="font-size: 0.9rem; opacity: 0.8;">Avg Duration</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="font-size: 2rem; font-weight: bold; color: #e8f5e8;">60</div>
+                        <div class="stat-label" style="font-size: 0.9rem; opacity: 0.8;">Questions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Mocks Section -->
+        <section class="mocks-section" style="padding: 60px 20px; background: #f8f9fa;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; color: #0a8a2f; font-size: 2rem; margin-bottom: 40px; font-weight: 600;">
+                    <i class="fas fa-list-check"></i> Available Mock Exams
+                </h2>
+                <div class="mocks-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+                    <!-- Full WAEC Mock -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Full WAEC Mock</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">Complete WAEC simulation with all subjects. Experience the full exam format.</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">60</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">120 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Mixed</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Mock Exam
+                        </button>
+                    </div>
+
+                    <!-- Science Combination -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-flask" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Science Combination</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">Physics, Chemistry, Biology, and Mathematics. Perfect for science students.</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">60</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">90 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Mixed</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Science Mock
+                        </button>
+                    </div>
+
+                    <!-- Arts Combination -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-book-open" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Arts Combination</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">English, History, Government, and Literature. Ideal for arts students.</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">60</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">90 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Mixed</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Arts Mock
+                        </button>
+                    </div>
+
+                    <!-- Commercial Combination -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-chart-line" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Commercial Combination</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">Commerce, Economics, Mathematics, and Accounting. For commercial students.</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">60</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">90 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Mixed</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Commercial Mock
+                        </button>
+                    </div>
+
+                    <!-- Challenge Mode -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-trophy" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Challenge Mode</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">High-difficulty questions from past WAEC exams. Test your limits!</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">50</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">120 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Hard</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Challenge
+                        </button>
+                    </div>
+
+                    <!-- Speed Drill -->
+                    <div class="mock-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #0a8a2f;">
+                        <div class="mock-header" style="margin-bottom: 20px;">
+                            <i class="fas fa-bolt" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 10px;"></i>
+                            <h3 style="color: #0a8a2f; font-size: 1.4rem; margin-bottom: 10px; font-weight: 600;">Speed Drill</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.5;">Quick 30-minute session to improve your speed and accuracy.</p>
+                        <div class="mock-details" style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Questions:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">30</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: #666;">Duration:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">30 minutes</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: #666;">Difficulty:</span>
+                                <span style="font-weight: 600; color: #0a8a2f;">Mixed</span>
+                            </div>
+                        </div>
+                        <button class="mock-btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            Start Speed Drill
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Section -->
+        <section class="quick-start-section" style="padding: 60px 20px; background: white;">
+            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 style="color: #0a8a2f; font-size: 2rem; margin-bottom: 40px; font-weight: 600;">
+                    <i class="fas fa-rocket"></i> Quick Start Options
+                </h2>
+                <div class="quick-start-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div class="quick-start-card" style="background: #f8f9fa; padding: 25px; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-play-circle" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Random Mock</h3>
+                        <p style="color: #666; margin-bottom: 15px;">Start a random mock exam immediately</p>
+                        <button style="padding: 10px 20px; background: #0a8a2f; color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer;">Start Now</button>
+                    </div>
+                    <div class="quick-start-card" style="background: #f8f9fa; padding: 25px; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-clock" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Timed Practice</h3>
+                        <p style="color: #666; margin-bottom: 15px;">Practice with time constraints</p>
+                        <button style="padding: 10px 20px; background: #0a8a2f; color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer;">Start Timer</button>
+                    </div>
+                    <div class="quick-start-card" style="background: #f8f9fa; padding: 25px; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-history" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Past Questions</h3>
+                        <p style="color: #666; margin-bottom: 15px;">Review previous WAEC questions</p>
+                        <button style="padding: 10px 20px; background: #0a8a2f; color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer;">Browse Questions</button>
+                    </div>
+                    <div class="quick-start-card" style="background: #f8f9fa; padding: 25px; border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-chart-bar" style="font-size: 2.5rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Performance Stats</h3>
+                        <p style="color: #666; margin-bottom: 15px;">View your mock exam results</p>
+                        <button style="padding: 10px 20px; background: #0a8a2f; color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer;">View Stats</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock History Stats Section -->
+        <section class="stats-section" style="padding: 60px 20px; background: linear-gradient(135deg, #0a8a2f 0%, #066426 100%); color: white;">
+            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 40px; font-weight: 700;">
+                    <i class="fas fa-chart-line"></i> Your Mock Exam History
+                </h2>
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2.5rem; font-weight: bold; color: #e8f5e8; margin-bottom: 10px;">12</div>
+                        <div class="stat-label" style="font-size: 1rem; opacity: 0.9;">Mocks Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2.5rem; font-weight: bold; color: #e8f5e8; margin-bottom: 10px;">78%</div>
+                        <div class="stat-label" style="font-size: 1rem; opacity: 0.9;">Average Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2.5rem; font-weight: bold; color: #e8f5e8; margin-bottom: 10px;">45min</div>
+                        <div class="stat-label" style="font-size: 1rem; opacity: 0.9;">Avg Completion Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2.5rem; font-weight: bold; color: #e8f5e8; margin-bottom: 10px;">A+</div>
+                        <div class="stat-label" style="font-size: 1rem; opacity: 0.9;">Best Grade</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section" style="padding: 60px 20px; background: #f8f9fa;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; color: #0a8a2f; font-size: 2rem; margin-bottom: 40px; font-weight: 600;">
+                    <i class="fas fa-lightbulb"></i> WAEC Mock Exam Tips
+                </h2>
+                <div class="tips-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    <div class="tip-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #0a8a2f;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Time Management</h3>
+                        <p style="color: #666; line-height: 1.5;">Allocate time wisely. Spend more time on difficult questions but don't get stuck on any single question.</p>
+                    </div>
+                    <div class="tip-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #0a8a2f;">
+                        <i class="fas fa-brain" style="font-size: 2rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Stay Focused</h3>
+                        <p style="color: #666; line-height: 1.5;">Maintain concentration throughout the exam. Take short breaks if needed, but stay within time limits.</p>
+                    </div>
+                    <div class="tip-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #0a8a2f;">
+                        <i class="fas fa-check-circle" style="font-size: 2rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Review Answers</h3>
+                        <p style="color: #666; line-height: 1.5;">If time permits, review your answers. Look for careless mistakes and ensure all questions are answered.</p>
+                    </div>
+                    <div class="tip-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #0a8a2f;">
+                        <i class="fas fa-rest" style="font-size: 2rem; color: #0a8a2f; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0a8a2f; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Rest Well</h3>
+                        <p style="color: #666; line-height: 1.5;">Get adequate sleep before the exam. A well-rested mind performs better and makes fewer mistakes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <!-- FOOTER -->
+    
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="/oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+    <script type="module" src="/Assets/js/quiz-navbar.js"></script>
+</body>
+</html>

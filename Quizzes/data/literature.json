@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"literature", "totalAvailable": 10 },
+  "questions": [
+    { "id":"lit-001","year":"jamb2019","question":"Metaphor is","options":["a direct comparison without like/as","a simile","punctuation mark","a play"],"answer":0,"explanation":"Metaphor implies comparison directly.","topic":"Literary Devices"},
+    { "id":"lit-002","year":"jamb2018","question":"Protagonist is the","options":["villain","main character","author","audience"],"answer":1,"explanation":"Protagonist is the central character.","topic":"Drama & Fiction"},
+    { "id":"lit-003","year":"jamb2017","question":"Tragedy typically ends in","options":["comedy","sorrow or catastrophe","wedding","festivity"],"answer":1,"explanation":"Tragedy often leads to downfall or suffering.","topic":"Drama & Fiction"},
+    { "id":"lit-004","year":"jamb2016","question":"Alliteration is repetition of","options":["vowels","consonant sounds at start","themes","characters"],"answer":1,"explanation":"Alliteration repeats initial consonant sounds.","topic":"Literary Devices"},
+    { "id":"lit-005","year":"jamb2015","question":"Sonnet is a poem of","options":["14 lines","3 lines","100 lines","7 lines"],"answer":0,"explanation":"A sonnet comprises 14 lines.","topic":"Poetry"},
+    { "id":"lit-006","year":"jamb2014","question":"Dramatic irony occurs when","options":["audience knows more than characters","characters know everything","no audience","it's non-fiction"],"answer":0,"explanation":"Audience awareness creates dramatic irony.","topic":"Literary Devices"},
+    { "id":"lit-007","year":"jamb2013","question":"Foreshadowing hints at","options":["past events","future events","irrelevant detail","none"],"answer":1,"explanation":"Foreshadowing indicates future developments.","topic":"Literary Devices"},
+    { "id":"lit-008","year":"jamb2012","question":"Narrator is the","options":["reader","voice telling the story","editor","publisher"],"answer":1,"explanation":"Narrator tells the story in a work.","topic":"Drama & Fiction"},
+    { "id":"lit-009","year":"jamb2011","question":"Imagery in literature involves","options":["visual description appealing to senses","only sound","only plot","only dialogue"],"answer":0,"explanation":"Imagery uses sensory language to create pictures.","topic":"Literary Devices"},
+    { "id":"lit-010","year":"jamb2010","question":"Theme in literature is","options":["plot details","central idea or message","character name","author biography"],"answer":1,"explanation":"Theme is the core idea explored in the work.","topic":"Drama & Fiction"}
+  ]
+}

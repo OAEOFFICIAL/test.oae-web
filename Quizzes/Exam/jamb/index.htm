@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OAE — JAMB CBT Practice</title>
+  <link rel="stylesheet" href="../../../Assets/css/style.css">
+  <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+  <link rel="stylesheet" href="/Assets/css/footer.css">
+  <link rel="stylesheet" href="/Assets/css/jamb-quiz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+ <!-- Fixed Sticky Navbar -->
+       <!-- Quiz Navbar - WHITE BACKGROUND -->
+    <nav class="quiz-navbar">
+        <!-- Logo -->
+        <div class="quiz-logo">
+            <a href="/Index.htm">
+               <img class="logo-quiz" src="/oae.png" alt="OAE">
+            </a>
+        </div>
+
+        <!-- Quiz Search - Visible on all devices -->
+        <div class="quiz-search-section">
+            <div class="quiz-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search quizzes, subjects, years, topics...">
+                <button class="quiz-search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation Links - Desktop only -->
+        <div class="quiz-nav-container">
+            <ul class="quiz-nav-links">
+                <li>
+                    <a href="#">
+                        Quizzes <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Types</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/index.htm">All Quizzes <i class="fas fa-globe"></i></a></li>
+                                <li><a href="#">Popular Quizzes <i class="fas fa-fire"></i></a></li>
+                                <li><a href="#">Recently Added <i class="fas fa-clock"></i></a></li>
+                                <li><a href="#">Recommended for You <i class="fas fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Subjects <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Subjects</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li><a href="#">Mathematics <i class="fas fa-calculator"></i></a></li>
+                                <li><a href="#">English Language <i class="fas fa-language"></i></a></li>
+                                <li><a href="#">Biology <i class="fas fa-dna"></i></a></li>
+                                <li><a href="#">Chemistry <i class="fas fa-flask"></i></a></li>
+                                <li><a href="#">Physics <i class="fas fa-atom"></i></a></li>
+                                <li><a href="#">Government <i class="fas fa-landmark"></i></a></li>
+                                <li><a href="#">Literature <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#">Economics <i class="fas fa-chart-line"></i></a></li>
+                                <li><a href="#">CRS / IRS <i class="fas fa-church"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Exams <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Exam Practice</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/Exam/jamb/index.htm">JAMB CBT Practice <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="#">WAEC Practice <i class="fas fa-certificate"></i></a></li>
+                                <li><a href="#">NECO Practice <i class="fas fa-award"></i></a></li>
+                                <li><a href="#">Post-UTME Practice <i class="fas fa-university"></i></a></li>
+                                <li><a href="#">Mock Exams <i class="fas fa-clipboard-check"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Join/Dashboard Button - Desktop only -->
+        <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+        
+        <!-- Hamburger Menu - Mobile only -->
+        <button class="quiz-hamburger" id="quizHamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu - Contains navigation items (NO SEARCH) -->
+        <div class="quiz-mobile-menu" id="quizMobileMenu">
+            <ul class="quiz-mobile-links">
+                <!-- NO SEARCH BAR HERE - It's already in the navbar -->
+                
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-question-circle"></i> Quizzes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/index.htm"><i class="fas fa-globe"></i> All Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-fire"></i> Popular Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Recently Added</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Recommended for You</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-book"></i> Subjects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                        <li><a href="#"><i class="fas fa-language"></i> English Language</a></li>
+                        <li><a href="#"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="#"><i class="fas fa-flask"></i> Chemistry</a></li>
+                        <li><a href="#"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="#"><i class="fas fa-landmark"></i> Government</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-graduation-cap"></i> Exams</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/Exam/jamb/index.htm"><i class="fas fa-laptop-code"></i> JAMB CBT Practice</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> WAEC Practice</a></li>
+                        <li><a href="#"><i class="fas fa-award"></i> NECO Practice</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> Post-UTME Practice</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Mock Exams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="quiz-join-mobile" id="quizJoinMobile">
+                        <i class="fas fa-user-plus"></i> Join OAE
+                    </button>
+                </li>
+                <li>
+                    <button class="quiz-demo" id="quizDemo">
+                        <i class="fas fa-user-circle"></i> Demo: User Dashboard
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+ 
+  <main class="quiz-container" role="main" aria-labelledby="main-heading">
+
+    <!-- INTRO -->
+    <section class="intro" aria-label="JAMB intro">
+      <h1 id="main-heading" class="animate-title">
+        <i class="fas fa-graduation-cap icon" aria-hidden="true"></i>
+        JAMB CBT Practice
+      </h1>
+
+      <p class="animate-text" id="intro-text">
+        Prepare effectively for the Joint Admissions and Matriculation Board (JAMB)
+        examination using real CBT-style quizzes on OAE. Our JAMB practice tests are
+        designed to improve speed, accuracy, and confidence before the main exam.
+      </p>
+
+      <!-- decorative progress -->
+      <div class="progress-wrap" aria-hidden="true" style="margin-top:12px;">
+        <div class="progress" id="intro-progress"></div>
+      </div>
+    </section>
+
+    <!-- PRACTICE TYPES -->
+    <section aria-labelledby="practice-types">
+      <h2 id="practice-types" class="section-title">JAMB Practice Options</h2>
+
+      <div class="grid" id="practice-grid">
+        <article class="card reveal" role="article" aria-label="Full CBT Mock">
+          <div class="badge">60+</div>
+          <h3><i class="fas fa-stopwatch" aria-hidden="true"></i> Full CBT Mock Tests</h3>
+          <p class="muted">Complete JAMB simulations with 60 questions, proper timing, and exam-like pressure.</p>
+          <div>
+            <a href="/exam/jamb/mock/full" class="btn" aria-label="Start Full Mock">Start Mock <i class="fas fa-arrow-right" style="opacity:.9"></i></a>
+          </div>
+        </article>
+
+        <article class="card reveal" role="article" aria-label="Subject based practice">
+          <div class="badge">150+</div>
+          <h3><i class="fas fa-book-open" aria-hidden="true"></i> Subject-Based Practice</h3>
+          <p class="muted">Practice JAMB questions by subject, aligned to the official syllabus.</p>
+          <div>
+            <a href="#subjects" class="btn" aria-label="View Subjects">View Subjects <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="card reveal" role="article" aria-label="Tough questions">
+          <div class="badge">80+</div>
+          <h3><i class="fas fa-fire" aria-hidden="true"></i> Tough & Repeated Questions</h3>
+          <p class="muted">High-frequency and challenging JAMB questions commonly repeated over the years.</p>
+          <div>
+            <a href="/exam/jamb/tough" class="btn" aria-label="Try Tough Questions">Try Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SUBJECTS -->
+    <section aria-labelledby="subjects">
+      <h2 id="subjects" class="section-title">JAMB Subjects</h2>
+
+      <div class="subjects" id="subjects-grid" role="list">
+        <div class="subject reveal" role="listitem" data-subject="mathematics">
+          <div>
+            <h4>Mathematics</h4>
+            <p>Algebra, geometry, trigonometry and problem solving for exam speed and accuracy.</p>
+          </div>
+          <a href="/exam/jamb/subject/mathematics" class="btn" aria-label="Take Mathematics Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="english-language">
+          <div>
+            <h4>English Language</h4>
+            <p>Comprehension, grammar, cloze tests and use-of-English drills.</p>
+          </div>
+          <a href="/exam/jamb/subject/english-language" class="btn" aria-label="Take English Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="physics">
+          <div>
+            <h4>Physics</h4>
+            <p>Mechanics, electricity and numerical problems to sharpen application skills.</p>
+          </div>
+          <a href="/exam/jamb/subject/physics" class="btn" aria-label="Take Physics Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="chemistry">
+          <div>
+            <h4>Chemistry</h4>
+            <p>Organic, inorganic and physical chemistry questions and mechanism drills.</p>
+          </div>
+          <a href="/exam/jamb/subject/chemistry" class="btn" aria-label="Take Chemistry Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="biology">
+          <div>
+            <h4>Biology</h4>
+            <p>Ecology, genetics and practical-based questions for both WAEC and JAMB styles.</p>
+          </div>
+          <a href="/exam/jamb/subject/biology" class="btn" aria-label="Take Biology Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="economics">
+          <div>
+            <h4>Economics</h4>
+            <p>Micro & macro principles, simple calculations and theory application.</p>
+          </div>
+          <a href="/exam/jamb/subject/economics" class="btn" aria-label="Take Economics Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="government">
+          <div>
+            <h4>Government</h4>
+            <p>Political systems, civic concepts and questions commonly tested in JAMB.</p>
+          </div>
+          <a href="/exam/jamb/subject/government" class="btn" aria-label="Take Government Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="literature">
+          <div>
+            <h4>Literature in English</h4>
+            <p>Poetry, drama and prose comprehension exercises and essay practice.</p>
+          </div>
+          <a href="/exam/jamb/subject/literature" class="btn" aria-label="Take Literature Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="geography">
+          <div>
+            <h4>Geography</h4>
+            <p>Physical and human geography, map reading, and environmental studies.</p>
+          </div>
+          <a href="/exam/jamb/subject/geography" class="btn" aria-label="Take Geography Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="history">
+          <div>
+            <h4>History</h4>
+            <p>World history, African history, and historical analysis and interpretation.</p>
+          </div>
+          <a href="/exam/jamb/subject/history" class="btn" aria-label="Take History Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subject reveal" role="listitem" data-subject="crs">
+          <div>
+            <h4>Christian Religious Studies</h4>
+            <p>Biblical studies, theology, church history, and Christian ethics for JAMB.</p>
+          </div>
+          <a href="/exam/jamb/subject/crs" class="btn" aria-label="Take CRS Quiz">Take Quiz <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMBINATIONS -->
+    <section aria-labelledby="combinations">
+      <h2 id="combinations" class="section-title">Practice by Course Combination</h2>
+
+      <div class="grid" style="margin-bottom:6px;">
+        <div class="combo" role="button" tabindex="0" onclick="location.href='/exam/jamb/combination/science'">Science-Based Courses<div class="small-muted">Maths • Physics • Chemistry • Biology</div></div>
+        <div class="combo" role="button" tabindex="0" onclick="location.href='/exam/jamb/combination/arts'">Art-Based Courses<div class="small-muted">English • Literature • CRS • Government</div></div>
+        <div class="combo" role="button" tabindex="0" onclick="location.href='/exam/jamb/combination/commercial'">Commercial-Based Courses<div class="small-muted">Economics • Commerce • Accounting</div></div>
+      </div>
+    </section>
+
+  </main>
+
+      <!-- FOOTER -->
+    
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="/oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+  </main>
+  <script type="module" src="/Assets/js/navbar-old.js"></script>
+  <script src="/Assets/js/animations.js"></script>
+  <script type="module" src="/Assets/js/enhance-ui.js"></script>
+  <script src="/Assets/js/quiz-navbar.js"></script>
+  <script type="module" src=/Assets/js/jamb-quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Yoruba", "totalAvailable": 10 },
+  "questions": [
+    { "id":"yoruba-001","year":"jamb2019","question":"'Bawo' in Yoruba means","options":["Hello","How are you?","Goodbye","Welcome"],"answer":1,"explanation":"Bawo is a Yoruba greeting meaning 'How are you?'","topic":"Greetings" },
+    { "id":"yoruba-002","year":"jamb2018","question":"The Yoruba word for 'water' is","options":["Omi","Ilé","Ọrun","Ẹjẹ"],"answer":0,"explanation":"Omi is the Yoruba word for water.","topic":"Vocabulary" },
+    { "id":"yoruba-003","year":"jamb2017","question":"'O ṣeun' means","options":["Thank you","Good morning","How are you?","Goodbye"],"answer":0,"explanation":"O ṣeun means thank you in Yoruba.","topic":"Polite Expressions" },
+    { "id":"yoruba-004","year":"jamb2016","question":"The number 2 in Yoruba is","options":["Ọ̀kan","Méjì","Mẹ́ta","Mẹ́rin"],"answer":1,"explanation":"Méjì is the Yoruba word for two.","topic":"Numbers" },
+    { "id":"yoruba-005","year":"jamb2015","question":"'Ilé' in Yoruba means","options":["Land","House/Home","Town","City"],"answer":1,"explanation":"Ilé means house or home in Yoruba.","topic":"Vocabulary" },
+    { "id":"yoruba-006","year":"jamb2014","question":"The plural marker in Yoruba is","options":["suffix -re","-o","-e","-di"],"answer":0,"explanation":"The suffix -re often marks plurals in Yoruba.","topic":"Grammar" },
+    { "id":"yoruba-007","year":"jamb2013","question":"'Kini orúkọ rẹ?' means","options":["Where are you?","What is your name?","How are you?","What are you doing?"],"answer":1,"explanation":"Kini orúkọ rẹ means 'What is your name?' in Yoruba.","topic":"Questions" },
+    { "id":"yoruba-008","year":"jamb2012","question":"'Oníṣogun' means","options":["Teacher","Chief","Doctor/Healer","Friend"],"answer":2,"explanation":"Oníṣogun refers to a healer or doctor in Yoruba.","topic":"Vocabulary" },
+    { "id":"yoruba-009","year":"jamb2011","question":"'Tí mo' means","options":["I know","I see","I am","I go"],"answer":0,"explanation":"Tí mo means 'that I know' in Yoruba.","topic":"Grammar" },
+    { "id":"yoruba-010","year":"jamb2010","question":"'Jẹ́' in Yoruba means","options":["to sit","to eat/accept","to go","to come"],"answer":1,"explanation":"Jẹ́ means 'to eat' or 'to accept' in Yoruba.","topic":"Verbs" }
+  ]
+}

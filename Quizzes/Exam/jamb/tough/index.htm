@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
+    <link rel="stylesheet" href="/Assets/css/jamb-tough.css">
+</head>
+<body>
+
+    <!-- Fixed Sticky Navbar -->
+        <!-- Quiz Navbar - WHITE BACKGROUND -->
+    <nav class="quiz-navbar">
+        <!-- Logo -->
+        <div class="quiz-logo">
+            <a href="/Index.htm">
+               <img class="logo-quiz" src="/oae.png" alt="OAE">
+            </a>
+        </div>
+
+        <!-- Quiz Search - Visible on all devices -->
+        <div class="quiz-search-section">
+            <div class="quiz-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search quizzes, subjects, years, topics...">
+                <button class="quiz-search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation Links - Desktop only -->
+        <div class="quiz-nav-container">
+            <ul class="quiz-nav-links">
+                <li>
+                    <a href="#">
+                        Quizzes <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Types</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/index.htm">All Quizzes <i class="fas fa-globe"></i></a></li>
+                                <li><a href="#">Popular Quizzes <i class="fas fa-fire"></i></a></li>
+                                <li><a href="#">Recently Added <i class="fas fa-clock"></i></a></li>
+                                <li><a href="#">Recommended for You <i class="fas fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Subjects <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Subjects</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li><a href="#">Mathematics <i class="fas fa-calculator"></i></a></li>
+                                <li><a href="#">English Language <i class="fas fa-language"></i></a></li>
+                                <li><a href="#">Biology <i class="fas fa-dna"></i></a></li>
+                                <li><a href="#">Chemistry <i class="fas fa-flask"></i></a></li>
+                                <li><a href="#">Physics <i class="fas fa-atom"></i></a></li>
+                                <li><a href="#">Government <i class="fas fa-landmark"></i></a></li>
+                                <li><a href="#">Literature <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#">Economics <i class="fas fa-chart-line"></i></a></li>
+                                <li><a href="#">CRS / IRS <i class="fas fa-church"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Exams <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Exam Practice</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/Exam/jamb/index.htm">JAMB CBT Practice <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="#">WAEC Practice <i class="fas fa-certificate"></i></a></li>
+                                <li><a href="#">NECO Practice <i class="fas fa-award"></i></a></li>
+                                <li><a href="#">Post-UTME Practice <i class="fas fa-university"></i></a></li>
+                                <li><a href="#">Mock Exams <i class="fas fa-clipboard-check"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Join/Dashboard Button - Desktop only -->
+        <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+        
+        <!-- Hamburger Menu - Mobile only -->
+        <button class="quiz-hamburger" id="quizHamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu - Contains navigation items (NO SEARCH) -->
+        <div class="quiz-mobile-menu" id="quizMobileMenu">
+            <ul class="quiz-mobile-links">
+                <!-- NO SEARCH BAR HERE - It's already in the navbar -->
+                
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-question-circle"></i> Quizzes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/index.htm"><i class="fas fa-globe"></i> All Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-fire"></i> Popular Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Recently Added</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Recommended for You</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-book"></i> Subjects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                        <li><a href="#"><i class="fas fa-language"></i> English Language</a></li>
+                        <li><a href="#"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="#"><i class="fas fa-flask"></i> Chemistry</a></li>
+                        <li><a href="#"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="#"><i class="fas fa-landmark"></i> Government</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-graduation-cap"></i> Exams</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/Exam/jamb/index.htm"><i class="fas fa-laptop-code"></i> JAMB CBT Practice</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> WAEC Practice</a></li>
+                        <li><a href="#"><i class="fas fa-award"></i> NECO Practice</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> Post-UTME Practice</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Mock Exams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="quiz-join-mobile" id="quizJoinMobile">
+                        <i class="fas fa-user-plus"></i> Join OAE
+                    </button>
+                </li>
+                <li>
+                    <button class="quiz-demo" id="quizDemo">
+                        <i class="fas fa-user-circle"></i> Demo: User Dashboard
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="main body">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">JAMB Tough Questions Challenge</h1>
+                <p class="hero-subtitle">Test your limits with the most challenging JAMB questions</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">17</span>
+                        <span class="stat-label">Subjects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Expert</span>
+                        <span class="stat-label">Level</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-brain"></i>
+            </div>
+        </section>
+
+        <!-- CHALLENGE OVERVIEW -->
+        <section class="challenge-overview">
+            <h2 class="section-title">The Ultimate JAMB Challenge</h2>
+            <div class="challenge-content">
+                <div class="challenge-text">
+                    <p>Are you ready to face the toughest questions JAMB has to offer? This challenge is designed for exceptional students who want to push their boundaries and achieve the highest scores possible.</p>
+                    <div class="challenge-features">
+                        <div class="challenge-feature">
+                            <i class="fas fa-fire"></i>
+                            <span>Advanced Problem Solving</span>
+                        </div>
+                        <div class="challenge-feature">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Complex Reasoning</span>
+                        </div>
+                        <div class="challenge-feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Critical Thinking</span>
+                        </div>
+                        <div class="challenge-feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>Score Mastery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-image">
+                    <i class="fas fa-crown"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBJECT COVERAGE -->
+        <section class="subject-coverage">
+            <h2 class="section-title">Complete Subject Coverage</h2>
+            <div class="coverage-grid">
+                <div class="coverage-card">
+                    <h3>Science Subjects</h3>
+                    <ul>
+                        <li>Mathematics (Advanced Calculus & Algebra)</li>
+                        <li>Physics (Quantum & Nuclear Physics)</li>
+                        <li>Chemistry (Organic & Physical Chemistry)</li>
+                        <li>Biology (Genetics & Biotechnology)</li>
+                    </ul>
+                </div>
+                <div class="coverage-card">
+                    <h3>Social Sciences</h3>
+                    <ul>
+                        <li>Economics (Macro & Micro Theory)</li>
+                        <li>Government (Political Philosophy)</li>
+                        <li>Geography (Advanced Physical & Human)</li>
+                        <li>Commerce (International Business)</li>
+                    </ul>
+                </div>
+                <div class="coverage-card">
+                    <h3>Arts & Humanities</h3>
+                    <ul>
+                        <li>Literature (Critical Analysis & Theory)</li>
+                        <li>English Language (Advanced Grammar)</li>
+                        <li>CRS/IRS (Comparative Religion)</li>
+                        <li>History (World & African History)</li>
+                    </ul>
+                </div>
+                <div class="coverage-card">
+                    <h3>Other Subjects</h3>
+                    <ul>
+                        <li>Agricultural Science (Advanced)</li>
+                        <li>Accounting (Financial Analysis)</li>
+                        <li>Further Mathematics</li>
+                        <li>Technical Drawing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFFICULTY LEVELS -->
+        <section class="difficulty-section">
+            <h2 class="section-title">Challenge Levels</h2>
+            <div class="difficulty-grid">
+                <div class="difficulty-card" onclick="startQuiz('expert')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Expert Level</h3>
+                    </div>
+                    <p>The ultimate challenge for JAMB masters</p>
+                    <ul class="difficulty-features">
+                        <li>Exceptionally difficult questions</li>
+                        <li>Requires deep understanding</li>
+                        <li>Time-pressured scenarios</li>
+                        <li>Multi-disciplinary problems</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Expert Challenge</button>
+                </div>
+                <div class="difficulty-card" onclick="startQuiz('master')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-star"></i>
+                        <h3>Master Level</h3>
+                    </div>
+                    <p>For students aiming for 350+ scores</p>
+                    <ul class="difficulty-features">
+                        <li>Highly challenging questions</li>
+                        <li>Advanced problem-solving</li>
+                        <li>Critical analysis required</li>
+                        <li>Comprehensive coverage</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Master Challenge</button>
+                </div>
+                <div class="difficulty-card" onclick="startQuiz('elite')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-diamond"></i>
+                        <h3>Elite Level</h3>
+                    </div>
+                    <p>The pinnacle of JAMB preparation</p>
+                    <ul class="difficulty-features">
+                        <li>Most difficult questions ever</li>
+                        <li>Requires exceptional brilliance</li>
+                        <li>Real exam pressure simulation</li>
+                        <li>Score prediction: 380+</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Elite Challenge</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- REQUIREMENTS -->
+        <section class="requirements-section">
+            <h2 class="section-title">Challenge Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Advanced Knowledge</h3>
+                    <p>Complete understanding of all JAMB subjects at intermediate level or higher</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Management</h3>
+                    <p>Excellent time management skills and ability to work under pressure</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Critical Thinking</h3>
+                    <p>Strong analytical and logical reasoning abilities</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Determination</h3>
+                    <p>Unwavering commitment to achieving excellence in JAMB</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WARNING -->
+        <section class="warning-section">
+            <div class="warning-content">
+                <div class="warning-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="warning-text">
+                    <h3>Important Notice</h3>
+                    <p>These questions are extremely challenging and are designed for students who have mastered the basic and intermediate levels. If you're new to JAMB preparation, we recommend starting with our Foundation or Intermediate quizzes first.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- START SECTION -->
+        <section class="start-section">
+            <div class="start-content">
+                <h2>Are You Ready for the Ultimate Challenge?</h2>
+                <p>Only attempt this challenge if you have thoroughly prepared and are confident in your abilities. Success here indicates you're ready for the highest JAMB scores possible.</p>
+                <div class="start-actions">
+                    <button class="btn-primary" onclick="startQuiz('expert')">
+                        <i class="fas fa-crown"></i> Start Expert Challenge
+                    </button>
+                    <button class="btn-secondary" onclick="startQuiz('master')">
+                        <i class="fas fa-star"></i> Start Master Challenge
+                    </button>
+                    <button class="btn-outline" onclick="startQuiz('elite')">
+                        <i class="fas fa-diamond"></i> Start Elite Challenge
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- FOOTER -->
+    
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="/oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+  </main>
+  <script type="module" src="/Assets/js/home.js"></script>
+  <script type="module" src="/Assets/js/enhance-ui.js"></script>
+  <script type="module" src="/Assets/js/animations.js"></script>
+  <script type="module" src="/Assets/js/quiz-navbar.js"></script>
+  <script type="module" src="/Assets/js/jamb-tough.js"></script>
+</body>
+</html>

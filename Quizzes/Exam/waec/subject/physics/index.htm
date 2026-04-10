@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAE Quiz Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
+    <link rel="stylesheet" href="/Assets/css/waec-quiz.css">
+</style>
+</head>
+<body>
+    <!-- Quiz Navbar - WHITE BACKGROUND -->
+    <nav class="quiz-navbar">
+        <!-- Logo -->
+        <div class="quiz-logo">
+            <a href="/Index.htm">
+               <img class="logo-quiz" src="/oae.png" alt="OAE">
+            </a>
+        </div>
+
+        <!-- Quiz Search - Visible on all devices -->
+        <div class="quiz-search-section">
+            <div class="quiz-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search quizzes, subjects, years, topics...">
+                <button class="quiz-search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation Links - Desktop only -->
+        <div class="quiz-nav-container">
+            <ul class="quiz-nav-links">
+                <li>
+                    <a href="../../../quiz.htm">
+                        Quizzes <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Types</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/index.htm">All Quizzes <i class="fas fa-globe"></i></a></li>
+                                <li><a href="../../../quiz.htm">Popular Quizzes <i class="fas fa-fire"></i></a></li>
+                                <li><a href="../../../quiz.htm">Recently Added <i class="fas fa-clock"></i></a></li>
+                                <li><a href="../../../quiz.htm">Recommended for You <i class="fas fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="../../../quiz.htm">
+                        Subjects <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Subjects</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li><a href="../../../quiz.htm">Mathematics <i class="fas fa-calculator"></i></a></li>
+                                <li><a href="../../../quiz.htm">English Language <i class="fas fa-language"></i></a></li>
+                                <li><a href="../../../quiz.htm">Biology <i class="fas fa-dna"></i></a></li>
+                                <li><a href="../../../quiz.htm">Chemistry <i class="fas fa-flask"></i></a></li>
+                                <li><a href="../../../quiz.htm">Physics <i class="fas fa-atom"></i></a></li>
+                                <li><a href="../../../quiz.htm">Government <i class="fas fa-landmark"></i></a></li>
+                                <li><a href="../../../quiz.htm">Literature <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="../../../quiz.htm">Economics <i class="fas fa-chart-line"></i></a></li>
+                                <li><a href="../../../quiz.htm">CRS / IRS <i class="fas fa-church"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="../../../quiz.htm">
+                        Exams <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Exam Practice</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="/Quizzes/Exam/jamb/index.htm">JAMB CBT Practice <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="../../../quiz.htm">WAEC Practice <i class="fas fa-certificate"></i></a></li>
+                                <li><a href="../../../quiz.htm">NECO Practice <i class="fas fa-award"></i></a></li>
+                                <li><a href="../../../quiz.htm">Post-UTME Practice <i class="fas fa-university"></i></a></li>
+                                <li><a href="../../../quiz.htm">Mock Exams <i class="fas fa-clipboard-check"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Join/Dashboard Button - Desktop only -->
+        <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+        
+        <!-- Hamburger Menu - Mobile only -->
+        <button class="quiz-hamburger" id="quizHamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu - Contains navigation items (NO SEARCH) -->
+        <div class="quiz-mobile-menu" id="quizMobileMenu">
+            <ul class="quiz-mobile-links">
+                <!-- NO SEARCH BAR HERE - It's already in the navbar -->
+                
+                <li>
+                    <a href="../../../quiz.htm" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-question-circle"></i> Quizzes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/index.htm"><i class="fas fa-globe"></i> All Quizzes</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-fire"></i> Popular Quizzes</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-clock"></i> Recently Added</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-star"></i> Recommended for You</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../../quiz.htm" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-book"></i> Subjects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="../../../quiz.htm"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-language"></i> English Language</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-flask"></i> Chemistry</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-landmark"></i> Government</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../../quiz.htm" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-graduation-cap"></i> Exams</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="/Quizzes/Exam/jamb/index.htm"><i class="fas fa-laptop-code"></i> JAMB CBT Practice</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-certificate"></i> WAEC Practice</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-award"></i> NECO Practice</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-university"></i> Post-UTME Practice</a></li>
+                        <li><a href="../../../quiz.htm"><i class="fas fa-clipboard-check"></i> Mock Exams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="quiz-join-mobile" id="quizJoinMobile">
+                        <i class="fas fa-user-plus"></i> Join OAE
+                    </button>
+                </li>
+                <li>
+                    <button class="quiz-demo" id="quizDemo">
+                        <i class="fas fa-user-circle"></i> Demo: User Dashboard
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="waec-content">
+        <!-- Hero Section -->
+        <section class="waec-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>WAEC Physics Practice</h1>
+                    <p>Unlock the laws of the universe with comprehensive WAEC Physics practice. From mechanics to modern physics, develop problem-solving skills and conceptual understanding.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">125</span>
+                            <span class="stat-label">Practice Questions</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Topics Covered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">84%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="subject-icons">
+                        <i class="fas fa-atom"></i>
+                        <i class="fas fa-magnet"></i>
+                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Grid -->
+        <section class="waec-section">
+            <h2>Physics Topics</h2>
+            <p class="section-subtitle">Comprehensive coverage of WAEC Physics syllabus</p>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Mechanics</h3>
+                    <p>Motion, forces, energy, and momentum</p>
+                    <div class="topic-meta">
+                        <span class="questions">28 questions</span>
+                        <span class="difficulty">Medium</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Thermal Physics</h3>
+                    <p>Heat, temperature, and thermodynamics</p>
+                    <div class="topic-meta">
+                        <span class="questions">20 questions</span>
+                        <span class="difficulty">Medium</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Electricity</h3>
+                    <p>Circuits, magnetism, and electromagnetism</p>
+                    <div class="topic-meta">
+                        <span class="questions">25 questions</span>
+                        <span class="difficulty">Hard</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Optics & Waves</h3>
+                    <p>Light, sound, and wave phenomena</p>
+                    <div class="topic-meta">
+                        <span class="questions">22 questions</span>
+                        <span class="difficulty">Medium</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Modern Physics</h3>
+                    <p>Quantum physics and nuclear physics</p>
+                    <div class="topic-meta">
+                        <span class="questions">15 questions</span>
+                        <span class="difficulty">Hard</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Practical Physics</h3>
+                    <p>Laboratory experiments and measurements</p>
+                    <div class="topic-meta">
+                        <span class="questions">15 questions</span>
+                        <span class="difficulty">Easy</span>
+                    </div>
+                    <a href="../../../quiz.htm" class="topic-btn">Practice Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Modes -->
+        <section class="waec-section">
+            <h2>Practice Modes</h2>
+            <p class="section-subtitle">Choose how you want to study Physics</p>
+
+            <div class="practice-modes">
+                <div class="mode-card featured">
+                    <div class="mode-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h3>Timed Practice</h3>
+                    <p>Full WAEC-style questions with time pressure</p>
+                    <ul class="mode-features">
+                        <li>40 questions, 1 hour</li>
+                        <li>Instant feedback</li>
+                        <li>Performance analysis</li>
+                    </ul>
+                    <a href="../../../quiz.htm" class="mode-btn primary">Start Timed Quiz</a>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Study Mode</h3>
+                    <p>Learn at your own pace with explanations</p>
+                    <ul class="mode-features">
+                        <li>Unlimited time</li>
+                        <li>Detailed explanations</li>
+                        <li>Review answers anytime</li>
+                    </ul>
+                    <a href="../../../quiz.htm" class="mode-btn secondary">Start Study Mode</a>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Topic Focus</h3>
+                    <p>Drill specific topics you want to master</p>
+                    <ul class="mode-features">
+                        <li>Topic-specific questions</li>
+                        <li>Progress tracking</li>
+                        <li>Weak area identification</li>
+                    </ul>
+                    <a href="../../../quiz.htm" class="mode-btn secondary">Choose Topics</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Resources -->
+        <section class="waec-section">
+            <h2>Study Resources</h2>
+            <p class="section-subtitle">Additional materials to boost your Physics knowledge</p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>Video Tutorials</h4>
+                    <p>Watch expert explanations of Physics concepts</p>
+                    <a href="../../../quiz.htm" class="resource-link">Watch Videos</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Formula Sheets</h4>
+                    <p>Essential Physics formulas and equations</p>
+                    <a href="../../../quiz.htm" class="resource-link">Download Sheets</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>Problem Solving</h4>
+                    <p>Step-by-step solutions to complex problems</p>
+                    <a href="../../../quiz.htm" class="resource-link">View Solutions</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Practical Guide</h4>
+                    <p>Physics laboratory experiments guide</p>
+                    <a href="../../../quiz.htm" class="resource-link">View Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracking -->
+        <section class="waec-section">
+            <h2>Your Physics Progress</h2>
+            <p class="section-subtitle">Track your improvement in WAEC Physics</p>
+
+            <div class="progress-dashboard">
+                <div class="progress-item">
+                    <h4>Overall Score</h4>
+                    <div class="score-circle">
+                        <span class="score">79%</span>
+                    </div>
+                    <p>Last quiz: 82%</p>
+                </div>
+
+                <div class="progress-item">
+                    <h4>Topics Mastered</h4>
+                    <div class="topics-count">
+                        <span class="count">9/16</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 56%"></div>
+                        </div>
+                    </div>
+                    <p>56% completion</p>
+                </div>
+
+                <div class="progress-item">
+                    <h4>Study Time</h4>
+                    <div class="time-stats">
+                        <span class="time">18.3 hours</span>
+                        <p>This week: 5.2 hours</p>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <h4>Questions Answered</h4>
+                    <div class="questions-stats">
+                        <span class="count">378</span>
+                        <p>Correct: 298 (79%)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="waec-section">
+            <h2>Success Stories</h2>
+            <p class="section-subtitle">Hear from students who aced WAEC Physics</p>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Physics calculations were my biggest challenge, but OAE's step-by-step solutions and practice questions built my confidence. Scored A1!"</p>
+                        <div class="testimonial-author">
+                            <strong>David A.</strong>
+                            <span>WAEC 2024 - A1 in Physics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The practical Physics questions were spot-on. I knew exactly what to expect in the exam and performed exceptionally well."</p>
+                        <div class="testimonial-author">
+                            <strong>Amara N.</strong>
+                            <span>WAEC 2024 - A1 in Physics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Ace WAEC Physics?</h2>
+            <p>Start practicing now and join thousands of successful Physics students</p>
+            <div class="cta-buttons">
+                <a href="../../../quiz.htm" class="cta-btn primary">Start Practice Quiz</a>
+                <a href="../../mock/index.htm" class="cta-btn secondary">Full Mock Exam</a>
+            </div>
+        </section>
+    </main>
+
+            <!-- FOOTER -->
+    
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="../../../quiz.htm"><i class="ri-linkedin-fill"></i></a>
+      <a href="../../../quiz.htm"><i class="ri-twitter-x-fill"></i></a>
+      <a href="../../../quiz.htm"><i class="ri-youtube-fill"></i></a>
+      <a href="../../../quiz.htm"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="../../../quiz.htm"><i class="ri-instagram-fill"></i></a>
+      <a href="../../../quiz.htm"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="/oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="../../../quiz.htm">Who We Are</a>
+      <a href="../../../quiz.htm">Our Mission</a>
+      <a href="../../../quiz.htm">Our Team</a>
+      <a href="../../../quiz.htm">Our Story</a>
+      <a href="../../../quiz.htm">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="../../../quiz.htm">News & Updates</a>
+      <a href="../../../quiz.htm">Past Questions</a>
+      <a href="../../../quiz.htm">Exam Tips</a>
+      <a href="../../../quiz.htm">Tutorials</a>
+      <a href="../../../quiz.htm">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="../../../quiz.htm">JAMB Resources</a>
+      <a href="../../../quiz.htm">WAEC Materials</a>
+      <a href="../../../quiz.htm">NECO Guides</a>
+      <a href="../../../quiz.htm">Post-UTME</a>
+      <a href="../../../quiz.htm">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="../../../quiz.htm">Terms of Use</a>
+      <a href="../../../quiz.htm">Privacy Policy</a>
+      <a href="../../../quiz.htm">Cookie Notice</a>
+      <a href="../../../quiz.htm">Accessibility</a>
+    </div>
+  </div>
+</footer>
+    <script type="module" src="/Assets/js/quiz-navbar.js"></script>
+</body>
+</html>

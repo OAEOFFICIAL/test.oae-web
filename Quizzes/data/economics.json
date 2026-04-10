@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"economics", "totalAvailable": 10 },
+  "questions": [
+    { "id":"eco-001","year":"jamb2019","question":"Scarcity in economics means","options":["limited wants","unlimited resources","limited resources relative to wants","no wants"],"answer":2,"explanation":"Resources are limited relative to wants.","topic":"Microeconomics"},
+    { "id":"eco-002","year":"jamb2018","question":"Opportunity cost is","options":["free benefit","next best alternative forgone","price only","total cost"],"answer":1,"explanation":"Opportunity cost is the next best forgone option.","topic":"Microeconomics"},
+    { "id":"eco-003","year":"jamb2017","question":"Inflation is","options":["fall in general price level","rise in general price level","stable prices","deflation"],"answer":1,"explanation":"Inflation is sustained rise in price level.","topic":"Macroeconomics"},
+    { "id":"eco-004","year":"jamb2016","question":"GDP measures","options":["income only","total value of goods and services produced","population","unemployment"],"answer":1,"explanation":"GDP is total output value.","topic":"Macroeconomics"},
+    { "id":"eco-005","year":"jamb2015","question":"Demand curve slopes","options":["upwards","downwards","vertical","horizontal"],"answer":1,"explanation":"Law of demand: quantity demanded falls as price rises.","topic":"Microeconomics"},
+    { "id":"eco-006","year":"jamb2014","question":"Monopoly is","options":["many firms","single seller","perfect competition","oligopoly"],"answer":1,"explanation":"Monopoly: one seller controls market.","topic":"Microeconomics"},
+    { "id":"eco-007","year":"jamb2013","question":"Fiscal policy is run by","options":["central bank","government","firms","consumers"],"answer":1,"explanation":"Government uses fiscal policy (tax & spending).","topic":"Macroeconomics"},
+    { "id":"eco-008","year":"jamb2012","question":"Shortage occurs when","options":["supply > demand","demand > supply","equilibrium","surplus"],"answer":1,"explanation":"Shortage when quantity demanded exceeds quantity supplied.","topic":"Microeconomics"},
+    { "id":"eco-009","year":"jamb2011","question":"Elasticity measures","options":["slope only","responsiveness to changes","level","money supply"],"answer":1,"explanation":"Elasticity is responsiveness to price/income changes.","topic":"Microeconomics"},
+    { "id":"eco-010","year":"jamb2010","question":"Microeconomics focuses on","options":["individual units","nationwide aggregates","global economy","government policy"],"answer":0,"explanation":"Micro looks at individual consumers and firms.","topic":"Microeconomics"}
+  ]
+}

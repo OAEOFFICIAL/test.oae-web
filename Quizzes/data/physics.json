@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"physics", "totalAvailable": 10 },
+  "questions": [
+    { "id":"phy-001","year":"jamb2019","question":"SI unit of force is","options":["Newton","Joule","Watt","Pascal"],"answer":0,"explanation":"Newton (N) is unit of force.","topic":"Mechanics"},
+    { "id":"phy-002","year":"jamb2018","question":"Speed is measured in","options":["m","m/s","s","m^2"],"answer":1,"explanation":"m/s.","topic":"Mechanics"},
+    { "id":"phy-003","year":"jamb2017","question":"Acceleration due to gravity on earth is approx","options":["9.8 m/s^2","10 m/s^2","9.8 m/s","98 m/s^2"],"answer":0,"explanation":"9.8 m/s^2.","topic":"Mechanics"},
+    { "id":"phy-004","year":"jamb2016","question":"Formula for kinetic energy","options":["mv","1/2 mv","1/2 mv^2","mv^2"],"answer":2,"explanation":"1/2 mv^2.","topic":"Energy"},
+    { "id":"phy-005","year":"jamb2015","question":"Unit of pressure","options":["Newton","Pascal","Joule","Coulomb"],"answer":1,"explanation":"Pascal (N/m^2).","topic":"Mechanics"},
+    { "id":"phy-006","year":"jamb2014","question":"Ohm's law relates","options":["V=IR","P=VI","E=mc^2","F=ma"],"answer":0,"explanation":"V=IR.","topic":"Electricity"},
+    { "id":"phy-007","year":"jamb2013","question":"Light travels fastest in","options":["Air","Vacuum","Glass","Water"],"answer":1,"explanation":"Vacuum.","topic":"Wave Motion"},
+    { "id":"phy-008","year":"jamb2012","question":"Unit of frequency","options":["Hz","s","N","m"],"answer":0,"explanation":"Hertz (Hz).","topic":"Wave Motion"},
+    { "id":"phy-009","year":"jamb2011","question":"SI unit of charge","options":["Coulomb","Ampere","Volt","Ohm"],"answer":0,"explanation":"Coulomb (C).","topic":"Electricity"},
+    { "id":"phy-010","year":"jamb2010","question":"A body in equilibrium has","options":["net force zero","acceleration zero","both A and B","none"],"answer":2,"explanation":"Both net force and acceleration are zero.","topic":"Mechanics"}
+  ]
+}

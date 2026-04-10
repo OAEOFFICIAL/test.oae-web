@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/navbar.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
+    <style>
+        /* Art Combination Page Styles */
+        :root {
+            --art-primary: #00695c;
+            --art-secondary: #00897b;
+            --art-accent: #26a69a;
+            --art-light: #4db6ac;
+            --art-bg: #e0f2f1;
+            --art-text: #00695c;
+            --art-border: #b2dfdb;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--art-bg) 0%, #f1f8e9 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main {
+            margin-top: 80px;
+            min-height: calc(100vh - 160px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--art-primary) 0%, var(--art-secondary) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="50" r="2" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--art-light);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 8rem;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--art-primary);
+            margin: 60px 0 40px 0;
+            font-weight: 600;
+        }
+
+        /* Subject Overview */
+        .subject-overview {
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .subject-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 105, 92, 0.1);
+            border: 2px solid var(--art-border);
+            transition: all 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 105, 92, 0.2);
+            border-color: var(--art-accent);
+        }
+
+        .subject-icon {
+            font-size: 3rem;
+            color: var(--art-primary);
+            margin-bottom: 20px;
+        }
+
+        .subject-card h3 {
+            color: var(--art-primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .subject-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .question-count {
+            background: var(--art-bg);
+            color: var(--art-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--art-bg);
+            border-radius: 12px;
+            border: 1px solid var(--art-border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 105, 92, 0.1);
+            border-color: var(--art-accent);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--art-primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: var(--art-primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Difficulty Section */
+        .difficulty-section {
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 60px auto;
+        }
+
+        .difficulty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .difficulty-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 105, 92, 0.1);
+            border: 2px solid var(--art-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .difficulty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 105, 92, 0.2);
+            border-color: var(--art-accent);
+        }
+
+        .difficulty-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .difficulty-header i {
+            font-size: 2rem;
+            color: var(--art-primary);
+        }
+
+        .difficulty-header h3 {
+            color: var(--art-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .difficulty-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .difficulty-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .difficulty-features li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .difficulty-features li::before {
+            content: '✓';
+            color: var(--art-accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .difficulty-btn {
+            background: linear-gradient(135deg, var(--art-primary) 0%, var(--art-secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .difficulty-btn:hover {
+            background: linear-gradient(135deg, var(--art-secondary) 0%, var(--art-primary) 100%);
+            transform: translateY(-2px);
+        }
+
+        /* Instructions Section */
+        .instructions-section {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .instruction-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--art-bg);
+            border-radius: 12px;
+            border: 1px solid var(--art-border);
+        }
+
+        .instruction-icon {
+            font-size: 2.5rem;
+            color: var(--art-primary);
+            margin-bottom: 20px;
+        }
+
+        .instruction-card h3 {
+            color: var(--art-primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .instruction-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Start Section */
+        .start-section {
+            background: linear-gradient(135deg, var(--art-primary) 0%, var(--art-secondary) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .start-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .start-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .start-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .start-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary, .btn-outline {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--art-primary);
+            border: 2px solid white;
+        }
+
+        .btn-primary:hover {
+            background: var(--art-light);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--art-accent);
+            color: white;
+            border: 2px solid var(--art-accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--art-secondary);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--art-primary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .subject-grid, .features-grid, .instructions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .difficulty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .start-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary, .btn-outline {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Sticky Navbar -->
+    <nav class="navbar">
+        <!-- Logo - Left side -->
+        <div class="logo-section">
+                <img src="/OAE.png" alt="OAE"class="logoimg">
+        </div>
+
+        <!-- Search Section - Middle -->
+        <div class="middle-section">
+            <div class="search-section">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search lessons, exams, careers...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Right Navigation Section - Right side -->
+        <div class="right-section">
+            <!-- Desktop Navigation Links - TEXT BEFORE ICONS -->
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                         <i class="fas fa-chevron-down"></i>
+                         Services <i class="fas fa-cogs"></i>
+                    </a>
+                    <div class="dropdown services-dropdown">
+                        <div class="dropdown-section">
+                            <h4> <i class="fas fa-cogs"></i> Services </h4>
+                            <ul class="dropdown-links">
+                                <li><a href="#">Smart Quiz Arena <i class="fas fa-brain"></i></a></li>
+                                <li><a href="#">JAMB / WAEC / NECO Prep <i class="fas fa-graduation-cap"></i></a></li>
+                                <li><a href="#">Post-UTME & School Screening <i class="fas fa-university"></i></a></li>
+                                <li><a href="#">Admissions Support <i class="fas fa-hands-helping"></i></a></li>
+                                <li><a href="#">Scholarships & Opportunities <i class="fas fa-award"></i></a></li>
+                                <li><a href="#">Learning Hub <i class="fas fa-book"></i></a></li>
+                                <li><a href="#">Past Questions & Solutions <i class="fas fa-file-alt"></i></a></li>
+                                <li><a href="#">Tech Careers Hub <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="#">School Updates & News <i class="fas fa-newspaper"></i></a></li>
+                                <li><a href="#">Resources Library <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#">OAE Community <i class="fas fa-users"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                         <i class="fas fa-chevron-down"></i>
+                         Explore <i class="fas fa-compass"></i>
+                    </a>
+                    <div class="dropdown explore-dropdown">
+                        <div class="explore-grid">
+                            <!-- Learning Hub Section -->
+                            <div class="dropdown-section">
+                                <h4>Learning Hub <i class="fas fa-book"></i></h4>
+                                <ul class="dropdown-links">
+                                    <li><a href="#"><i class="fas fa-arrow-right"></i> Science <i class="fas fa-flask"></i> </a></li>
+                                    <li><a href="#"><i class="fas fa-arrow-right"></i> Art <i class="fas fa-paint-brush"></i> </a></li>
+                                    <li><a href="#"><i class="fas fa-arrow-right"></i> Commercial <i class="fas fa-chart-line"></i> </a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Exams & Tutorials Section -->
+                            <div class="dropdown-section">
+                                <h4>Exams & Tutorials <i class="fas fa-graduation-cap"></i></h4>
+                                <ul class="dropdown-links">
+                                    <li><a href="#">JAMB <i class="fas fa-file-alt"></i></a></li>
+                                    <li><a href="#">WAEC <i class="fas fa-certificate"></i></a></li>
+                                    <li><a href="#">NECO <i class="fas fa-award"></i></a></li>
+                                    <li><a href="#">GCE <i class="fas fa-book-open"></i></a></li>
+                                    <li><a href="#">POST UTME <i class="fas fa-university"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tech Careers Section -->
+                            <div class="dropdown-section">
+                                <h4>Tech Careers <i class="fas fa-laptop-code"></i></h4>
+                                <ul class="dropdown-links">
+                                    <li><a href="#">Web Development <i class="fas fa-code"></i></a></li>
+                                    <li><a href="#">Mobile Development <i class="fas fa-mobile-alt"></i></a></li>
+                                    <li><a href="#">Data Science <i class="fas fa-chart-bar"></i></a></li>
+                                    <li><a href="#">Cybersecurity <i class="fas fa-shield-alt"></i></a></li>
+                                    <li><a href="#">AI & ML <i class="fas fa-robot"></i></a></li>
+                                    <li><a href="#">UI/UX Design <i class="fas fa-palette"></i></a></li>
+                                    <li><a href="#">Cloud & DevOps <i class="fas fa-cloud"></i></a></li>
+                                    <li><a href="#">Blockchain & Web3 <i class="fas fa-link"></i></a></li>
+                                    <li><a href="#">Game Development <i class="fas fa-gamepad"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Media TV <i class="fas fa-tv"></i></a></li>
+                <li><a href="#">Community <i class="fas fa-users"></i></a></li>
+                <li>
+    <a href="#">
+        <i class="fas fa-chevron-down"></i> Resources <i class="fas fa-book-open"></i> 
+    </a>
+
+                       
+    <div class="dropdown resources-dropdown">
+        <div class="dropdown-section">
+            <h4>Resources <i class="fas fa-book-open"></i></h4>
+            <ul class="dropdown-links">
+                <li><a href="#">Past Questions & Solutions <i class="fas fa-file-alt"></i></a></li>
+                <li><a href="#">Study Materials Library <i class="fas fa-book"></i></a></li>
+                <li><a href="#">Study Timetables <i class="fas fa-calendar-alt"></i></a></li>
+                <li><a href="#">Exam Tips & Guides <i class="fas fa-lightbulb"></i></a></li>
+                <li><a href="#">School Updates & News <i class="fas fa-newspaper"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+</li>
+            </ul>
+
+            <!-- Join OAE Button -->
+            <button class="join-btn">Join OAE</button>
+            
+            <!-- Hamburger Menu - Hidden on desktop, shown on mobile at right edge -->
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-links">
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        <span><i class="fas fa-cogs"></i> Services</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-brain"></i> Smart Quiz Arena</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> JAMB / WAEC / NECO Prep</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> Post-UTME & School Screening</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i> Admissions Support</a></li>
+                        <li><a href="#"><i class="fas fa-award"></i> Scholarships & Opportunities</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Learning Hub</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Past Questions & Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-laptop-code"></i> Tech Careers Hub</a></li>
+                        <li><a href="#"><i class="fas fa-newspaper"></i> School Updates & News</a></li>
+                        <li><a href="#"><i class="fas fa-book-open"></i> Resources Library</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> OAE Community</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle explore-main">
+                        <span><i class="fas fa-compass"></i> Explore</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="mobile-dropdown">
+                        <!-- Learning Hub with nested dropdown -->
+                        <li>
+                            <a href="#" class="mobile-nested-toggle">
+                                <span><i class="fas fa-book"></i> Learning Hub</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-nested-dropdown">
+                                <li><a href="#"><i class="fas fa-flask"></i> Science <i class="fas fa-arrow-right"></i></a></li>
+                                <li><a href="#"><i class="fas fa-paint-brush"></i> Art <i class="fas fa-arrow-right"></i></a></li>
+                                <li><a href="#"><i class="fas fa-chart-line"></i> Commercial <i class="fas fa-arrow-right"></i></a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Exams & Tutorials with nested dropdown -->
+                        <li>
+                            <a href="#" class="mobile-nested-toggle">
+                                <span><i class="fas fa-graduation-cap"></i> Exams & Tutorials</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-nested-dropdown">
+                                <li><a href="#"><i class="fas fa-file-alt"></i> JAMB</a></li>
+                                <li><a href="#"><i class="fas fa-certificate"></i> WAEC</a></li>
+                                <li><a href="#"><i class="fas fa-award"></i> NECO</a></li>
+                                <li><a href="#"><i class="fas fa-book-open"></i> GCE</a></li>
+                                <li><a href="#"><i class="fas fa-university"></i> POST UTME</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Tech Careers with nested dropdown -->
+                        <li>
+                            <a href="#" class="mobile-nested-toggle">
+                                <span><i class="fas fa-laptop-code"></i> Tech Careers</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-nested-dropdown">
+                                <li><a href="#"><i class="fas fa-code"></i> Web Development</a></li>
+                                <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobile Development</a></li>
+                                <li><a href="#"><i class="fas fa-chart-bar"></i> Data Science</a></li>
+                                <li><a href="#"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
+                                <li><a href="#"><i class="fas fa-robot"></i> AI & ML</a></li>
+                                <li><a href="#"><i class="fas fa-palette"></i> UI/UX Design</a></li>
+                                <li><a href="#"><i class="fas fa-cloud"></i> Cloud & DevOps</a></li>
+                                <li><a href="#"><i class="fas fa-link"></i> Blockchain & Web3</a></li>
+                                <li><a href="#"><i class="fas fa-gamepad"></i> Game Development</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-tv"></i> Media TV</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+                <li><a href="#"><i class="fas fa-book-open"></i> Resources</a></li>
+                <li><a href="#" class="join-btn-mobile" >Join OAE</a></li>
+                <li><a href="#" class="quiz-btn-mobile">Take Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="main body">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">JAMB Art Combination Practice</h1>
+                <p class="hero-subtitle">Explore the humanities and social sciences for your JAMB examination</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Subjects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Levels</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-palette"></i>
+            </div>
+        </section>
+
+        <!-- SUBJECT OVERVIEW -->
+        <section class="subject-overview">
+            <h2 class="section-title">Art Subjects Overview</h2>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="subject-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Literature</h3>
+                    <p>Analysis of literary works, themes, and critical appreciation</p>
+                    <div class="question-count">50 Questions</div>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Government</h3>
+                    <p>Political systems, governance, and civic responsibilities</p>
+                    <div class="question-count">50 Questions</div>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h3>CRS/IRS</h3>
+                    <p>Religious studies and moral philosophy</p>
+                    <div class="question-count">50 Questions</div>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Economics</h3>
+                    <p>Economic principles and societal resource management</p>
+                    <div class="question-count">50 Questions</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <h2 class="section-title">Why Choose Art Combination?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Critical Thinking</h3>
+                    <p>Develop analytical and interpretive skills through literature and social sciences</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Societal Understanding</h3>
+                    <p>Gain deep insights into human behavior, society, and governance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Moral Reasoning</h3>
+                    <p>Explore ethical dilemmas and develop sound moral judgment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Liberal Arts Foundation</h3>
+                    <p>Perfect preparation for humanities, social sciences, and law studies</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFFICULTY LEVELS -->
+        <section class="difficulty-section">
+            <h2 class="section-title">Choose Your Difficulty Level</h2>
+            <div class="difficulty-grid">
+                <div class="difficulty-card" onclick="startQuiz('foundation')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Foundation</h3>
+                    </div>
+                    <p>Basic concepts and fundamental principles across all art subjects</p>
+                    <ul class="difficulty-features">
+                        <li>Basic literary analysis</li>
+                        <li>Fundamental government concepts</li>
+                        <li>Basic religious teachings</li>
+                        <li>Introduction to economics</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Foundation Quiz</button>
+                </div>
+                <div class="difficulty-card" onclick="startQuiz('intermediate')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Intermediate</h3>
+                    </div>
+                    <p>Moderate complexity with thematic analysis and case studies</p>
+                    <ul class="difficulty-features">
+                        <li>Thematic literary analysis</li>
+                        <li>Political systems comparison</li>
+                        <li>Religious philosophy</li>
+                        <li>Economic policy analysis</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Intermediate Quiz</button>
+                </div>
+                <div class="difficulty-card" onclick="startQuiz('advanced')">
+                    <div class="difficulty-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Advanced</h3>
+                    </div>
+                    <p>Complex analysis requiring deep understanding and critical evaluation</p>
+                    <ul class="difficulty-features">
+                        <li>Advanced literary criticism</li>
+                        <li>Political theory and ideology</li>
+                        <li>Comparative religion studies</li>
+                        <li>Advanced economic theories</li>
+                    </ul>
+                    <button class="difficulty-btn">Start Advanced Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTRUCTIONS -->
+        <section class="instructions-section">
+            <h2 class="section-title">Quiz Instructions</h2>
+            <div class="instructions-grid">
+                <div class="instruction-card">
+                    <div class="instruction-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Management</h3>
+                    <p>Each quiz has a 2-hour time limit. Manage your time effectively across all subjects.</p>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Question Format</h3>
+                    <p>Multiple choice questions with four options. Select the best answer for each question.</p>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-icon">
+                        <i class="fas fa-save"></i>
+                    </div>
+                    <h3>Auto-Save</h3>
+                    <p>Your progress is automatically saved. You can resume incomplete quizzes anytime.</p>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Scoring</h3>
+                    <p>Get instant results with detailed explanations and performance analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- START SECTION -->
+        <section class="start-section">
+            <div class="start-content">
+                <h2>Ready to Begin Your Art Journey?</h2>
+                <p>Choose your difficulty level above and start practicing with questions that cover all four art subjects. Develop your analytical skills and deepen your understanding of humanities and social sciences.</p>
+                <div class="start-actions">
+                    <button class="btn-primary" onclick="startQuiz('foundation')">
+                        <i class="fas fa-play"></i> Start Foundation Quiz
+                    </button>
+                    <button class="btn-secondary" onclick="startQuiz('intermediate')">
+                        <i class="fas fa-forward"></i> Start Intermediate Quiz
+                    </button>
+                    <button class="btn-outline" onclick="startQuiz('advanced')">
+                        <i class="fas fa-rocket"></i> Start Advanced Quiz
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- FOOTER -->
+    
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="/oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+  </main>
+  <script type="module" src="/Assets/js/home.js"></script>
+  <script type="module" src="/Assets/js/enhance-ui.js"></script>
+  <script type="module" src="/Assets/js/animations.js"></script>
+  <script type="module" src="/Assets/js/navbar.js"></script>
+  <script>
+    // Art Combination Quiz Functions
+    function startQuiz(difficulty) {
+        // Define quiz parameters for art combination
+        const quizParams = {
+            exam: 'jamb',
+            subject: 'art-combination',
+            difficulty: difficulty,
+            combination: 'art'
+        };
+
+        // Build query string
+        const queryString = new URLSearchParams(quizParams).toString();
+
+        // Redirect to quiz page
+        window.location.href = `/Quizzes/quiz.htm?${queryString}`;
+    }
+
+    // Add click event listeners to difficulty cards
+    document.addEventListener('DOMContentLoaded', function() {
+        const difficultyCards = document.querySelectorAll('.difficulty-card');
+
+        difficultyCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const difficulty = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                startQuiz(difficulty);
+            });
+        });
+
+        // Add hover effects for better UX
+        difficultyCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    });
+  </script>
+</body>
+</html>

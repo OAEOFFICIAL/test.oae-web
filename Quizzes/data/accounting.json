@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"accounting", "totalAvailable": 10 },
+  "questions": [
+    { "id":"acc-001","year":"jamb2019","question":"Accounting equation is","options":["Assets = Liabilities + Owner's Equity","Assets = Revenue - Expenses","Profit = Revenue - Cost","Assets + Liabilities = Equity"],"answer":0,"explanation":"Assets = Liabilities + Owner's Equity.","topic":"Accounting Fundamentals"},
+    { "id":"acc-002","year":"jamb2018","question":"Depreciation is charged on","options":["Land","Buildings","Cash","Inventory"],"answer":1,"explanation":"Buildings are depreciable assets.","topic":"Fixed Assets"},
+    { "id":"acc-003","year":"jamb2017","question":"Double entry principle: every entry has","options":["one debit and one credit","one entry","two debits","no credit"],"answer":0,"explanation":"Every transaction affects at least two accounts.","topic":"Accounting Fundamentals"},
+    { "id":"acc-004","year":"jamb2016","question":"Capital expenditure creates","options":["liability","asset","expense","revenue"],"answer":1,"explanation":"Capital expenditure results in an asset.","topic":"Fixed Assets"},
+    { "id":"acc-005","year":"jamb2015","question":"Trial balance detects","options":["all errors","arithmetical errors only","errors of omission","appropriation errors"],"answer":1,"explanation":"Trial balance detects arithmetical errors in ledger balances.","topic":"Financial Statements"},
+    { "id":"acc-006","year":"jamb2014","question":"Contra entry is used in","options":["Cash book","Sales book","Purchase book","Journal proper"],"answer":0,"explanation":"Contra entries appear in cash book between cash and bank columns.","topic":"Accounting Fundamentals"},
+    { "id":"acc-007","year":"jamb2013","question":"Bad debts are treated as","options":["asset","liability","expense","income"],"answer":2,"explanation":"Bad debts are an expense to the business.","topic":"Receivables Management"},
+    { "id":"acc-008","year":"jamb2012","question":"Provision for doubtful debts is shown as","options":["asset","contra asset","expense","liability"],"answer":1,"explanation":"It is a contra asset reducing receivables.","topic":"Receivables Management"},
+    { "id":"acc-009","year":"jamb2011","question":"FIFO stands for","options":["First In First Out","First In First Out (correct)","Fast In Fast Out","First Inventory First Out"],"answer":0,"explanation":"FIFO is First In First Out.","topic":"Inventory Valuation"},
+    { "id":"acc-010","year":"jamb2010","question":"Current ratio formula","options":["Current Assets / Current Liabilities","Equity / Debt","Gross Profit / Sales","Net Assets / Equity"],"answer":0,"explanation":"Current ratio = Current Assets / Current Liabilities.","topic":"Financial Analysis"}
+  ]
+}

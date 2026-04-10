@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Igbo", "totalAvailable": 10 },
+  "questions": [
+    { "id":"igbo-001","year":"jamb2019","question":"'Kedu?' in Igbo means","options":["Goodbye","How are you?","Welcome","Good morning"],"answer":1,"explanation":"Kedu is the Igbo greeting meaning 'How are you?'","topic":"Greetings" },
+    { "id":"igbo-002","year":"jamb2018","question":"The Igbo word for 'house' is","options":["Ulo","Ugbo","Nri","Mmadụ"],"answer":0,"explanation":"Ulo is the Igbo word for house.","topic":"Vocabulary" },
+    { "id":"igbo-003","year":"jamb2017","question":"'Daalụ' means","options":["Hello","Thank you","Good night","Goodbye"],"answer":1,"explanation":"Daalụ means thank you in Igbo.","topic":"Polite Expressions" },
+    { "id":"igbo-004","year":"jamb2016","question":"The number 3 in Igbo is","options":["Otu","Abụọ","Ato","Anọ"],"answer":2,"explanation":"Ato is the Igbo word for three.","topic":"Numbers" },
+    { "id":"igbo-005","year":"jamb2015","question":"'Nri' in Igbo means","options":["Water","Food","Tree","Person"],"answer":1,"explanation":"Nri means food in Igbo.","topic":"Vocabulary" },
+    { "id":"igbo-006","year":"jamb2014","question":"The plural of 'nwa' (child) in Igbo is","options":["nwata","nwa-nwa","ụmụ nwa","nwere"],"answer":2,"explanation":"Ụmụ nwa or ụmụ is used for children (plural) in Igbo.","topic":"Pluralization" },
+    { "id":"igbo-007","year":"jamb2013","question":"'Olee emé?' means","options":["What is your name?","What is it?","How are you?","Where are you?"],"answer":1,"explanation":"Olee emé means 'What is it?' in Igbo.","topic":"Questions" },
+    { "id":"igbo-008","year":"jamb2012","question":"'Mmadụ' means","options":["Chief","Woman","Person","Man"],"answer":2,"explanation":"Mmadụ means person in Igbo.","topic":"Vocabulary" },
+    { "id":"igbo-009","year":"jamb2011","question":"The verb 'ga' in Igbo means","options":["to sit","to go","to come","to stay"],"answer":1,"explanation":"Ga means 'to go' in Igbo.","topic":"Verbs" },
+    { "id":"igbo-010","year":"jamb2010","question":"'Ama m' means","options":["I know","I see","I hear","I feel"],"answer":0,"explanation":"Ama m means 'I know' in Igbo.","topic":"Verbs" }
+  ]
+}

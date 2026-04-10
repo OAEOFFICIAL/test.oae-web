@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OAE — Smart Quiz Arena</title>
+  <link rel="stylesheet" href="/Assets/css/quiz.css">
+  <link rel="stylesheet" href="/Assets/css/style.css">
+  <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+  <link rel="stylesheet" href="/Assets/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <style>
+    /* ============================================
+       KEYFRAME ANIMATIONS
+       ============================================ */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    /* ============================================
+       CUSTOM CSS VARIABLES
+       ============================================ */
+    :root {
+      --green: #0a8a2f;
+      --darkgreen: #066426;
+      --muted: #666;
+      --card: #f8fdf9;
+      --card-border: #e6e6e6;
+      --oae-dark: #333;
+      --shadow: 0 8px 24px rgba(10,138,47,0.08);
+      --transition: 0.3s ease;
+    }
+
+    /* ============================================
+       DARK MODE
+       ============================================ */
+    body.dark-mode {
+      --card: #1a1a1a;
+      --card-border: #333;
+      --oae-dark: #e0e0e0;
+      --muted: #999;
+      --shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    /* ============================================
+       QUIZ CONTAINER
+       ============================================ */
+    .quiz-container {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .quiz-hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--darkgreen) 100%);
+      padding: 80px 40px;
+      border-radius: 20px;
+      margin-bottom: 60px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      animation: slideInDown 0.8s ease-out;
+    }
+
+    .quiz-hero::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .quiz-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .quiz-hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .quiz-hero h1 {
+      margin: 0 0 20px;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .quiz-hero p {
+      margin: 0 auto 40px;
+      max-width: 700px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      opacity: 0.95;
+    }
+
+    .quiz-hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quiz-btn-primary,
+    .quiz-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all var(--transition);
+      cursor: pointer;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .quiz-btn-primary {
+      background: white;
+      color: var(--green);
+    }
+
+    .quiz-btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .quiz-btn-secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid white;
+    }
+
+    .quiz-btn-secondary:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* ============================================
+       SECTION HEADERS
+       ============================================ */
+    .quiz-section-header {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--oae-dark);
+      margin-bottom: 50px;
+      animation: slideInDown 0.7s ease-out;
+    }
+
+    .quiz-section-header i {
+      color: var(--green);
+      margin-right: 12px;
+    }
+
+    /* ============================================
+       EXAM CATEGORIES SECTION
+       ============================================ */
+    .exam-categories {
+      margin-bottom: 80px;
+    }
+
+    .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .exam-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--green);
+      transition: all var(--transition);
+      cursor: pointer;
+      animation: scaleIn 0.6s ease-out both;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exam-card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .exam-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .exam-card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .exam-card:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .exam-card:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .exam-card:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .exam-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(10,138,47,0.15);
+    }
+
+    .exam-card-icon {
+      font-size: 2.5rem;
+      color: var(--green);
+      margin-bottom: 12px;
+      transition: transform var(--transition);
+    }
+
+    .exam-card:hover .exam-card-icon {
+      transform: scale(1.15) rotate(10deg);
+      animation: float 1s ease-in-out infinite;
+    }
+
+    .exam-card h3 {
+      margin: 0 0 12px;
+      color: var(--oae-dark);
+      font-size: 1.3rem;
+      font-weight: 700;
+      transition: color var(--transition);
+    }
+
+    .exam-card:hover h3 {
+      color: var(--green);
+    }
+
+    .exam-card p {
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .exam-card-link {
+      color: var(--green);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      transition: all var(--transition);
+    }
+
+    .exam-card:hover .exam-card-link {
+      gap: 12px;
+    }
+
+    /* ============================================
+       DEPARTMENTS SECTION
+       ============================================ */
+    .departments {
+      margin-bottom: 80px;
+    }
+
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dept-card {
+      background: linear-gradient(135deg, var(--green) 0%, var(--darkgreen) 100%);
+      padding: 40px 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(10,138,47,0.15);
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      color: white;
+      text-decoration: none;
+      animation: scaleIn 0.6s ease-out both;
+    }
+
+    .dept-card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .dept-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dept-card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .dept-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(10,138,47,0.25);
+    }
+
+    .dept-card-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      transition: transform var(--transition);
+    }
+
+    .dept-card:hover .dept-card-icon {
+      transform: scale(1.2) rotate(15deg);
+      animation: float 1s ease-in-out infinite;
+    }
+
+    .dept-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .dept-card p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+
+    /* ============================================
+       DARK MODE ADJUSTMENTS
+       ============================================ */
+    body.dark-mode .exam-card {
+      background: var(--card);
+      border-top-color: var(--green);
+    }
+
+    body.dark-mode .exam-card h3 {
+      color: var(--oae-dark);
+    }
+
+    body.dark-mode .exam-card p {
+      color: var(--muted);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+      .quiz-hero {
+        padding: 60px 20px;
+      }
+
+      .quiz-hero h1 {
+        font-size: 2rem;
+      }
+
+      .quiz-hero p {
+        font-size: 1rem;
+      }
+
+      .quiz-btn-primary,
+      .quiz-btn-secondary {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+      }
+
+      .exam-grid,
+      .dept-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-section-header {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Fixed Sticky Navbar -->
+    <!-- Quiz Navbar - WHITE BACKGROUND -->
+    <nav class="quiz-navbar">
+        <!-- Logo -->
+        <div class="quiz-logo">
+            <a href="/Index.htm">
+               <img class="logo-quiz" src="/oae.png" alt="OAE">
+            </a>
+        </div>
+
+        <!-- Quiz Search - Visible on all devices -->
+        <div class="quiz-search-section">
+            <div class="quiz-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search quizzes, subjects, years, topics...">
+                <button class="quiz-search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation Links - Desktop only -->
+        <div class="quiz-nav-container">
+            <ul class="quiz-nav-links">
+                <li>
+                    <a href="#">
+                        Quizzes <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Types</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="#">All Quizzes <i class="fas fa-globe"></i></a></li>
+                                <li><a href="#">Popular Quizzes <i class="fas fa-fire"></i></a></li>
+                                <li><a href="#">Recently Added <i class="fas fa-clock"></i></a></li>
+                                <li><a href="#">Recommended for You <i class="fas fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Subjects <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Quiz Subjects</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li><a href="#">Mathematics <i class="fas fa-calculator"></i></a></li>
+                                <li><a href="#">English Language <i class="fas fa-language"></i></a></li>
+                                <li><a href="#">Biology <i class="fas fa-dna"></i></a></li>
+                                <li><a href="#">Chemistry <i class="fas fa-flask"></i></a></li>
+                                <li><a href="#">Physics <i class="fas fa-atom"></i></a></li>
+                                <li><a href="#">Government <i class="fas fa-landmark"></i></a></li>
+                                <li><a href="#">Literature <i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#">Economics <i class="fas fa-chart-line"></i></a></li>
+                                <li><a href="#">CRS / IRS <i class="fas fa-church"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        Exams <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="quiz-dropdown">
+                        <div class="quiz-dropdown-section">
+                            <h4>Exam Practice</h4>
+                            <ul class="quiz-dropdown-links">
+                                <li class="popular"><a href="#">JAMB CBT Practice <i class="fas fa-laptop-code"></i></a></li>
+                                <li><a href="#">WAEC Practice <i class="fas fa-certificate"></i></a></li>
+                                <li><a href="#">NECO Practice <i class="fas fa-award"></i></a></li>
+                                <li><a href="#">Post-UTME Practice <i class="fas fa-university"></i></a></li>
+                                <li><a href="#">Mock Exams <i class="fas fa-clipboard-check"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Join/Dashboard Button - Desktop only -->
+        <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+        
+        <!-- Hamburger Menu - Mobile only -->
+        <button class="quiz-hamburger" id="quizHamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="quiz-mobile-menu" id="quizMobileMenu">
+            <ul class="quiz-mobile-links">
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-question-circle"></i> Quizzes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-globe"></i> All Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-fire"></i> Popular Quizzes</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Recently Added</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Recommended for You</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-book"></i> Subjects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                        <li><a href="#"><i class="fas fa-language"></i> English Language</a></li>
+                        <li><a href="#"><i class="fas fa-dna"></i> Biology</a></li>
+                        <li><a href="#"><i class="fas fa-flask"></i> Chemistry</a></li>
+                        <li><a href="#"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="#"><i class="fas fa-landmark"></i> Government</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="quiz-mobile-toggle">
+                        <span><i class="fas fa-graduation-cap"></i> Exams</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="quiz-mobile-dropdown">
+                        <li><a href="#"><i class="fas fa-laptop-code"></i> JAMB CBT Practice</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> WAEC Practice</a></li>
+                        <li><a href="#"><i class="fas fa-award"></i> NECO Practice</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> Post-UTME Practice</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Mock Exams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="quiz-join-mobile" id="quizJoinMobile">
+                        <i class="fas fa-user-plus"></i> Join OAE
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <main class="quiz-container" role="main" aria-labelledby="main-heading">
+    <!-- INTRO HERO -->
+    <section class="quiz-hero">
+      <div class="quiz-hero-content">
+        <h1 id="main-heading">Smart Quiz Arena</h1>
+        <p>Welcome to OAE's premier quiz platform where thousands of students prepare smarter and excel in their exams. Practice with real exam patterns, track your progress, and build confidence.</p>
+        <div class="quiz-hero-buttons">
+          <a href="quiz.htm" class="quiz-btn-primary">
+            <i class="fas fa-play-circle"></i> Start Quiz Now
+          </a>
+          <a href="#exams" class="quiz-btn-secondary">
+            <i class="fas fa-chevron-down"></i> Explore Exams
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAM CATEGORIES -->
+    <section id="exams" class="exam-categories">
+      <h2 class="quiz-section-header">
+        <i class="fas fa-graduation-cap"></i>Exam Practice Categories
+      </h2>
+      <div class="exam-grid">
+        <a href="Exam/jamb/index.htm" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>JAMB CBT</h3>
+          <p>CBT-style full mocks, topic drills and timed packs.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="Exam/waec/index.htm" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-certificate"></i></div>
+          <h3>WAEC Practice</h3>
+          <p>Objective & theory questions aligned to WAEC.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-award"></i></div>
+          <h3>NECO Practice</h3>
+          <p>Past-question style and topic drills.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>GCE Practice</h3>
+          <p>Practice papers for external candidates.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-university"></i></div>
+          <h3>Post-UTME</h3>
+          <p>Screening drills for departmental exams.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="exam-card">
+          <div class="exam-card-icon"><i class="fas fa-industry"></i></div>
+          <h3>NABTEB</h3>
+          <p>Trade and technical subject quizzes.</p>
+          <div class="exam-card-link">Explore <i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DEPARTMENTS -->
+    <section id="departments" class="departments">
+      <h2 class="quiz-section-header">
+        <i class="fas fa-layer-group"></i>Quiz by Department
+      </h2>
+      <div class="dept-grid">
+        <a href="/notes/science/index.htm" class="dept-card">
+          <div class="dept-card-icon"><i class="fas fa-flask"></i></div>
+          <h3>Science</h3>
+          <p>Physics • Chemistry • Biology</p>
+        </a>
+
+        <a href="/notes/art-and-humanities/index.htm" class="dept-card">
+          <div class="dept-card-icon"><i class="fas fa-book"></i></div>
+          <h3>Arts</h3>
+          <p>Literature • Government • History</p>
+        </a>
+
+        <a href="/notes/commercial/index.htm" class="dept-card">
+          <div class="dept-card-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Commercial</h3>
+          <p>Economics • Accounting • Commerce</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+   <!-- FOOTER -->
+<footer class="oae-footer">
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+    </div>
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+    </div>
+    <div class="footer-col">
+      <h3>Exams</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/Assets/js/quiz-navbar.js"></script>
+<script src="/Assets/js/quiz.js"></script>
+<script>
+  /* ============================================
+     GLOBAL DARK MODE MANAGER FOR QUIZ
+     ============================================ */
+  class QuizDarkModeManager {
+    constructor() {
+      this.storageKey = 'oae-dark-mode';
+      this.init();
+    }
+
+    init() {
+      // Apply saved preference on page load
+      this.applySavedPreference();
+      
+      // Listen for storage changes from other tabs/windows
+      window.addEventListener('storage', (e) => {
+        if (e.key === this.storageKey) {
+          this.applySavedPreference();
+        }
+      });
+
+      // Listen for dark mode change events from settings modal
+      window.addEventListener('dark-mode-changed', (e) => {
+        this.applySavedPreference();
+      });
+    }
+
+    applySavedPreference() {
+      const isDarkMode = localStorage.getItem(this.storageKey) === 'true';
+      this.setDarkMode(isDarkMode);
+    }
+
+    setDarkMode(isDarkMode) {
+      if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
+      }
+    }
+  }
+
+  // Initialize dark mode manager when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      new QuizDarkModeManager();
+    });
+  } else {
+    new QuizDarkModeManager();
+  }
+</script>
+</body>
+</html>

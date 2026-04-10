@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Hausa", "totalAvailable": 10 },
+  "questions": [
+    { "id":"hausa-001","year":"jamb2019","question":"'Sannu' in Hausa means","options":["Goodbye","Hello/Greetings","Thank you","How are you?"],"answer":1,"explanation":"Sannu is a greeting meaning hello in Hausa.","topic":"Greetings" },
+    { "id":"hausa-002","year":"jamb2018","question":"The Hausa word for 'water' is","options":["Ruwa","Gida","Noma","Rafi"],"answer":0,"explanation":"Ruwa is the Hausa word for water.","topic":"Vocabulary" },
+    { "id":"hausa-003","year":"jamb2017","question":"'Nagode' means","options":["Sorry","Thank you","Yes","No"],"answer":1,"explanation":"Nagode means thank you in Hausa.","topic":"Polite Expressions" },
+    { "id":"hausa-004","year":"jamb2016","question":"The number 5 in Hausa is","options":["Uku","Hudu","Biyar","Shida"],"answer":2,"explanation":"Biyar is the Hausa word for five.","topic":"Numbers" },
+    { "id":"hausa-005","year":"jamb2015","question":"'Gida' means","options":["School","House/Home","Market","Farm"],"answer":1,"explanation":"Gida means house or home in Hausa.","topic":"Vocabulary" },
+    { "id":"hausa-006","year":"jamb2014","question":"The plural marker in Hausa is often","options":["suffix -i","-u","-a","-e"],"answer":0,"explanation":"The suffix -i is commonly used to form plurals in Hausa.","topic":"Grammar" },
+    { "id":"hausa-007","year":"jamb2013","question":"'Inā kake?' means","options":["What is your name?","How are you?","Where are you?","What are you doing?"],"answer":2,"explanation":"Inā kake means 'Where are you?' in Hausa.","topic":"Conversations" },
+    { "id":"hausa-008","year":"jamb2012","question":"The verb 'gida' means","options":["to run","to sit","to come","to go"],"answer":2,"explanation":"Gida can mean 'to come' in certain contexts of Hausa verbs.","topic":"Verbs" },
+    { "id":"hausa-009","year":"jamb2011","question":"'Ashe' means","options":["I am","You are","He is","She is"],"answer":0,"explanation":"Ashe means 'I am' in Hausa.","topic":"Grammar" },
+    { "id":"hausa-010","year":"jamb2010","question":"The Hausa word for 'food' is","options":["Abinci","Ruwa","Waje","Gida"],"answer":0,"explanation":"Abinci is the Hausa word for food.","topic":"Vocabulary" }
+  ]
+}

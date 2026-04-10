@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"chemistry", "totalAvailable": 10 },
+  "questions": [
+    { "id":"chem-001","year":"jamb2019","question":"Atomic number represents","options":["protons","neutrons","electrons","nucleons"],"answer":0,"explanation":"Number of protons.","topic":"Atomic Structure"},
+    { "id":"chem-002","year":"jamb2018","question":"Water is a","options":["acid","base","polar molecule","non-polar molecule"],"answer":2,"explanation":"Water is polar.","topic":"Bonding & Structure"},
+    { "id":"chem-003","year":"jamb2017","question":"pH of neutral solution at 25°C","options":["0","7","14","1"],"answer":1,"explanation":"pH 7 is neutral.","topic":"Acids, Bases & Salts"},
+    { "id":"chem-004","year":"jamb2016","question":"NaCl is an example of","options":["covalent","ionic","metallic","hydrogen bond"],"answer":1,"explanation":"Ionic compound.","topic":"Bonding & Structure"},
+    { "id":"chem-005","year":"jamb2015","question":"Molar mass unit is","options":["g/mol","mol/g","g","mol"],"answer":0,"explanation":"g per mole.","topic":"Stoichiometry"},
+    { "id":"chem-006","year":"jamb2014","question":"Avogadro's number approx","options":["6.02e23","3.14","9.8","1.6e-19"],"answer":0,"explanation":"6.02×10^23.","topic":"Stoichiometry"},
+    { "id":"chem-007","year":"jamb2013","question":"Catalyst function","options":["increase product","decrease product","lower activation energy","increase temperature"],"answer":2,"explanation":"Lowers activation energy.","topic":"Kinetics"},
+    { "id":"chem-008","year":"jamb2012","question":"Electrolyte conducts when","options":["solid","molten or solution","gas","none"],"answer":1,"explanation":"Molten or aqueous solution conducts.","topic":"Electrochemistry"},
+    { "id":"chem-009","year":"jamb2011","question":"Atomic mass approx equals","options":["protons+neutrons","protons only","electrons only","neutrons only"],"answer":0,"explanation":"Protons + neutrons.","topic":"Atomic Structure"},
+    { "id":"chem-010","year":"jamb2010","question":"Gas law PV=nRT: R is","options":["gas constant","pressure","volume","temperature"],"answer":0,"explanation":"Universal gas constant.","topic":"States of Matter"}
+  ]
+}

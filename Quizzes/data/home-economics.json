@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Home Economics", "totalAvailable": 10 },
+  "questions": [
+    { "id":"home-001","year":"jamb2019","question":"The main function of carbohydrates in the body is","options":["building tissue","providing energy","regulating temperature","fighting infections"],"answer":1,"explanation":"Carbohydrates are the body's primary source of energy.","topic":"Nutrition" },
+    { "id":"home-002","year":"jamb2018","question":"Which mineral is essential for healthy bones and teeth?","options":["Iron","Calcium","Zinc","Copper"],"answer":1,"explanation":"Calcium is essential for strong bones and teeth.","topic":"Nutrition" },
+    { "id":"home-003","year":"jamb2017","question":"The recommended daily water intake for adults is approximately","options":["1 liter","2 liters","4 liters","6 liters"],"answer":1,"explanation":"About 2 liters (8 glasses) of water per day is recommended.","topic":"Health" },
+    { "id":"home-004","year":"jamb2016","question":"Which of these is a balanced diet?","options":["Only proteins","Proteins, carbohydrates, fats, vitamins, minerals","Only vegetables","Only fruits"],"answer":1,"explanation":"A balanced diet includes all necessary nutrients.","topic":"Nutrition" },
+    { "id":"home-005","year":"jamb2015","question":"The best method to preserve food at home is","options":["drying","refrigeration","salting","all methods depending on the food"],"answer":3,"explanation":"Different foods require different preservation methods.","topic":"Food Preservation" },
+    { "id":"home-006","year":"jamb2014","question":"Which of these is a first aid treatment for burns?","options":["Apply butter","Cool the area with water","Wrap with dirty cloth","Apply oil"],"answer":1,"explanation":"Cool water helps reduce burn severity and pain.","topic":"First Aid" },
+    { "id":"home-007","year":"jamb2013","question":"Proper hygiene during food preparation includes","options":["washing hands","keeping work area clean","using clean utensils","all of the above"],"answer":3,"explanation":"All these practices prevent food contamination.","topic":"Food Hygiene" },
+    { "id":"home-008","year":"jamb2012","question":"Which nutrient deficiency causes anemia?","options":["Vitamin C deficiency","Iron deficiency","Calcium deficiency","Zinc deficiency"],"answer":1,"explanation":"Iron deficiency is a leading cause of anemia.","topic":"Nutrition" },
+    { "id":"home-009","year":"jamb2011","question":"The proper temperature for storing food in a refrigerator is","options":["0°C","4°C","10°C","15°C"],"answer":1,"explanation":"Food should be stored at 4°C (40°F) to prevent bacterial growth.","topic":"Food Storage" },
+    { "id":"home-010","year":"jamb2010","question":"Personal hygiene includes","options":["bathing daily","brushing teeth regularly","washing hands frequently","all of the above"],"answer":3,"explanation":"All these are essential components of personal hygiene.","topic":"Hygiene" }
+  ]
+}

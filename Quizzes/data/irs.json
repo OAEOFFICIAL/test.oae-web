@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"irs", "totalAvailable": 10 },
+  "questions": [
+    { "id":"irs-001","year":"jamb2019","question":"IRS usually refers to","options":["Islamic Religious Studies","International Relations","Integrated Routines","Income tax"],"answer":0,"explanation":"In this syllabus IRS = Islamic Religious Studies.","topic":"Islam Basics"},
+    { "id":"irs-002","year":"jamb2018","question":"Five Pillars of Islam include","options":["Shahada, Salah, Zakat, Sawm, Hajj","Confession, Prayer, Fasting","Baptism only","None"],"answer":0,"explanation":"These are the core acts of worship in Islam.","topic":"Islamic Practices"},
+    { "id":"irs-003","year":"jamb2017","question":"Quran is","options":["Christian scripture","Islamic holy book","Historical text","Poetry"],"answer":1,"explanation":"The Quran is the central religious text of Islam.","topic":"Islamic Scripture"},
+    { "id":"irs-004","year":"jamb2016","question":"Zakat is","options":["prayer","charitable giving/purification of wealth","fasting","pilgrimage"],"answer":1,"explanation":"Zakat is obligatory almsgiving.","topic":"Islamic Practices"},
+    { "id":"irs-005","year":"jamb2015","question":"Prophet Muhammad is considered","options":["a philosopher","the final prophet in Islam","an artist","a king"],"answer":1,"explanation":"Muslims regard Muhammad as the final prophet.","topic":"Islamic History"},
+    { "id":"irs-006","year":"jamb2014","question":"Hadith are","options":["sayings and actions of Prophet Muhammad","parts of Quran","legal codes","poems"],"answer":0,"explanation":"Hadith record the Prophet's sayings and actions.","topic":"Islamic Scripture"},
+    { "id":"irs-007","year":"jamb2013","question":"Sawm refers to","options":["almsgiving","fasting during Ramadan","prayer","pilgrimage"],"answer":1,"explanation":"Sawm is fasting in Ramadan.","topic":"Islamic Practices"},
+    { "id":"irs-008","year":"jamb2012","question":"Salah is performed","options":["once a week","five times daily","only on Fridays","never"],"answer":1,"explanation":"Muslims pray five times daily.","topic":"Islamic Practices"},
+    { "id":"irs-009","year":"jamb2011","question":"Hajj is required once if","options":["able physically and financially","young only","for priests only","optional"],"answer":0,"explanation":"Hajj obligatory for those who can undertake it.","topic":"Islamic Practices"},
+    { "id":"irs-010","year":"jamb2010","question":"Sharia refers to","options":["Islamic law and moral code","music","architecture","agriculture"],"answer":0,"explanation":"Sharia is the moral and legal framework in Islam.","topic":"Islamic Law"}
+  ]
+}

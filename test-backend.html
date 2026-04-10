@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Integration Test</title>
+</head>
+<body>
+    <h1>Quiz Backend Integration Test</h1>
+
+    <h2>Test Different Quiz Types</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 20px;">
+        <button onclick="testQuiz('JAMB', 'mathematics', 'exam')">JAMB Maths Exam</button>
+        <button onclick="testQuiz('JAMB', 'english', 'mock')">JAMB English Mock</button>
+        <button onclick="testQuiz('WAEC', 'physics', 'tough')">WAEC Physics Tough</button>
+        <button onclick="testQuiz('NECO', 'chemistry', 'exam')">NECO Chemistry Exam</button>
+        <button onclick="testQuiz('GCE', 'biology', 'combination')">GCE Biology Combo</button>
+    </div>
+
+    <h2>Test Study Mode</h2>
+    <button onclick="testStudyMode()">Test Study Mode (English)</button>
+    <div id="study-result"></div>
+
+    <h2>Test Exam Mode</h2>
+    <button onclick="testExamMode()">Test Full Exam Mode</button>
+    <div id="exam-result"></div>
+
+    <script>
+        async function testQuiz(examType, subject, quizType) {
+            const resultDiv = document.getElementById('study-result');
+            resultDiv.innerHTML = `Loading ${examType} ${subject} ${quizType} quiz...`;
+
+            try {
+                const response = await fetch(`http://localhost:4000/api/questions?subject=${subject}&examType=${examType}&quizType=${quizType}&mode=study`);
+                const data = await response.json();
+
+                resultDiv.innerHTML = `
+                    <h3>✅ ${examType} ${subject.toUpperCase()} ${quizType.toUpperCase()} Quiz</h3>
+                    <p><strong>Exam Type:</strong> ${data.examType}</p>
+                    <p><strong>Quiz Type:</strong> ${data.quizType}</p>
+                    <p><strong>Subject:</strong> ${data.subject}</p>
+                    <p><strong>Questions returned:</strong> ${data.questions.length}</p>
+                    ${data.questions.length > 0 ? `
+                        <p><strong>Sample question:</strong> ${data.questions[0]?.question?.substring(0, 80)}...</p>
+                        <p><strong>Has exam metadata:</strong> ${data.questions[0]?.exam ? '✅' : '❌'}</p>
+                        <p><strong>Level:</strong> ${data.questions[0]?.level || 'N/A'}</p>
+                    ` : '<p style="color: red;">No questions found for this combination!</p>'}
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+            }
+        }
+
+        async function testStudyMode() {
+            const resultDiv = document.getElementById('study-result');
+            resultDiv.innerHTML = 'Loading...';
+
+            try {
+                const response = await fetch('http://localhost:4000/api/questions?subject=english&mode=study');
+                const data = await response.json();
+
+                resultDiv.innerHTML = `
+                    <h3>✅ Study Mode Working</h3>
+                    <p>Subject: ${data.subject}</p>
+                    <p>Questions returned: ${data.questions.length}</p>
+                    <p>First question: ${data.questions[0]?.question?.substring(0, 50)}...</p>
+                    <p>Has all properties: ${data.questions[0]?.id ? '✅' : '❌'} ID,
+                        ${data.questions[0]?.options ? '✅' : '❌'} Options,
+                        ${data.questions[0]?.answer !== undefined ? '✅' : '❌'} Answer</p>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+            }
+        }
+
+        async function testExamMode() {
+            const resultDiv = document.getElementById('exam-result');
+            resultDiv.innerHTML = 'Loading...';
+
+            try {
+                const selection = {
+                    subjects: ["english", "mathematics", "physics", "chemistry"],
+                    examType: "JAMB",
+                    quizType: "exam",
+                    mode: "exam",
+                    topics: {
+                        "english": ["Lexis & Structure"],
+                        "mathematics": ["Algebra"],
+                        "physics": ["Mechanics"],
+                        "chemistry": ["Organic Chemistry"]
+                    },
+                    novel: null
+                };
+
+                const response = await fetch('http://localhost:4000/api/exam/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(selection)
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    resultDiv.innerHTML = `<p style="color: red;">❌ Error: ${data.error}</p>`;
+                    return;
+                }
+
+                resultDiv.innerHTML = `
+                    <h3>✅ Exam Mode Working</h3>
+                    <p>JWT received: ${data.jwt ? '✅' : '❌'}</p>
+                    <p>Session ID: ${data.payload?.sessionId || 'N/A'}</p>
+                    <p>Questions per subject:</p>
+                    <ul>
+                        ${Object.entries(data.payload?.perSubjectQuestions || {}).map(([subj, qs]) =>
+                            `<li>${subj}: ${qs.length} questions</li>`
+                        ).join('')}
+                    </ul>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

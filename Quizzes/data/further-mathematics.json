@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Further Mathematics", "totalAvailable": 10 },
+  "questions": [
+    { "id":"fmath-001","year":"jamb2019","question":"The modulus of the complex number (3+4i) is","options":["3","4","5","7"],"answer":2,"explanation":"Modulus = √(3² + 4²) = √25 = 5.","topic":"Complex Numbers" },
+    { "id":"fmath-002","year":"jamb2018","question":"The inverse of matrix [[2,1],[1,1]] is","options":["[[1,-1],[-1,2]]","[[1,1],[1,2]]","[[2,1],[1,1]]","No inverse"],"answer":0,"explanation":"For a 2×2 matrix, use the formula 1/det × adjugate.","topic":"Matrices" },
+    { "id":"fmath-003","year":"jamb2017","question":"If z = 3e^(iπ/4), then z in rectangular form is","options":["3+3i","3√2/2 + 3√2i/2","2+2i","1+i"],"answer":1,"explanation":"z = 3cos(π/4) + 3i·sin(π/4) = (3√2/2) + (3√2/2)i.","topic":"Complex Numbers" },
+    { "id":"fmath-004","year":"jamb2016","question":"The sum of the series 1 + 1/2 + 1/4 + 1/8 + ... is","options":["1","1.5","2","∞"],"answer":2,"explanation":"This is a geometric series with a=1, r=1/2. Sum = a/(1-r) = 1/(1-1/2) = 2.","topic":"Series" },
+    { "id":"fmath-005","year":"jamb2015","question":"The determinant of [[1,2,3],[4,5,6],[7,8,9]] is","options":["0","6","12","24"],"answer":0,"explanation":"The rows are linearly dependent, so determinant = 0.","topic":"Determinants" },
+    { "id":"fmath-006","year":"jamb2014","question":"If f(x) = x³ - 2x, then f'(x) is","options":["3x² - 2","3x² + 2","x² - 2x","2x²"],"answer":0,"explanation":"f'(x) = 3x² - 2.","topic":"Calculus" },
+    { "id":"fmath-007","year":"jamb2013","question":"∫ x² dx from 0 to 3 equals","options":["9","18","27","36"],"answer":0,"explanation":"∫ x² dx = x³/3. Evaluate from 0 to 3: 27/3 - 0 = 9.","topic":"Integration" },
+    { "id":"fmath-008","year":"jamb2012","question":"The binomial expansion of (1+x)⁴ is","options":["1+4x+6x²+4x³+x⁴","1+4x+4x²+4x³+x⁴","1+x+x²+x³+x⁴","4+4x+4x²+4x³+4x⁴"],"answer":0,"explanation":"Using binomial theorem with n=4: coefficients are 1,4,6,4,1.","topic":"Binomial Theorem" },
+    { "id":"fmath-009","year":"jamb2011","question":"The solution to 2ˣ = 8 is","options":["x=1","x=2","x=3","x=4"],"answer":2,"explanation":"2³ = 8, so x = 3.","topic":"Exponential Equations" },
+    { "id":"fmath-010","year":"jamb2010","question":"The eigenvalue of matrix [[2,0],[0,3]] is","options":["2 and 3","2 only","3 only","0 and 5"],"answer":0,"explanation":"For a diagonal matrix, eigenvalues are the diagonal elements: 2 and 3.","topic":"Linear Algebra" }
+  ]
+}

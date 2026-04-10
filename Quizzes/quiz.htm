@@ -1,0 +1,478 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Quiz Arena — OAE</title>
+  <link rel="stylesheet" href="../Assets/css/quiz.css">
+  <link rel="stylesheet" href="../Assets/css/style.css">
+  <link rel="stylesheet" href="../Assets/css/quiz-navbar.css">
+  <link rel="stylesheet" href="../Assets/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .quiz-wrap { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .config-card {
+      background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(10,138,47,0.06); border: 1px solid var(--card-border);
+    }
+    body.dark-mode .config-card { background: #1a1a1a; border-color: #333; }
+    .config-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .config-header i { font-size: 1.8rem; color: var(--green); background: rgba(10,138,47,0.1); padding: 10px; border-radius: 12px; }
+    .config-header h3 { margin: 0; font-size: 1.4rem; color: var(--oae-dark); }
+    body.dark-mode .config-header h3 { color: #eee; }
+    .mode-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .mode-card {
+      border: 2px solid var(--card-border); border-radius: 16px; padding: 24px 20px;
+      cursor: pointer; background: var(--card);
+    }
+    .mode-card.active { border-color: var(--green); background: rgba(10,138,47,0.04); }
+    .mode-card i { font-size: 2rem; color: var(--green); margin-bottom: 12px; }
+    .mode-card h4 { margin: 0 0 8px; color: var(--oae-dark); }
+    .mode-card p { margin: 0; color: var(--muted); }
+    .subject-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 14px; }
+    .subject-card {
+      padding: 16px 20px; border: 2px solid var(--card-border); border-radius: 14px;
+      cursor: pointer; background: var(--card); text-align: center; font-weight: 600;
+      color: var(--oae-dark); transition: all 0.15s;
+    }
+    .subject-card.selected { border-color: var(--green); background: rgba(10,138,47,0.1); }
+    .subject-card.disabled { opacity: 0.5; pointer-events: none; }
+    .summary-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(10,138,47,0.05); padding: 20px 30px; border-radius: 18px;
+    }
+    .btn-primary {
+      background: var(--green); color: white; border: none; padding: 14px 34px;
+      border-radius: 14px; font-weight: 700; font-size: 1rem; cursor: pointer;
+    }
+    .btn-outline {
+      background: transparent; border: 1.5px solid #ccc; padding: 14px 28px;
+      border-radius: 14px; font-weight: 600; cursor: pointer;
+    }
+    .filter-select {
+      padding: 8px 16px; border: 1px solid var(--card-border); border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="quiz-navbar">
+    <div class="quiz-logo"><a href="/Index.htm"><img class="logo-quiz" src="/oae.png" alt="OAE"></a></div>
+    <div class="quiz-search-section">
+      <div class="quiz-search-container"><i class="fas fa-search"></i><input placeholder="Search quizzes..."><button class="quiz-search-btn">Search</button></div>
+    </div>
+    <div class="quiz-nav-container">
+      <ul class="quiz-nav-links">
+        <li><a href="#">Practice <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="#">Subjects <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="#">Leaderboard <i class="fas fa-chevron-down"></i></a></li>
+      </ul>
+    </div>
+    <button class="quiz-join-btn">Join OAE</button>
+    <button class="quiz-hamburger"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <main class="section">
+    <div class="quiz-wrap">
+      <header class="quiz-header">
+        <h1 class="quiz-title">Smart Quiz Arena</h1>
+        <div class="small">Choose your mode and subjects — let's practice.</div>
+      </header>
+
+      <div class="config-card">
+        <div class="config-header"><i class="fas fa-sliders-h"></i><h3>1. Select Mode</h3></div>
+        <div class="mode-cards">
+          <div class="mode-card active" data-mode="exam"><i class="fas fa-clock"></i><h4>Exam Mode</h4><p>English (60Q) + 3 others. 1h 45m strict.</p></div>
+          <div class="mode-card" data-mode="quiz"><i class="fas fa-gamepad"></i><h4>Quiz Mode</h4><p>Any subjects, custom time, hints.</p></div>
+          <div class="mode-card" data-mode="study"><i class="fas fa-book-open"></i><h4>Study Mode</h4><p>Filter by topic/year. Explanations.</p></div>
+        </div>
+      </div>
+
+      <div class="config-card">
+        <div class="config-header"><i class="fas fa-graduation-cap"></i><h3>2. Exam Type</h3></div>
+        <div style="display:flex;gap:24px;">
+          <label><input type="radio" name="examType" value="JAMB" checked> JAMB</label>
+          <label><input type="radio" name="examType" value="WAEC"> WAEC</label>
+          <label><input type="radio" name="examType" value="NECO"> NECO</label>
+        </div>
+      </div>
+
+      <div class="config-card">
+        <div class="config-header"><i class="fas fa-book"></i><h3>3. Choose Subjects</h3></div>
+        <div id="subject-container" class="subject-grid"></div>
+        <div id="subject-message" style="margin-top:16px;color:var(--muted);"></div>
+      </div>
+
+      <div class="config-card" id="study-filters" style="display:none;">
+        <div class="config-header"><i class="fas fa-filter"></i><h3>4. Study Filters</h3></div>
+        <div style="display:flex;gap:20px;">
+          <select id="topic-filter" class="filter-select" disabled><option>All Topics</option></select>
+          <select id="year-filter" class="filter-select" disabled><option>All Years</option></select>
+        </div>
+      </div>
+
+      <div class="config-card">
+        <div class="config-header"><i class="fas fa-cog"></i><h3>4. Settings</h3></div>
+        <div style="display:flex;gap:30px;flex-wrap:wrap;">
+          <div><i class="fas fa-hourglass-half"></i> Time (min): <input type="number" id="time-limit" value="105" min="5" max="300" style="width:80px;padding:8px;" disabled></div>
+          <div><label><input type="checkbox" id="allow-hints" disabled> Enable Hints</label></div>
+          <div><label><input type="checkbox" id="shuffle-options" checked> Shuffle Options</label></div>
+        </div>
+      </div>
+
+      <div class="summary-bar">
+        <div><strong>Selected:</strong> <span id="selected-subjects-text">English</span><br><span class="small" id="question-count-display">60 questions</span></div>
+        <div>
+          <button class="btn-outline" onclick="location.href='../Index.htm'"><i class="fas fa-arrow-left"></i> Home</button>
+          <button class="btn-primary" id="start-quiz-btn"><i class="fas fa-play"></i> Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quiz-container" style="margin-top:30px;"></div>
+    </div>
+  </main>
+
+  <footer class="oae-footer">
+    <div class="footer-connect"><h3>Connect With Us</h3><hr><div class="socials-bar"><a href="#"><i class="ri-twitter-x-fill"></i></a><a href="#"><i class="ri-telegram-fill"></i></a></div></div>
+    <div class="footer-bottom"><p>© 2025 OAE. All rights reserved.</p></div>
+  </footer>
+
+  <script src="../Assets/js/quiz-core.js"></script>
+  <script src="../Assets/js/quiz-data.js"></script>
+  <script src="../Assets/js/quiz-render.js"></script>
+  <script>
+    (function(){
+      const subjects = [
+        { id: 'english', name: 'English', cap: 60 },
+        { id: 'mathematics', name: 'Mathematics', cap: 40 },
+        { id: 'physics', name: 'Physics', cap: 40 },
+        { id: 'chemistry', name: 'Chemistry', cap: 40 },
+        { id: 'biology', name: 'Biology', cap: 40 },
+        { id: 'economics', name: 'Economics', cap: 40 },
+        { id: 'accounting', name: 'Accounting', cap: 40 },
+        { id: 'government', name: 'Government', cap: 40 },
+        { id: 'literature', name: 'Literature', cap: 40 },
+        { id: 'crs', name: 'CRS', cap: 40 }
+      ];
+
+      let currentMode = 'exam';
+      let selectedSubjects = new Set(['english']);
+      
+      const modeCards = document.querySelectorAll('.mode-card');
+      const subjectContainer = document.getElementById('subject-container');
+      const subjectMessage = document.getElementById('subject-message');
+      const studyFilters = document.getElementById('study-filters');
+      const timeLimitInput = document.getElementById('time-limit');
+      const allowHintsCheck = document.getElementById('allow-hints');
+      const selectedSubjectsText = document.getElementById('selected-subjects-text');
+      const questionCountDisplay = document.getElementById('question-count-display');
+      const startBtn = document.getElementById('start-quiz-btn');
+
+      const loader = new QuizDataLoader();
+
+      function updateUIForMode() {
+        if (currentMode === 'exam') {
+          timeLimitInput.value = 105; timeLimitInput.disabled = true;
+          allowHintsCheck.disabled = true; allowHintsCheck.checked = false;
+          studyFilters.style.display = 'none';
+          subjectMessage.textContent = 'English is required. Select exactly 3 more subjects.';
+          selectedSubjects.add('english');
+        } else if (currentMode === 'quiz') {
+          timeLimitInput.disabled = false; timeLimitInput.value = 30;
+          allowHintsCheck.disabled = false;
+          studyFilters.style.display = 'none';
+          subjectMessage.textContent = 'Select any subjects.';
+        } else {
+          timeLimitInput.disabled = false; timeLimitInput.value = 30;
+          allowHintsCheck.disabled = false;
+          studyFilters.style.display = 'block';
+          subjectMessage.textContent = 'Select subjects and optional filters.';
+        }
+        renderSubjects();
+        updateSummary();
+      }
+
+      function renderSubjects() {
+        subjectContainer.innerHTML = '';
+        const selectedArray = Array.from(selectedSubjects);
+        
+        subjects.forEach(subj => {
+          const isEnglishExam = (currentMode === 'exam' && subj.id === 'english');
+          const isDisabled = (currentMode === 'exam' && !isEnglishExam && selectedArray.length >= 4 && !selectedSubjects.has(subj.id));
+          
+          const card = document.createElement('div');
+          card.className = 'subject-card' + (selectedSubjects.has(subj.id) ? ' selected' : '') + (isDisabled ? ' disabled' : '');
+          card.innerHTML = `<i class="fas fa-book"></i> ${subj.name} (${subj.cap} Qs)`;
+          
+          card.addEventListener('click', () => {
+            if (isDisabled) return;
+            if (isEnglishExam) return;
+            
+            if (selectedSubjects.has(subj.id)) {
+              if (currentMode === 'exam' && subj.id === 'english') return;
+              selectedSubjects.delete(subj.id);
+            } else {
+              if (currentMode === 'exam' && selectedSubjects.size >= 4) {
+                alert('Exam mode allows maximum 4 subjects.');
+                return;
+              }
+              selectedSubjects.add(subj.id);
+            }
+            renderSubjects();
+            updateSummary();
+          });
+          
+          subjectContainer.appendChild(card);
+        });
+      }
+
+      function updateSummary() {
+        const selectedArray = Array.from(selectedSubjects);
+        let totalQ = 0;
+        selectedArray.forEach(id => {
+          const subj = subjects.find(s => s.id === id);
+          if (subj) totalQ += subj.cap;
+        });
+        const names = selectedArray.map(id => subjects.find(s => s.id === id).name).join(', ');
+        selectedSubjectsText.textContent = names || 'None';
+        questionCountDisplay.textContent = `${totalQ} questions`;
+      }
+
+      modeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          modeCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          currentMode = card.dataset.mode;
+          if (currentMode === 'exam') selectedSubjects.add('english');
+          updateUIForMode();
+        });
+      });
+
+      // Helper function to shuffle options
+      function shuffleOptionsForQuestion(q, shouldShuffle) {
+        if (!shouldShuffle) {
+          return {
+            ...q,
+            options: [...q.options],
+            answer: q.answer
+          };
+        }
+        
+        const options = [...q.options];
+        const correctOption = options[q.answer];
+        
+        // Fisher-Yates shuffle
+        for (let i = options.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [options[i], options[j]] = [options[j], options[i]];
+        }
+        
+        const newAnswerIndex = options.indexOf(correctOption);
+        
+        return {
+          ...q,
+          options: options,
+          answer: newAnswerIndex
+        };
+      }
+
+      startBtn.addEventListener('click', async () => {
+        const selected = Array.from(selectedSubjects);
+        if (selected.length === 0) return alert('Select at least one subject.');
+        if (currentMode === 'exam' && selected.length !== 4) return alert('Exam mode requires exactly 4 subjects.');
+        
+        const container = document.getElementById('quiz-container');
+        container.innerHTML = `<div style="text-align:center;padding:40px;"><i class="fas fa-spinner fa-spin"></i> Loading questions...</div>`;
+        
+        const examType = document.querySelector('input[name="examType"]:checked').value;
+        const timeLimit = parseInt(timeLimitInput.value);
+        const allowHints = allowHintsCheck.checked;
+        const shouldShuffle = document.getElementById('shuffle-options').checked;
+        
+        try {
+          const questionsBySubject = {};
+          
+          for (const subjId of selected) {
+            const allQuestions = await loader.loadSubject(subjId);
+            const cap = subjects.find(s => s.id === subjId).cap;
+            
+            // Ensure we have an array
+            let questionPool = Array.isArray(allQuestions) ? allQuestions : [];
+            
+            // Filter by exam type if needed
+            if (examType) {
+              questionPool = questionPool.filter(q => {
+                if (!q.exam) return true;
+                return Array.isArray(q.exam) ? q.exam.includes(examType) : q.exam === examType;
+              });
+            }
+            
+            // Select random questions up to cap
+            let selectedQs = [];
+            if (questionPool.length <= cap) {
+              selectedQs = [...questionPool];
+            } else {
+              const shuffled = [...questionPool].sort(() => Math.random() - 0.5);
+              selectedQs = shuffled.slice(0, cap);
+            }
+            
+            // Shuffle options if needed
+            const preparedQs = selectedQs.map((q, idx) => {
+              const shuffled = shuffleOptionsForQuestion(q, shouldShuffle);
+              return {
+                ...shuffled,
+                questionNumber: idx + 1,
+                subject: subjId
+              };
+            });
+            
+            questionsBySubject[subjId] = preparedQs;
+          }
+          
+          const engine = new QuizEngine({
+            mode: currentMode,
+            subjects: selected,
+            timeLimit,
+            allowHints,
+            shuffleOptions: shouldShuffle,
+            examType
+          });
+          
+          engine.questionsBySubject = questionsBySubject;
+          engine.currentSubject = Object.keys(questionsBySubject)[0];
+          engine.currentIndex = 0;
+          engine.remainingSeconds = timeLimit * 60;
+          
+          const renderer = new QuizRenderer(engine, 'quiz-container');
+          
+          engine.getCurrentQuestion = function() {
+            if (!this.currentSubject) return null;
+            const qs = this.questionsBySubject[this.currentSubject];
+            return qs ? qs[this.currentIndex] : null;
+          };
+          
+          engine.getSubjects = function() {
+            return Object.keys(this.questionsBySubject);
+          };
+          
+          engine.switchSubject = function(subjectId) {
+            if (this.questionsBySubject[subjectId]) {
+              this.currentSubject = subjectId;
+              this.currentIndex = 0;
+              if (this.onQuestionChange) {
+                this.onQuestionChange(this.getCurrentQuestion(), 0, this.questionsBySubject[subjectId].length, subjectId);
+              }
+              return true;
+            }
+            return false;
+          };
+          
+          engine.getSubjectQuestionCount = function(subjectId) {
+            return this.questionsBySubject[subjectId]?.length || 0;
+          };
+          
+          engine.goToQuestion = function(index) {
+            const qs = this.questionsBySubject[this.currentSubject];
+            if (qs && index >= 0 && index < qs.length) {
+              this.currentIndex = index;
+              if (this.onQuestionChange) {
+                this.onQuestionChange(qs[index], index, qs.length, this.currentSubject);
+              }
+              return true;
+            }
+            return false;
+          };
+          
+          engine.nextQuestion = function() {
+            const qs = this.questionsBySubject[this.currentSubject];
+            if (qs && this.currentIndex < qs.length - 1) {
+              return this.goToQuestion(this.currentIndex + 1);
+            }
+            return false;
+          };
+          
+          engine.previousQuestion = function() {
+            if (this.currentIndex > 0) {
+              return this.goToQuestion(this.currentIndex - 1);
+            }
+            return false;
+          };
+          
+          engine.saveAnswer = function(questionId, selectedIndex) {
+            this.userAnswers.set(questionId, selectedIndex);
+          };
+          
+          engine.getAnswer = function(questionId) {
+            return this.userAnswers.get(questionId);
+          };
+          
+          engine.getAnsweredCount = function(subjectId = null) {
+            if (subjectId) {
+              const qs = this.questionsBySubject[subjectId] || [];
+              return qs.filter(q => this.userAnswers.has(q.id)).length;
+            }
+            return this.userAnswers.size;
+          };
+          
+          engine.calculateResults = function() {
+            let totalCorrect = 0, totalQuestions = 0;
+            for (const qs of Object.values(this.questionsBySubject)) {
+              qs.forEach(q => {
+                totalQuestions++;
+                if (this.userAnswers.get(q.id) === q.answer) totalCorrect++;
+              });
+            }
+            return {
+              totalQuestions,
+              totalCorrect,
+              totalPercentage: totalQuestions ? ((totalCorrect/totalQuestions)*100).toFixed(1) : 0
+            };
+          };
+          
+          engine.finishQuiz = function() {
+            if (this.completed) return;
+            this.completed = true;
+            if (this.timerInterval) clearInterval(this.timerInterval);
+            const results = this.calculateResults();
+            if (this.onQuizComplete) this.onQuizComplete(results);
+            return results;
+          };
+          
+          engine.startTimer = function() {
+            if (this.timerInterval) clearInterval(this.timerInterval);
+            this.timerInterval = setInterval(() => {
+              if (this.completed) return;
+              this.remainingSeconds--;
+              if (this.onTimerTick) {
+                this.onTimerTick(this.remainingSeconds, this.formatTime(this.remainingSeconds));
+              }
+              if (this.remainingSeconds <= 0) {
+                this.remainingSeconds = 0;
+                this.finishQuiz();
+              }
+            }, 1000);
+          };
+          
+          engine.formatTime = function(sec) {
+            const h = Math.floor(sec / 3600);
+            const m = Math.floor((sec % 3600) / 60);
+            const s = sec % 60;
+            return h > 0 ? `${h}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}` 
+                         : `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+          };
+          
+          engine.onQuizComplete = (res) => renderer.renderResults(res);
+          engine.startTimer();
+          renderer.renderQuiz();
+          
+        } catch (e) {
+          console.error(e);
+          container.innerHTML = `<div style="color:red;padding:20px;">Error: ${e.message}</div>`;
+        }
+      });
+
+      updateUIForMode();
+    })();
+  </script>
+</body>
+</html>

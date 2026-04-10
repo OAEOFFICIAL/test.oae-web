@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Music", "totalAvailable": 10 },
+  "questions": [
+    { "id":"music-001","year":"jamb2019","question":"The standard musical staff has how many lines?","options":["3","4","5","6"],"answer":2,"explanation":"The musical staff consists of 5 horizontal lines.","topic":"Music Theory" },
+    { "id":"music-002","year":"jamb2018","question":"The treble clef is also known as the","options":["G clef","C clef","F clef","B clef"],"answer":0,"explanation":"The treble clef is the G clef.","topic":"Musical Notation" },
+    { "id":"music-003","year":"jamb2017","question":"How many semitones are in an octave?","options":["8","10","12","14"],"answer":2,"explanation":"An octave contains 12 semitones.","topic":"Intervals" },
+    { "id":"music-004","year":"jamb2016","question":"The time signature 4/4 means","options":["4 beats per measure, quarter note gets one beat","3 beats per measure, quarter note gets one beat","2 beats per measure, half note gets one beat","8 beats per measure, eighth note gets one beat"],"answer":0,"explanation":"4/4 time has 4 beats per measure with a quarter note receiving one beat.","topic":"Time Signatures" },
+    { "id":"music-005","year":"jamb2015","question":"Which instrument is not a percussion instrument?","options":["Drum","Violin","Gong","Xylophone"],"answer":1,"explanation":"Violin is a string instrument, not percussion.","topic":"Instruments" },
+    { "id":"music-006","year":"jamb2014","question":"The musical note with the shortest duration is","options":["Whole note","Half note","Quarter note","Sixteenth note"],"answer":3,"explanation":"The sixteenth note has the shortest standard duration.","topic":"Note Values" },
+    { "id":"music-007","year":"jamb2013","question":"A major scale has how many semitones between the tonic and octave?","options":["10","11","12","13"],"answer":2,"explanation":"A major scale spans 12 semitones (one octave).","topic":"Scales" },
+    { "id":"music-008","year":"jamb2012","question":"The term 'forte' in music means","options":["soft","moderately loud","very loud","loud"],"answer":3,"explanation":"Forte means loud or strong in Italian musical terms.","topic":"Dynamics" },
+    { "id":"music-009","year":"jamb2011","question":"Which of these is a woodwind instrument?","options":["Trumpet","Clarinet","Violin","Trombone"],"answer":1,"explanation":"Clarinet is a woodwind instrument.","topic":"Instruments" },
+    { "id":"music-010","year":"jamb2010","question":"The speed at which music is played is called","options":["Rhythm","Tempo","Beat","Meter"],"answer":1,"explanation":"Tempo refers to the speed of music.","topic":"Music Terminology" }
+  ]
+}

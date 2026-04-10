@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"biology", "totalAvailable": 10 },
+  "questions": [
+    { "id":"bio-001","year":"jamb2019","question":"Photosynthesis occurs in","options":["Mitochondria","Chloroplast","Ribosome","Nucleus"],"answer":1,"explanation":"Chloroplasts contain chlorophyll for photosynthesis.","topic":"Cell Biology"},
+    { "id":"bio-002","year":"jamb2018","question":"DNA stands for","options":["Deoxyribonucleic acid","Ribonucleic acid","Deoxyric acid","None"],"answer":0,"explanation":"DNA = Deoxyribonucleic acid.","topic":"Genetics & Evolution"},
+    { "id":"bio-003","year":"jamb2017","question":"Plant transport of water is mainly through","options":["Phloem","Xylem","Epidermis","Cortex"],"answer":1,"explanation":"Xylem transports water and minerals.","topic":"Plant Physiology"},
+    { "id":"bio-004","year":"jamb2016","question":"Blood cell that fights infection","options":["Red blood cell","White blood cell","Platelet","Plasma"],"answer":1,"explanation":"White blood cells are part of immune system.","topic":"Human Physiology"},
+    { "id":"bio-005","year":"jamb2015","question":"Enzymes are","options":["Lipids","Proteins","Carbohydrates","Nucleic acids"],"answer":1,"explanation":"Most enzymes are proteins.","topic":"Cell Biology"},
+    { "id":"bio-006","year":"jamb2014","question":"Osmosis is","options":["diffusion of solute","diffusion of solvent through semipermeable membrane","active transport","facilitated diffusion"],"answer":1,"explanation":"Osmosis is solvent movement across membrane.","topic":"Cell Biology"},
+    { "id":"bio-007","year":"jamb2013","question":"Site of aerobic respiration","options":["Chloroplast","Mitochondrion","Golgi","Rough ER"],"answer":1,"explanation":"Mitochondria generate ATP aerobically.","topic":"Cell Biology"},
+    { "id":"bio-008","year":"jamb2012","question":"Mendel is known for","options":["cell theory","law of inheritance","evolution","gene theory"],"answer":1,"explanation":"Mendel formulated laws of inheritance.","topic":"Genetics & Evolution"},
+    { "id":"bio-009","year":"jamb2011","question":"Tissues make up","options":["Organs","Cells","Systems","Organelle"],"answer":0,"explanation":"Tissues combine to form organs.","topic":"Human Physiology"},
+    { "id":"bio-010","year":"jamb2010","question":"Homeostasis refers to","options":["change","stable internal environment","disease","growth"],"answer":1,"explanation":"Maintaining stable internal conditions.","topic":"Human Physiology"}
+  ]
+}

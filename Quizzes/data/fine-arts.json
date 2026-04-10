@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Fine Arts", "totalAvailable": 10 },
+  "questions": [
+    { "id":"farts-001","year":"jamb2019","question":"Which artist is famous for the 'Mona Lisa'?","options":["Michelangelo","Leonardo da Vinci","Raphael","Donatello"],"answer":1,"explanation":"Leonardo da Vinci painted the Mona Lisa during the Renaissance.","topic":"Art History" },
+    { "id":"farts-002","year":"jamb2018","question":"Perspective in art is used to create the illusion of","options":["texture","depth","color","movement"],"answer":1,"explanation":"Perspective creates the illusion of depth and three-dimensional space on a flat surface.","topic":"Drawing Principles" },
+    { "id":"farts-003","year":"jamb2017","question":"The primary colors in painting are","options":["Red, Green, Blue","Red, Yellow, Blue","Orange, Green, Purple","Pink, Black, White"],"answer":1,"explanation":"Red, Yellow, and Blue are the primary colors in traditional painting.","topic":"Color Theory" },
+    { "id":"farts-004","year":"jamb2016","question":"Which sculpture technique involves removing material?","options":["Modeling","Carving","Casting","Welding"],"answer":1,"explanation":"Carving involves removing material from a block to create a sculpture.","topic":"Sculpture Techniques" },
+    { "id":"farts-005","year":"jamb2015","question":"The Renaissance period began in","options":["12th century","14th century","16th century","18th century"],"answer":1,"explanation":"The Renaissance began in Italy during the 14th century.","topic":"Art History" },
+    { "id":"farts-006","year":"jamb2014","question":"Complementary colors are","options":["shades of the same color","colors opposite on the color wheel","colors next to each other","dark and light versions"],"answer":1,"explanation":"Complementary colors are opposite each other on the color wheel.","topic":"Color Theory" },
+    { "id":"farts-007","year":"jamb2013","question":"The technique of using dots to create images is called","options":["pointillism","impressionism","cubism","surrealism"],"answer":0,"explanation":"Pointillism uses small dots of color applied to create the full image.","topic":"Painting Techniques" },
+    { "id":"farts-008","year":"jamb2012","question":"Which element of art deals with the surface qualities?","options":["Form","Texture","Shape","Value"],"answer":1,"explanation":"Texture refers to the surface qualities of an artwork.","topic":"Elements of Art" },
+    { "id":"farts-009","year":"jamb2011","question":"Symmetry in art occurs when","options":["objects are randomly placed","objects balance around a center point","colors blend smoothly","lines are always curved"],"answer":1,"explanation":"Symmetry occurs when objects balance around a central point.","topic":"Composition" },
+    { "id":"farts-010","year":"jamb2010","question":"The vanishing point in perspective is where","options":["lines come together in the distance","the artist stands","colors fade","shadows appear"],"answer":0,"explanation":"The vanishing point is where parallel lines appear to converge in the distance.","topic":"Perspective" }
+  ]
+}

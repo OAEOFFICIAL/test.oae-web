@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Geography", "totalAvailable": 10 },
+  "questions": [
+    { "id":"geo-001","year":"jamb2019","question":"The largest desert in Africa is","options":["Kalahari","Sahara","Namib","Gobi"],"answer":1,"explanation":"The Sahara is the largest desert in Africa.","topic":"African Geography" },
+    { "id":"geo-002","year":"jamb2018","question":"The Earth's atmosphere is primarily composed of","options":["Oxygen","Nitrogen and Oxygen","Carbon dioxide","Hydrogen"],"answer":1,"explanation":"The atmosphere is about 78% nitrogen and 21% oxygen.","topic":"Atmosphere" },
+    { "id":"geo-003","year":"jamb2017","question":"The process by which rock is broken down into smaller pieces is called","options":["Erosion","Weathering","Deposition","Metamorphism"],"answer":1,"explanation":"Weathering is the breakdown of rock.","topic":"Geomorphology" },
+    { "id":"geo-004","year":"jamb2016","question":"Which of these is a renewable resource?","options":["Coal","Petroleum","Forests","Natural gas"],"answer":2,"explanation":"Forests are renewable resources that can regenerate.","topic":"Resources" },
+    { "id":"geo-005","year":"jamb2015","question":"The Equator is located at","options":["0° latitude","23.5° latitude","90° latitude","45° latitude"],"answer":0,"explanation":"The Equator is at 0° latitude.","topic":"Latitude and Longitude" },
+    { "id":"geo-006","year":"jamb2014","question":"Nigeria's position in terms of latitude is","options":["Between 0° and 4° N","Between 4° and 14° N","Between 14° and 24° N","Between 24° and 34° N"],"answer":1,"explanation":"Nigeria is located between 4° and 14° North latitude.","topic":"African Geography" },
+    { "id":"geo-007","year":"jamb2013","question":"The process of population moving from rural to urban areas is called","options":["Emigration","Immigration","Urbanization","Migration"],"answer":2,"explanation":"Urbanization is the movement from rural to urban areas.","topic":"Human Geography" },
+    { "id":"geo-008","year":"jamb2012","question":"Tropical rainforests are found in areas with","options":["high rainfall and high temperature","low rainfall and low temperature","high rainfall and low temperature","low rainfall and high temperature"],"answer":0,"explanation":"Tropical rainforests have high rainfall and high temperatures.","topic":"Climate and Vegetation" },
+    { "id":"geo-009","year":"jamb2011","question":"The phenomenon of global warming is primarily caused by","options":["ozone depletion","acid rain","greenhouse gas emissions","deforestation only"],"answer":2,"explanation":"Greenhouse gas emissions are the primary cause of global warming.","topic":"Environmental Issues" },
+    { "id":"geo-010","year":"jamb2010","question":"Lagos is located at approximately","options":["3° E, 6° N","5° E, 6° N","6° E, 3° N","8° E, 6° N"],"answer":0,"explanation":"Lagos is at approximately 3° E, 6° N.","topic":"African Geography" }
+  ]
+}

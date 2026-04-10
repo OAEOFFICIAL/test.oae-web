@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OAE — Science Quizzes</title>
+  <link rel="stylesheet" href="/Assets/css/quiz.css">
+  <link rel="stylesheet" href="/Assets/css/style.css">
+  <link rel="stylesheet" href="/Assets/css/quiz-navbar.css">
+  <link rel="stylesheet" href="/Assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="quiz-navbar">
+    <div class="quiz-logo">
+      <a href="/Index.htm"><img class="logo-quiz" src="/oae.png" alt="OAE"></a>
+    </div>
+    <div class="quiz-search-section">
+      <div class="quiz-search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search quizzes, subjects...">
+        <button class="quiz-search-btn">Search</button>
+      </div>
+    </div>
+    <div class="quiz-nav-container">
+      <ul class="quiz-nav-links">
+        <li><a href="/Quizzes/index.htm"><i class="fas fa-arrow-left"></i> Back to Quiz Hub</a></li>
+      </ul>
+    </div>
+    <button class="quiz-join-btn" id="quizJoinBtn">Join OAE</button>
+    <button class="quiz-hamburger" id="quizHamburger"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <main class="quiz-container" style="padding:40px 20px">
+    <!-- HEADER -->
+    <section style="background:linear-gradient(135deg, #1f4b3f 0%, #0a8a2f 100%);padding:60px 40px;border-radius:20px;margin-bottom:60px;text-align:center;color:white">
+      <h1 style="margin:0 0 16px;font-size:2.6rem;font-weight:800">Science Department</h1>
+      <p style="margin:0 auto;max-width:700px;font-size:1.1rem;line-height:1.8;opacity:0.95">
+        Master science subjects with comprehensive quizzes covering Physics, Chemistry, and Biology. Perfect for JAMB, WAEC, and NECO exam preparation.
+      </p>
+    </section>
+
+    <!-- SUBJECTS GRID -->
+    <section style="margin-bottom:60px">
+      <h2 style="text-align:center;font-size:2rem;font-weight:700;color:var(--oae-dark);margin-bottom:40px">
+        <i class="fas fa-flask" style="color:var(--green);margin-right:12px"></i>Science Subjects
+      </h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:1200px;margin:0 auto">
+        <!-- Physics -->
+        <div style="background:white;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(10,138,47,0.08);border-left:6px solid #1f4b3f;transition:all 0.3s" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(10,138,47,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(10,138,47,0.08)'">
+          <div style="font-size:3rem;color:var(--green);margin-bottom:16px"><i class="fas fa-atom"></i></div>
+          <h3 style="margin:0 0 12px;color:var(--oae-dark);font-size:1.4rem;font-weight:700">Physics</h3>
+          <p style="color:var(--muted);margin:0 0 24px;font-size:0.95rem;line-height:1.7">
+            Mechanics, Electricity, Thermodynamics, Waves & Optics, Modern Physics. Complete topic coverage for exams.
+          </p>
+          <ul style="margin:0 0 24px;padding-left:0;list-style:none;color:var(--oae-dark);font-size:0.9rem">
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>150+ Questions</li>
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>5 Major Topics</li>
+            <li><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>Video Tutorials</li>
+          </ul>
+          <a href="../../quiz.htm?subject=physics" style="display:inline-block;padding:12px 28px;background:var(--green);color:white;border:none;border-radius:8px;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='#066426'" onmouseout="this.style.background='var(--green)'">
+            Start Physics Quiz
+          </a>
+        </div>
+
+        <!-- Chemistry -->
+        <div style="background:white;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(10,138,47,0.08);border-left:6px solid #1f4b3f;transition:all 0.3s" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(10,138,47,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(10,138,47,0.08)'">
+          <div style="font-size:3rem;color:var(--green);margin-bottom:16px"><i class="fas fa-flask"></i></div>
+          <h3 style="margin:0 0 12px;color:var(--oae-dark);font-size:1.4rem;font-weight:700">Chemistry</h3>
+          <p style="color:var(--muted);margin:0 0 24px;font-size:0.95rem;line-height:1.7">
+            Organic, Inorganic & Physical Chemistry. Reactions, equations, mechanisms, and stoichiometry drills.
+          </p>
+          <ul style="margin:0 0 24px;padding-left:0;list-style:none;color:var(--oae-dark);font-size:0.9rem">
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>140+ Questions</li>
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>Reaction Mechanism</li>
+            <li><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>Practice Calculations</li>
+          </ul>
+          <a href="../../quiz.htm?subject=chemistry" style="display:inline-block;padding:12px 28px;background:var(--green);color:white;border:none;border-radius:8px;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='#066426'" onmouseout="this.style.background='var(--green)'">
+            Start Chemistry Quiz
+          </a>
+        </div>
+
+        <!-- Biology -->
+        <div style="background:white;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(10,138,47,0.08);border-left:6px solid #1f4b3f;transition:all 0.3s" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 16px 40px rgba(10,138,47,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(10,138,47,0.08)'">
+          <div style="font-size:3rem;color:var(--green);margin-bottom:16px"><i class="fas fa-dna"></i></div>
+          <h3 style="margin:0 0 12px;color:var(--oae-dark);font-size:1.4rem;font-weight:700">Biology</h3>
+          <p style="color:var(--muted);margin:0 0 24px;font-size:0.95rem;line-height:1.7">
+            Anatomy, Ecology, Genetics, Cell Biology. Comprehensive coverage for JAMB and WAEC styles.
+          </p>
+          <ul style="margin:0 0 24px;padding-left:0;list-style:none;color:var(--oae-dark);font-size:0.9rem">
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>130+ Questions</li>
+            <li style="margin-bottom:8px"><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>Diagram Practice</li>
+            <li><i class="fas fa-check" style="color:var(--green);margin-right:8px"></i>Experiment Notes</li>
+          </ul>
+          <a href="../../quiz.htm?subject=biology" style="display:inline-block;padding:12px 28px;background:var(--green);color:white;border:none;border-radius:8px;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='#066426'" onmouseout="this.style.background='var(--green)'">
+            Start Biology Quiz
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL SCIENCE SUBJECTS -->
+    <section style="background:linear-gradient(135deg, rgba(10,138,47,0.05) 0%, rgba(10,138,47,0.02) 100%);padding:40px;border-radius:16px;margin-bottom:60px">
+      <h3 style="margin:0 0 24px;color:var(--oae-dark);font-size:1.5rem;font-weight:700">
+        <i class="fas fa-plus-circle" style="color:var(--green);margin-right:8px"></i>Extended Science
+      </h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+        <a href="../../quiz.htm?subject=geography" style="padding:20px;background:white;border-left:4px solid var(--green);border-radius:8px;text-decoration:none;color:var(--oae-dark);transition:all 0.3s;display:flex;align-items:center;gap:12px" onmouseover="this.style.boxShadow='0 8px 16px rgba(10,138,47,0.1)'" onmouseout="this.style.boxShadow='none'">
+          <i class="fas fa-globe" style="font-size:1.5rem;color:var(--green)"></i>
+          <div>
+            <strong>Geography</strong>
+            <div style="font-size:0.85rem;color:var(--muted)">Physical & Human</div>
+          </div>
+        </a>
+        <a href="../../quiz.htm?subject=irs" style="padding:20px;background:white;border-left:4px solid var(--green);border-radius:8px;text-decoration:none;color:var(--oae-dark);transition:all 0.3s;display:flex;align-items:center;gap:12px" onmouseover="this.style.boxShadow='0 8px 16px rgba(10,138,47,0.1)'" onmouseout="this.style.boxShadow='none'">
+          <i class="fas fa-heart" style="font-size:1.5rem;color:var(--green)"></i>
+          <div>
+            <strong>Islamic Studies</strong>
+            <div style="font-size:0.85rem;color:var(--muted)">IRS Complete</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:linear-gradient(135deg, var(--green) 0%, #0a6b2a 100%);padding:60px 40px;border-radius:16px;text-align:center;color:white">
+      <h2 style="margin:0 0 16px;font-size:1.8rem;font-weight:700">Ready to Master Science?</h2>
+      <p style="margin:0 0 28px;font-size:1rem;opacity:0.95">
+        Start practicing now with real exam-style questions and track your progress.
+      </p>
+      <a href="../.." style="display:inline-block;padding:14px 36px;background:white;color:var(--green);border:none;border-radius:10px;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        Back to Quiz Hub
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="oae-footer" style="margin-top:60px">
+    <div class="footer-connect">
+      <h3>Connect With Us</h3>
+      <hr>
+      <div class="socials-bar">
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+        <a href="#"><i class="ri-youtube-fill"></i></a>
+        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/Assets/js/quiz-navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact OAE | Oluwatosin Academy of Excellence</title>
+  <meta name="description" content="Get in touch with Oluwatosin Academy of Excellence - we're here to help with your educational needs.">
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <link rel="stylesheet" href="Assets/css/navbar-footer.css">
+  <link rel="stylesheet" href="Assets/css/layout.css">
+  <script defer src="Assets/js/animations.js"></script>
+  <script defer src="Assets/js/enhance-ui.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <a class="brand" href="Index.htm" aria-label="OAE home">
+      <div class="logo"><img src="OAE.png" alt="OAE Logo" class="logo-img"></div>
+    </a>
+    
+    <button class="mobile-toggle" aria-label="Open menu" onclick="openMobileMenu()">☰</button>
+  </header>
+
+  <div id="mobile-menu" style="position:fixed;right:0;top:0;height:100%;width:68%;max-width:380px;box-shadow:-8px 0 36px rgba(10,30,20,0.12);z-index:1001;padding:26px 22px;border-radius:8px;box-sizing:border-box">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div class="logo"><img src="OAE.png" alt="OAE Logo" class="logo-img"></div>
+      <button onclick="closeMobileMenu()" style="background:none;border:none;font-size:20px;cursor:pointer">×</button>
+    </div>
+    <nav style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+      <a href="Index.htm" style="text-decoration:none;color:#174d3a;font-weight:500">Home</a>
+      <a href="learning-hub.htm" style="text-decoration:none;color:#174d3a;font-weight:500">Learning Hub</a>
+      <a href="jamb.htm" style="text-decoration:none;color:#174d3a;font-weight:500">JAMB</a>
+      <a href="tech-careers.htm" style="text-decoration:none;color:#174d3a;font-weight:500">Tech Careers</a>
+      <a href="resources.htm" style="text-decoration:none;color:#174d3a;font-weight:500">Resources</a>
+      <a href="media.htm" style="text-decoration:none;color:#174d3a;font-weight:500">Media TV</a>
+    </nav>
+    <div style="margin-top:20px;padding-top:20px;border-top:1px solid #eafaf2">
+      <a href="login.htm" style="display:inline-block;text-decoration:none;color:#174d3a;font-weight:500;margin-right:10px">Log in</a>
+      <a href="signup.htm" style="display:inline-block;background:#1fb980;color:white;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:500">Sign up</a>
+    </div>
+  </div>
+
+  <main class="section" style="padding:20px;max-width:900px;margin:0 auto">
+    <h2 style="font-size:clamp(1.5rem,4vw,2.5rem);color:#174d3a;margin:20px 0 10px">Contact Us</h2>
+    <p class="muted">Have questions or feedback? We'd love to hear from you. Reach out to us below.</p>
+    
+    <div style="margin:30px 0;background:#eafaf2;padding:20px;border-radius:8px">
+      <h3 style="color:#174d3a;margin:0 0 15px">Get in Touch</h3>
+      <form style="display:flex;flex-direction:column;gap:12px">
+        <div>
+          <label for="name" style="display:block;margin-bottom:6px;font-weight:500">Name</label>
+          <input type="text" id="name" name="name" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box" required />
+        </div>
+        <div>
+          <label for="email" style="display:block;margin-bottom:6px;font-weight:500">Email</label>
+          <input type="email" id="email" name="email" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box" required />
+        </div>
+        <div>
+          <label for="message" style="display:block;margin-bottom:6px;font-weight:500">Message</label>
+          <textarea id="message" name="message" rows="5" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-family:inherit" required></textarea>
+        </div>
+        <button type="submit" style="background:#1fb980;color:white;padding:12px 20px;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer">Send Message</button>
+      </form>
+    </div>
+
+    <div style="margin:30px 0">
+      <h3 style="color:#174d3a;margin:20px 0 15px">Other Ways to Reach Us</h3>
+      <p><strong>Email:</strong> info@oae.edu.ng</p>
+      <p><strong>Phone:</strong> Coming soon</p>
+      <p><strong>Social Media:</strong> Follow us on social media for updates and announcements</p>
+    </div>
+  </main>
+
+  
+
+  <script src="Assets/js/home.js" defer></script>
+  <script src="Assets/js/navbar.js" defer></script>
+
+
+
+
+<footer class="oae-footer">
+
+  <!-- CONNECT WITH US BAR -->
+  <div class="footer-connect">
+    <h3>Connect With Us</h3>
+    <hr>
+    <div class="socials-bar">
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-twitter-x-fill"></i></a>
+      <a href="#"><i class="ri-youtube-fill"></i></a>
+      <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://t.me/OAECONNECT"><i class="ri-telegram-fill"></i></a>
+      <a href="mailto:oaeofficial123@gmail.com"><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+  <!-- TOP SECTION: Mission, Vision, Ambition (Summarized) -->
+  <div class="footer-top">
+    <div class="mission-container">
+      <img src="oaepic2.png" alt="OAE Mission" class="mission-img">
+      <div class="mission-text">
+        <p class="footer-mission-summary">
+          OAE is committed to delivering high-quality digital education from Nigeria to learners across Africa and the world. We provide verified exam preparation resources, tech tutorials, AI-enabled learning tools, and Web3-ready career pathways, helping students succeed academically and develop practical skills for the future.
+        </p>
+      </div>
+    </div>
+
+    <p class="short-about">
+      Oluwatosin Academy of Excellence (OAE) is a Nigerian EdTech organisation delivering exam preparation, tech tutorials, and learning tools to students in Nigeria, across Africa, and worldwide.
+    </p>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email for updates">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- GRID SECTION: Clean links without bullets -->
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>About OAE</h3>
+      <a href="#">Who We Are</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Our Team</a>
+      <a href="#">Our Story</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <a href="#">News & Updates</a>
+      <a href="#">Past Questions</a>
+      <a href="#">Exam Tips</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Coding Lessons</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Exam Categories</h3>
+      <a href="#">JAMB Resources</a>
+      <a href="#">WAEC Materials</a>
+      <a href="#">NECO Guides</a>
+      <a href="#">Post-UTME</a>
+      <a href="#">Mock Exams</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="contact-item"><i class="ri-map-pin-line"></i> Lagos, Nigeria</div>
+      <div class="contact-item"><i class="ri-mail-line"></i> oaeofficial123@gmail.com</div>
+      <div class="contact-item"><i class="ri-phone-line"></i> +234 705 176 3835</div>
+      <div class="contact-item"><i class="ri-whatsapp-line"></i> WhatsApp Available</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>🌍 Trusted by <strong>15,000+ learners</strong> across Nigeria, Africa, and the world.</p>
+    <p>© 2025 OAE — Oluwatosin Academy of Excellence. All rights reserved.</p>
+
+    <div class="legal-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Notice</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

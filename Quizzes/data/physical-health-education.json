@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"Physical & Health Education", "totalAvailable": 10 },
+  "questions": [
+    { "id":"phe-001","year":"jamb2019","question":"The recommended duration of moderate physical activity per week is","options":["30 minutes","75 minutes","150 minutes","300 minutes"],"answer":2,"explanation":"WHO recommends at least 150 minutes of moderate-intensity aerobic activity weekly.","topic":"Exercise" },
+    { "id":"phe-002","year":"jamb2018","question":"Which of these is NOT a component of health-related fitness?","options":["Cardiovascular endurance","Muscular strength","Flexibility","Beauty"],"answer":3,"explanation":"Beauty is not a component of health-related fitness.","topic":"Fitness Components" },
+    { "id":"phe-003","year":"jamb2017","question":"The normal resting heart rate for adults is","options":["40-60 bpm","60-100 bpm","100-120 bpm","120-140 bpm"],"answer":1,"explanation":"Normal resting heart rate for adults is 60-100 bpm.","topic":"Cardiovascular Health" },
+    { "id":"phe-004","year":"jamb2016","question":"Which exercise improves cardiovascular endurance?","options":["Weight lifting","Running","Stretching","Balance training"],"answer":1,"explanation":"Running is an excellent cardiovascular exercise.","topic":"Exercise" },
+    { "id":"phe-005","year":"jamb2015","question":"The main purpose of warm-up before exercise is to","options":["lose weight","increase body temperature","show off","feel tired"],"answer":1,"explanation":"Warm-up increases body temperature and prepares muscles for activity.","topic":"Exercise Safety" },
+    { "id":"phe-006","year":"jamb2014","question":"A nutritious diet should include","options":["proteins only","carbohydrates only","all nutrients balanced","only fats"],"answer":2,"explanation":"A balanced diet includes all necessary nutrients.","topic":"Nutrition" },
+    { "id":"phe-007","year":"jamb2013","question":"The ability to move joints through full range of motion is","options":["Strength","Flexibility","Endurance","Power"],"answer":1,"explanation":"Flexibility is the range of motion in joints.","topic":"Fitness Components" },
+    { "id":"phe-008","year":"jamb2012","question":"Which is the correct technique for CPR (chest compressions)?","options":["30 compressions at 60-80 bpm","100 compressions at 100-120 bpm","50 compressions at 50-70 bpm","20 compressions at 150 bpm"],"answer":1,"explanation":"CPR requires 100-120 chest compressions per minute.","topic":"First Aid" },
+    { "id":"phe-009","year":"jamb2011","question":"The side effects of physical inactivity include","options":["increased health","better sleep","obesity and cardiovascular disease","improved fitness"],"answer":2,"explanation":"Physical inactivity leads to obesity and cardiovascular disease.","topic":"Health" },
+    { "id":"phe-010","year":"jamb2010","question":"Safe water for drinking should be","options":["Clear","Free from pathogens","Properly treated","all of the above"],"answer":3,"explanation":"Safe water must be clear, pathogen-free, and properly treated.","topic":"Water Safety" }
+  ]
+}

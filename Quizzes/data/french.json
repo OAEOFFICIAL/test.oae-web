@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"French", "totalAvailable": 10 },
+  "questions": [
+    { "id":"french-001","year":"jamb2019","question":"'Bonjour' in French means","options":["Good evening","Good morning/Hello","Good night","Welcome"],"answer":1,"explanation":"Bonjour means hello or good day in French.","topic":"Greetings" },
+    { "id":"french-002","year":"jamb2018","question":"The French word for 'water' is","options":["Vin","Pain","Eau","Lait"],"answer":2,"explanation":"Eau is the French word for water.","topic":"Vocabulary" },
+    { "id":"french-003","year":"jamb2017","question":"How do you say 'Thank you' in French?","options":["S'il vous plaît","Merci","Oui","Non"],"answer":1,"explanation":"Merci means thank you in French.","topic":"Polite Expressions" },
+    { "id":"french-004","year":"jamb2016","question":"The verb 'être' means","options":["to have","to be","to go","to do"],"answer":1,"explanation":"Être means 'to be' in French.","topic":"Verbs" },
+    { "id":"french-005","year":"jamb2015","question":"'Je suis' translates to","options":["You are","They are","I am","He is"],"answer":2,"explanation":"Je suis means 'I am' in French.","topic":"Grammar" },
+    { "id":"french-006","year":"jamb2014","question":"The plural of 'une femme' is","options":["un femme","des femmes","les femme","une femmes"],"answer":1,"explanation":"Des femmes is the correct plural of 'une femme' (a woman).","topic":"Pluralization" },
+    { "id":"french-007","year":"jamb2013","question":"'Quel âge avez-vous?' means","options":["Where are you?","How are you?","What is your age?","What time is it?"],"answer":2,"explanation":"Quel âge avez-vous means 'How old are you?' or 'What is your age?'","topic":"Questions" },
+    { "id":"french-008","year":"jamb2012","question":"The number 10 in French is","options":["Huit","Neuf","Dix","Onze"],"answer":2,"explanation":"Dix is the French word for ten.","topic":"Numbers" },
+    { "id":"french-009","year":"jamb2011","question":"'Faire' means","options":["to go","to do/make","to see","to know"],"answer":1,"explanation":"Faire means 'to do' or 'to make' in French.","topic":"Verbs" },
+    { "id":"french-010","year":"jamb2010","question":"The adjective 'grand' means","options":["old","new","big/tall","small"],"answer":2,"explanation":"Grand means big or tall in French.","topic":"Adjectives" }
+  ]
+}

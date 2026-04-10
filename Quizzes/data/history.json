@@ -1,0 +1,15 @@
+{
+  "meta": { "subject":"history", "totalAvailable": 10 },
+  "questions": [
+    { "id":"his-001","year":"jamb2019","question":"The Berlin Conference (1884-85) concerned","options":["division of Africa among European powers","World War I","trade with Asia","American independence"],"answer":0,"explanation":"It regulated European colonization of Africa.","topic":"World History"},
+    { "id":"his-002","year":"jamb2018","question":"Colonialism generally refers to","options":["internal trade","political control of one country by another","independence movements","local governance"],"answer":1,"explanation":"Colonial rule by foreign powers.","topic":"World History"},
+    { "id":"his-003","year":"jamb2017","question":"Independence movements often aim to","options":["establish colonies","gain self-rule","increase taxes","form unions"],"answer":1,"explanation":"They seek self-rule and independence.","topic":"African History"},
+    { "id":"his-004","year":"jamb2016","question":"Industrial Revolution began in","options":["Nigeria","Britain","USA","China"],"answer":1,"explanation":"It started in Britain in late 18th century.","topic":"World History"},
+    { "id":"his-005","year":"jamb2015","question":"Archaeology studies","options":["past human activity through material remains","current news","business trends","sports"],"answer":0,"explanation":"Archaeology examines artifacts and remains.","topic":"History Methods"},
+    { "id":"his-006","year":"jamb2014","question":"Feudalism is a system of","options":["modern democracy","medieval land-based hierarchy","industrial capitalism","socialism"],"answer":1,"explanation":"Feudal system based on land tenure and allegiance.","topic":"World History"},
+    { "id":"his-007","year":"jamb2013","question":"The Trans-Atlantic Slave Trade mainly moved people from","options":["Europe to Africa","Africa to Americas","Asia to Africa","Americas to Europe"],"answer":1,"explanation":"Enslaved Africans were taken to the Americas.","topic":"African History"},
+    { "id":"his-008","year":"jamb2012","question":"Primary sources are","options":["first-hand original records","textbook summaries","fiction","interpretations"],"answer":0,"explanation":"Original documents provide primary evidence.","topic":"History Methods"},
+    { "id":"his-009","year":"jamb2011","question":"Nationalism is","options":["loyalty to a religion","loyalty and devotion to one's nation","a trade policy","an art style"],"answer":1,"explanation":"Nationalism emphasizes national identity.","topic":"African History"},
+    { "id":"his-010","year":"jamb2010","question":"Civilisation typically includes","options":["no cities","writing systems, cities and organized institutions","only hunting","no laws"],"answer":1,"explanation":"Civilisation involves complex social institutions.","topic":"World History"}
+  ]
+}
