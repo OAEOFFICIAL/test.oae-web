@@ -1,0 +1,43 @@
+/* =========================================
+   Page Layout Stylesheet
+   Purpose: Page structure & layout ONLY
+   - DO NOT add navbar, footer, or form styles here
+   Navbar: See navbar-footer.css
+   Footer: See footer.css
+   Forms: See auth.css, signup.css, login.css
+   ========================================= */
+
+/* Navbar styling now centralized in navbar-footer.css */
+/* layout.css is for page layout structure only - not navbar/footer */
+
+/* Footer styling now managed exclusively by footer.css (.oae-footer class) */
+/* Removed conflicting footer rules - layout.css should not style footer elements */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .links {
+    justify-content: center;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 4px 8px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+  }
+}

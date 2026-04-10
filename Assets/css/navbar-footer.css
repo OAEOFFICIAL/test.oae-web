@@ -1,0 +1,44 @@
+/*
+  Compatibility shim: many pages in this repo link to
+  `Assets/css/navbar-footer.css`. To avoid conflicting navbar
+  and footer rules across multiple stylesheets, this file now
+  forwards to the canonical `navbar.css` and `footer.css`.
+
+  This keeps existing <link> references working while ensuring
+  a single source of truth for navbar/footer styling.
+*/
+
+ /*@import url('navbar.css');
+@import url('footer.css');
+   { min-height: 70px;
+    gap: 12px;
+  }
+  
+  .brand h1 {
+    display: none;
+  }
+  
+  .logo {
+    width: 110px !important;
+    height: 36px !important;
+    min-width: 110px !important;
+    min-height: 36px !important;
+    max-width: 110px !important;
+    max-height: 36px !important;
+    flex-shrink: 0;}
+ 
+    Compatibility shim: many pages in this repo link to
+    `Assets/css/navbar-footer.css`. To avoid conflicting navbar
+    and footer rules across multiple stylesheets, this file now
+    forwards to the canonical `navbar.css` and `footer.css`.
+
+    This keeps existing <link> references working while ensuring
+    a single source of truth for navbar/footer styling.
+  
+
+  @import url('navbar.css');
+  @import url('footer.css');
+    border: none;
+
+    color: darkgreen !important;
+*/

@@ -1,0 +1,24 @@
+/* Styles specific to signup & login pages */
+@import url('style.css'); /* keep base styles available */
+
+.auth-container{
+  display:flex;align-items:center;justify-content:center;padding:40px 18px;background:linear-gradient(180deg,var(--bg),#fff);min-height:70vh
+}
+.auth-card{
+  width:100%;max-width:760px;background:linear-gradient(180deg,#fff,#fbfffb);border-radius:12px;padding:26px;box-shadow:0 14px 40px rgba(10,30,20,0.06);border:1px solid rgba(10,30,20,0.03)
+}
+.auth-card h2{margin:0 0 6px;color:green}
+.auth-card .subtitle{color:green;margin-bottom:12px}
+.form-group{margin-top:12px}
+.form-group label{display:block;font-weight:700;color:green;margin-bottom:6px}
+.form-group input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid rgba(10,30,20,0.06);background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6)}
+.signup-msg{margin-top:12px;font-size:0.95rem}
+.switch-link{margin-top:12px;color:green}
+.switch-link a{color:green;font-weight:700;text-decoration:none}
+.footer{max-width:1200px;margin:28px auto;text-align:center;color:green}
+
+/* mobile tweaks */
+@media (max-width:640px){
+  .auth-container{padding:24px}
+  .auth-card{padding:18px}
+}

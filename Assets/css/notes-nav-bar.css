@@ -1,0 +1,828 @@
+ /* ============================================
+           CSS VARIABLES - Using only named colors
+           ============================================ */
+        :root {
+            --white: white;
+            --green: green;
+            --darkgreen: darkgreen;
+            --light-bg: #f8f9fa; /* Light background for body */
+            --text-primary: #212529; /* Dark text for readability */
+            --text-secondary: #6c757d;
+            --border-color: green;
+            --shadow: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-lg: 0 6px 20px rgba(0,0,0,0.1);
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================
+           DARK MODE VARIABLES
+           ============================================ */
+        .dark-mode {
+            --white: #121212;
+            --light-bg: #1a1a1a;
+            --text-primary: #f8f9fa;
+            --text-secondary: #adb5bd;
+            --border-color: #495057;
+        }
+
+        /* ============================================
+           BASE RESET & GLOBAL STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            /* Prevent zoom issues - set base font size */
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: var(--transition);
+            /* Center the body content */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           DESKTOP NAVBAR 
+           White background with green bottom border
+           ============================================ */
+        .navbar-desktop {
+            background-color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            border-bottom: 3px solid var(--green);
+            /* Prevent zooming of navbar */
+            transform-origin: top center;
+        }
+
+        .nav-desktop-inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 72px; /* Fixed height to prevent zoom issues */
+        }
+
+        /* ============================================
+           LOGO STYLING
+           ============================================ */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--green); /* Green color for logo */
+            transition: var(--transition);
+            margin-right: auto;
+            border-radius: 50px;
+        }
+
+        .logo:focus {
+            outline: none;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+
+        .desktop-logo img {
+            margin-top: -40px;
+            margin-left: -100px;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.2) contrast(1.1);
+        }
+
+        .mobile-logo img {
+            min-height: 30px;
+            min-width: 30px;
+            max-width: 200px;
+            max-height: 100px;
+            margin-top: -40px;
+            margin-left: -20px;
+            object-fit: contain;
+            filter: brightness(1.2) contrast(1.1);
+        }
+
+        /* ============================================
+           DESKTOP NAVIGATION ITEMS
+           ============================================ */
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        /* ============================================
+           ENHANCED PROFESSIONAL SEARCH BAR
+           ============================================ */
+        .search-container {
+            position: relative;
+            width: 500px;
+            margin-right: 16px;
+            margin-left: 30px;
+        }
+
+        .search-wrapper {
+            display: flex;
+            background-color: var(--white);
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+
+        .search-wrapper:focus-within {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 400;
+            outline: none;
+            /* Ensure text doesn't zoom */
+            font-size: 1rem;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+        .search-button {
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 0 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .search-button:hover {
+            background-color: var(--darkgreen);
+        }
+
+        /* ============================================
+           NAVIGATION LINKS - GREEN WITH DARKGREEN HOVER
+           ============================================ */
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--green); /* Green text color */
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 12px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            color: var(--darkgreen); /* Dark green on hover */
+        }
+
+        /* Underline animation effect */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--darkgreen);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 100%;
+        }
+
+        /* ============================================
+           DEPARTMENT DROPDOWN - PROFESSIONAL STYLING
+           ============================================ */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dropdown-chevron {
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .dropdown:hover .dropdown-chevron {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background-color: var(--white);
+            min-width: 240px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            z-index: 100;
+            border: 1px solid var(--border-color);
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--green); /* Green text color */
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            background-color: rgba(0, 128, 0, 0.05);
+            color: var(--darkgreen); /* Dark green on hover */
+            border-left-color: var(--green);
+            padding-left: 24px;
+        }
+
+        .dropdown-item i {
+            width: 18px;
+            text-align: center;
+            color: var(--green);
+        }
+
+        /* ============================================
+           MOBILE TOP BAR 
+           Only appears on mobile devices
+           ============================================ */
+        .navbar-mobile {
+            display: none;
+            background-color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            border-bottom: 3px solid var(--green);
+min-width: 500px;
+        }
+
+        .mobile-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .mobile-search-container {
+            flex: 1;
+            margin: 0 16px;
+        }
+
+        .mobile-search-wrapper {
+            display: flex;
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .mobile-search-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .mobile-search-button {
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 0 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ============================================
+           HAMBURGER MENU BUTTON - ENHANCED STYLING
+           ============================================ */
+        .hamburger {
+            background: none;
+            border: none;
+            color: green;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border-radius: 8px;
+        }
+
+        .hamburger:hover, .hamburger:focus {
+            color: var(--darkgreen);
+            transform: rotate(90deg);
+        }
+
+        /* ============================================
+           MOBILE SLIDE-IN MENU - PROFESSIONAL DESIGN
+           ============================================ */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background-color: var(--white);
+            padding: 24px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            border-left: 3px solid var(--green);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            color: var(--darkgreen);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 8px;
+            transition: var(--transition);
+            border-radius: 8px;
+        }
+
+        .close-menu:hover, .close-menu:focus {
+            color: var(--darkgreen);
+            transform: rotate(90deg);
+        }
+
+        .mobile-nav-items {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 0;
+            text-decoration: none;
+            color: var(--green); /* Green text color */
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .mobile-nav-item:hover, .mobile-nav-item:focus {
+            color: var(--darkgreen); /* Dark green on hover */
+            padding-left: 8px;
+        }
+
+        .mobile-nav-item i {
+            width: 20px;
+            text-align: center;
+            color: var(--green);
+        }
+
+        .mobile-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px 0;
+            color: var(--green); /* Green text color */
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-dropdown-toggle i:first-child {
+            margin-right: 14px;
+            color: var(--green);
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: 34px;
+        }
+
+        .mobile-dropdown-menu.active {
+            display: block;
+        }
+
+        /* ============================================
+           MOBILE BOTTOM NAVBAR 
+           White background with green top border
+           ============================================ */
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            padding: 8px 0;
+            z-index: 900;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+            border-top: 3px solid var(--green);
+        }
+
+        .bottom-nav-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--green); /* Green text color */
+            font-size: 0.75rem;
+            padding: 10px 12px;
+            border-radius: 10px;
+            transition: var(--transition);
+            min-width: 70px;
+            min-height: 70px;
+            justify-content: center;
+        }
+
+        .bottom-nav-item:hover, .bottom-nav-item:focus {
+            background-color: rgba(0, 128, 0, 0.08);
+            color: var(--darkgreen); /* Dark green on hover */
+            transform: translateY(-3px);
+        }
+
+        .bottom-nav-icon {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        /* ============================================
+           SETTINGS MODAL - PROFESSIONAL DESIGN
+           ============================================ */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .settings-modal {
+            background-color: var(--white);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--green);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h2 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 6px;
+            transition: var(--transition);
+            border-radius: 6px;
+        }
+
+        .close-modal:hover, .close-modal:focus {
+            background-color: rgba(0, 128, 0, 0.08);
+            color: var(--green);
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .settings-section {
+            margin-bottom: 32px;
+        }
+
+        .settings-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .settings-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .settings-option:last-child {
+            border-bottom: none;
+        }
+
+        /* Toggle switch styling */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 28px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: var(--transition);
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--green);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+        }
+
+        /* Color options styling */
+        .color-options {
+            display: flex;
+            gap: 16px;
+        }
+
+        .color-option {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .color-option:hover, .color-option:focus {
+            transform: scale(1.1);
+        }
+
+        .color-option.active {
+            border-color: var(--text-primary);
+            transform: scale(1.05);
+        }
+
+        .color-green {
+            background-color: green;
+        }
+
+        .color-darkgreen {
+            background-color: darkgreen;
+        }
+
+        /* ============================================
+           OVERLAY FOR MOBILE MENU
+           ============================================ */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+
+        .menu-overlay.active {
+            display: block;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN BREAKPOINTS
+           ============================================ */
+        @media (max-width: 1100px) {
+            /* Hide desktop navbar on mobile */
+            .navbar-desktop {
+                display: none;
+            }
+            
+            /* Show mobile navbar on mobile */
+            .navbar-mobile {
+                display: block;
+            }
+            
+            /* Show bottom navigation on mobile */
+            .mobile-bottom-nav {
+                display: block;
+            }
+            
+            /* Adjust container padding for mobile */
+            .container {
+                padding: 0 20px;
+            }
+            
+            /* Add bottom padding to account for fixed bottom nav */
+            .main-content {
+                padding-bottom: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Single column layout for cards on mobile */
+            .study-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Adjust mobile menu width */
+            .mobile-menu {
+                width: 85%;
+            }
+            
+            /* Full width settings modal on mobile */
+            .settings-modal {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Smaller padding on very small screens */
+            .container {
+                padding: 0 16px;
+            }
+            
+            /* Adjust mobile search margin */
+            .mobile-search-container {
+                margin: 0 12px;
+            }
+        }
+
+        /* ============================================
+           ACCESSIBILITY FOCUS STYLES
+           ============================================ */
+        button:focus, 
+        a:focus, 
+        input:focus, 
+        select:focus {
+            outline: 2px solid var(--green);
+            outline-offset: 3px;
+        }
+
+        /* ============================================
+           FONT SIZE CLASSES FOR SETTINGS
+           ============================================ */
+        .font-small {
+            font-size: 0.9rem;
+        }
+
+        .font-medium {
+            font-size: 1rem;
+        }
+
+        .font-large {
+            font-size: 1.1rem;
+        }

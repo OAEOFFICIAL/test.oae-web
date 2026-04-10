@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAE Study Dashboard</title>
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/css/notes-nav-bar.css">
+</head>
+<body class="font-medium">
+    <!-- ============================================
+         DESKTOP NAVBAR - ALL ITEMS VISIBLE
+         Only shows on desktop (no hamburger here)
+         ============================================ -->
+    <nav class="navbar-desktop" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-desktop-inner">
+                <!-- Logo with green color -->
+                <a href="#" class="logo desktop-logo" aria-label="OAE Study Dashboard">
+                    <img src="/oae.png" alt="OAE Logo">
+                </a>
+                
+                <!-- Desktop Navigation Items -->
+                <div class="nav-items">
+                    <!-- Enhanced Professional Search Bar -->
+                    <div class="search-container">
+                        <div class="search-wrapper">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                placeholder="Search topics, questions, keywords…"
+                                aria-label="Search study materials"
+                                id="search-input"
+                            >
+                            <button class="search-button" type="button" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Department Dropdown -->
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-chevron"></i>
+                        </button>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" class="dropdown-item" role="menuitem">
+                                <i class="fas fa-flask"></i>
+                                Science
+                            </a>
+                            <a href="#" class="dropdown-item" role="menuitem">
+                                <i class="fas fa-palette"></i>
+                                Art & Humanities
+                            </a>
+                            <a href="#" class="dropdown-item" role="menuitem">
+                                <i class="fas fa-chart-line"></i>
+                                Commercial
+                            </a>
+                            <a href="#" class="dropdown-item" role="menuitem">
+                                <i class="fas fa-users"></i>
+                                Social Sciences
+                            </a>
+                            <a href="#" class="dropdown-item" role="menuitem">
+                                <i class="fas fa-book-open"></i>
+                                General Studies
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Past Questions -->
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Past Questions</span>
+                    </a>
+                    
+                    <!-- Practice/Quiz -->
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span>Practice / Quiz</span>
+                    </a>
+                    
+                    <!-- Bookmarks -->
+                    <a href="#" class="nav-link" id="bookmarks-link">
+                        <i class="fas fa-bookmark"></i>
+                        <span>Bookmarks</span>
+                    </a>
+                    
+                    <!-- Settings -->
+                    <button class="nav-link" id="settings-button" aria-label="Open settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ============================================
+         MOBILE NAVBAR - HAMBURGER ONLY ON MOBILE
+         ============================================ -->
+    <nav class="navbar-mobile" aria-label="Mobile navigation">
+        <div class="container">
+            <div class="mobile-top-bar">
+                <!-- Logo -->
+                <a href="#" class="logo mobile-logo" aria-label="OAE Study Dashboard">
+                    <img src="/oae.png" alt="OAE Logo">
+                </a>
+                
+                <!-- Mobile Search Bar -->
+                <div class="mobile-search-container">
+                    <div class="mobile-search-wrapper">
+                        <input 
+                            type="text" 
+                            class="mobile-search-input" 
+                            placeholder="Search topics, questions…"
+                            aria-label="Search study materials"
+                        >
+                        <button class="mobile-search-button" type="button" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hamburger Menu Button (ONLY ON MOBILE) -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ============================================
+         MOBILE BOTTOM NAVBAR 
+         White with green top border
+         ============================================ -->
+    <nav class="mobile-bottom-nav" aria-label="Bottom navigation">
+        <div class="container">
+            <div class="bottom-nav-items">
+                <a href="#" class="bottom-nav-item" aria-label="Department">
+                    <i class="fas fa-graduation-cap bottom-nav-icon"></i>
+                    <span>Department</span>
+                </a>
+                <a href="#" class="bottom-nav-item" aria-label="Practice">
+                    <i class="fas fa-pencil-alt bottom-nav-icon"></i>
+                    <span>Practice</span>
+                </a>
+                <a href="#" class="bottom-nav-item" aria-label="Bookmarks">
+                    <i class="fas fa-bookmark bottom-nav-icon"></i>
+                    <span>Bookmarks</span>
+                </a>
+                <button class="bottom-nav-item" id="bottom-settings" aria-label="Settings">
+                    <i class="fas fa-cog bottom-nav-icon"></i>
+                    <span>Settings</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ============================================
+         MOBILE SLIDE-IN MENU
+         ============================================ -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-menu" id="close-menu" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-nav-items">
+            <!-- Department Dropdown -->
+            <button class="mobile-dropdown-toggle" id="mobile-department-toggle">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Department</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-menu" id="mobile-department-menu">
+                <a href="#" class="mobile-nav-item">
+                    <i class="fas fa-flask"></i>
+                    Science
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i class="fas fa-palette"></i>
+                    Art & Humanities
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    Commercial
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i class="fas fa-users"></i>
+                    Social Sciences
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i class="fas fa-book-open"></i>
+                    General Studies
+                </a>
+            </div>
+            
+            <!-- Past Questions -->
+            <a href="#" class="mobile-nav-item">
+                <i class="fas fa-file-alt"></i>
+                Past Questions
+            </a>
+            
+            <!-- Practice/Quiz -->
+            <a href="#" class="mobile-nav-item">
+                <i class="fas fa-pencil-alt"></i>
+                Practice / Mock Exam
+            </a>
+            
+            <!-- Bookmarks -->
+            <a href="#" class="mobile-nav-item" id="mobile-bookmarks">
+                <i class="fas fa-bookmark"></i>
+                Bookmarks
+            </a>
+            
+            <!-- Settings -->
+            <a href="#" class="mobile-nav-item" id="mobile-settings">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+            
+            <!-- Help/Feedback -->
+            <a href="#" class="mobile-nav-item">
+                <i class="fas fa-question-circle"></i>
+                Help / Feedback
+            </a>
+        </div>
+    </div>
+    
+    <!-- ============================================
+         SETTINGS MODAL
+         ============================================ -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="settings-modal">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-modal" id="close-settings" aria-label="Close settings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Display</h3>
+                    <div class="settings-option">
+                        <div class="settings-label">
+                            <span>Dark Mode</span>
+                            <span>Switch between light and dark themes</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-option">
+                        <div class="settings-label">
+                            <span>Font Size</span>
+                            <span>Adjust the text size for better readability</span>
+                        </div>
+                        <div class="select-container">
+                            <select class="settings-select" id="font-size-select">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Colors</h3>
+                    <div class="settings-option">
+                        <div class="settings-label">
+                            <span>Accent Color</span>
+                            <span>Choose your preferred accent color</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option color-green active" id="color-green" data-color="green">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="color-option color-darkgreen" id="color-darkgreen" data-color="darkgreen">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================================
+         MENU OVERLAY
+         ============================================ -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    
+    <!-- ============================================
+         MAIN CONTENT AREA - CENTERED
+         ============================================ -->
+    <main class="main-content">
+        
+    </main>
+<script type="module" src="/Assets/js/notes-nav-bar.js"></script>
+</body>
+</html>

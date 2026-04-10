@@ -1,0 +1,356 @@
+/* ===========================
+   OAE JAMB Page Styling
+   Purpose: JAMB topic cards, syllabus grids, subject nav ONLY
+   Navbar/Footer: Inherited from navbar-footer.css & footer.css
+   =========================== */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --oae-green: green; /* OAE signature green */
+  --oae-light-green: lightgreen;
+  --oae-dark: darkgreen;
+  --oae-gray: #6c757d;
+  --oae-bg: #f9fafb;
+  --radius: 12px;
+}
+
+/* General Body */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--oae-bg);
+  color: black;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar styling centralized in navbar-footer.css */
+/* jamb.css is for JAMB-specific content only (topics, grids, etc.) */
+
+/* Section Basics */
+.section {
+  padding: 28px 6%;
+  animation: fadeIn 0.6s ease;
+}
+
+.section h1,
+.section h2 {
+  color: var(--oae-green);
+  margin-bottom: 10px;
+}
+
+.section .muted {
+  color: var(--oae-gray);
+  font-size: 0.95rem;
+}
+
+/* CTA Buttons */
+.cta {
+  background: var(--oae-green);
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background(0.25s, transform 0.25s);
+}
+
+.cta:hover {
+  background: var(--oae-light-green);
+  transform: translateY(-2px);
+}
+
+/* Grid for features */
+.jamb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.feature {
+  background: white;
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+  color: var(--oae-green);
+  margin-bottom: 6px;
+}
+
+.feature .meta a {
+  color: var(--oae-green);
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+ul {
+  margin-left: 18px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Subject navigation (shared) */
+.subject-nav{
+  display:flex;flex-wrap:wrap;gap:8px;padding:12px;border-radius:10px;margin:16px 0;
+  background: linear-gradient(90deg, green), green;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.subject-nav a{
+  color: white;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;transition:all .18s ease;border:1px solid rgba(255,255,255,0.08)
+}
+.subject-nav a:hover{color:#ff4f2b;background:rgba(255,255,255,0.95);transform:translateY(-3px)}
+.subject-nav a.active{background:white;color:#ff4f2b;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+/* Topic cards and layout for syllabus pages */
+.topic-list{margin-top:18px;display:block}
+.topic-card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,20,10,0.04);border:1px solid rgba(0,0,0,0.04);margin-bottom:14px}
+.topic-card h3{color:green;margin-bottom:8px}
+.topic-card p{color:var(--oae-gray)}
+.topic-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.topic-columns ul{list-style:none;padding-left:0}
+.topic-columns li{position:relative;padding-left:18px;margin-bottom:8px}
+.topic-columns li:before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:#ff4f2b}
+
+/* Search bar */
+#jamb-search {
+  padding: 8px 12px;
+  border: 1.4px solid #ccc;
+  border-radius: var(--radius);
+  outline: none;
+  width: 220px;
+  transition: border-color 0.25s;
+}
+
+#jamb-search:focus {
+  border-color: green;
+}
+
+.btn-outline {
+  background: none;
+  border: 1.6px solid green;
+  color: green;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btn-outline:hover {
+  background: green;
+  color: white;
+}
+
+/* ===========================
+   INLINE STYLES FROM jamb.htm
+   =========================== */
+
+/* Responsive heading styles */
+.section-header, 
+.page-header,
+.main-title {
+  text-align: center;
+  background: #f3fff3;
+  margin: 0 0 16px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,128,0,0.1);
+}
+
+.section-header h2,
+.page-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  margin: 0;
+  color: green;
+}
+
+.page-header p,
+.section-header p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-top: 8px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+}
+
+#jamb-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Nav actions layout */
+.nav-actions {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 68%;
+  max-width: 380px;
+  box-shadow: -8px 0 36px rgba(10,30,20,0.12);
+  z-index: 200;
+  padding: 26px 22px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#mobile-menu > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mobile-menu hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+#mobile-menu > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Menu items styling */
+.menu-item {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 4px;
+  display: block;
+}
+
+.menu-item:hover {
+  color: #008000;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Page header specific */
+.page-header {
+  margin-bottom: 8px;
+}
+
+/* Section margins */
+#why,
+#subjects,
+#featured,
+#cta,
+#extras {
+  margin-top: 18px;
+}
+
+#cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+#cta div {
+  max-width: 720px;
+}
+
+#cta .small {
+  margin: 0;
+}
+
+/* Featured section search controls */
+.jamb-controls {
+  margin-bottom: 10px;
+}
+
+.jamb-empty {
+  display: none;
+  margin-top: 12px;
+}
+
+/* Footer */
+footer {
+  background: green;
+  color: white;
+  padding: 24px 6%;
+  margin-top: 40px;
+}
+
+.foot-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #e8e8e8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta {
+    padding: 8px 14px;
+  }
+
+  #jamb-search {
+    width: 100%;
+  }
+
+  .section-header, 
+  .page-header,
+  .main-title {
+    padding: 8px 0;
+    margin: 0 0 12px;
+  }
+
+  #jamb-page {
+    padding: 0 16px;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header, 
+  .page-header,
+  .main-title {
+    padding: 6px 0;
+  }
+
+  #jamb-page {
+    padding: 0 12px;
+    margin: 12px auto;
+  }
+}

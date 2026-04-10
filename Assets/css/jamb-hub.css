@@ -1,0 +1,155 @@
+/* =========================================
+   JAMB HUB SPECIFIC STYLES
+   Purpose: Quote boxes, info cards, extras
+   Used on JAMB hub & info pages
+   ========================================= */
+
+/* JAMB Hub Specific Styles */
+.quote-box {
+    background: linear-gradient(135deg, #f3fff3 0%, #ffffff 100%);
+    border: 2px solid green;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(31,185,128,0.08);
+}
+
+.quote-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: green;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(31,185,128,0.12);
+}
+
+.info-card h3 {
+    color: green;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-card p {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.highlight-box {
+    background: #f3fff3;
+    border-left: 4px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: green;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 16px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: green;
+}
+
+.extras-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.extra-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.extra-card:hover {
+    transform: translateY(-4px);
+}
+
+.extra-card i {
+    font-size: 2rem;
+    color: green;
+    margin-bottom: 12px;
+}
+
+.welcome-note {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+    text-align: center;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .info-card {
+        padding: 20px;
+    }
+    
+    .quote-box {
+        margin: 16px auto;
+        padding: 20px;
+    }
+
+    .extras-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        padding: 16px;
+    }
+    
+    .quote-box {
+        margin: 12px auto;
+        padding: 16px;
+    }
+
+    .extras-section {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,139 @@
+/* ========= OAE THEME ========= */
+:root{
+  --oae-dark: darkgreen;    /* deep green */
+  --oae-green: green;   /* bright accent */
+  --oae-soft: #eafaf2;    /* soft background */
+  --bg: #f7f8fb;
+  --muted: #586068;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.65);
+}
+/*   *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg),#ffffff);
+      color:black;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:60px;
+    }
+
+    /* Navbar, brand, and logo styles are now in navbar-footer.css */
+    .brand h1{font-size:1.05rem;margin:0}
+    .nav-actions{display:flex;align-items:center;gap:14px}
+    /* search */
+    .search{
+      display:flex;align-items:center;gap:8px;background:var(--glass);padding:6px;border-radius:999px;border:1px solid rgba(20,40,30,0.06);
+      min-width:230px;max-width:480px;flex:1;
+    }
+    .search input{
+      border:0;background:transparent;outline:none;padding:8px 6px;font-size:0.95rem;color:#0b2b22;
+      width:100%;
+    }
+    .search button{
+      background:var(--oae-green);border:0;padding:8px 14px;border-radius:999px;color:white;font-weight:600;
+      cursor:pointer;box-shadow:0 6px 18px rgba(31,185,128,0.14);
+    }
+    .nav-links{
+      display:flex;gap:8px;align-items:center;margin-left:8px;
+    }
+    .nav-link{
+      position:relative;
+      padding:6px 10px;border-radius:8px;color:var(--oae-dark);text-decoration:none;font-weight:600;
+      cursor:pointer;
+    }
+    .nav-link:hover{background:rgba(27,111,82,0.06)}
+    .cta{
+      padding:8px 12px;border-radius:8px;background:var(--oae-green);color:white;border:0;font-weight:700;cursor:pointer;
+    }
+
+    /* dropdown */
+    .dropdown{
+      position:relative;
+    }
+    .dropdown-menu{
+      position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:var(--card);border-radius:12px;padding:12px;
+      box-shadow: 0 12px 40px rgba(10,30,20,0.08);display:none;gap:8px;border:1px solid rgba(10,30,20,0.03);z-index:1000;
+    }
+    .dropdown-menu.show{display:block !important}
+    .menu-section{display:flex;flex-direction:column;gap:6px;padding:6px}
+    .menu-section h4{margin:0;color:var(--oae-dark);font-size:0.95rem}
+    .menu-item{
+      display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;
+      text-decoration:none;color:#113b2f;font-weight:600;cursor:pointer;
+    }
+    .menu-item:hover{background:rgba(20,120,80,0.04)}
+
+    /* ===== HERO ===== */
+    .hero{
+      display:flex;gap:30px;align-items:center;padding:38px 22px;max-width:1200px;margin:10px auto;border-radius:16px;
+      background:linear-gradient(180deg, rgba(31,185,128,0.06), rgba(255,255,255,0.9));
+    }
+    .hero-left{flex:1;min-width:300px}
+    .eyebrow{display:inline-block;padding:6px 10px;background:var(--oae-dark);color:white;border-radius:999px;font-weight:700;margin-bottom:12px;font-size:0.85rem}
+    .hero h2{font-size:1.9rem;margin:8px 0 12px;color:var(--oae-dark)}
+    .hero p{color:var(--muted);max-width:620px;margin-bottom:18px}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(90deg,var(--oae-green),var(--oae-dark));color:white;padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:1.5px solid var(--oae-dark);padding:10px 16px;border-radius:12px;cursor:pointer;color:var(--oae-dark);font-weight:700}
+    .hero-right{width:420px;max-width:45%;min-width:240px}
+    .hero-card{background:linear-gradient(180deg, white, #fbfffb);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(10,30,20,0.06)}
+    .stats{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:10px}
+    .stat{flex:1;padding:8px;border-radius:10px;text-align:center;background:rgba(27,111,82,0.04)}
+
+    /* ===== WHY CHOOSE OAE ===== */
+    .section{max-width:1100px;margin:28px auto;padding:24px;display:block}
+    .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .feature{
+      background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(10,30,20,0.04);
+    }
+    .feature h3{margin:0 0 8px;color:var(--oae-dark)}
+    .feature p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    /* ===== FOCUS AREAS (big cards) ===== */
+    .focus{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px;
+    }
+    .focus-card{background:linear-gradient(180deg,var(--card),#ffffff);padding:18px;border-radius:12px;box-shadow:0 10px 28px rgba(12,30,20,0.04);display:flex;flex-direction:column;gap:10px}
+    .focus-card h4{margin:0;color:var(--oae-dark)}
+    .focus-card p{margin:0;color:var(--muted);font-size:0.95rem}
+    .focus-card .explore{margin-top:auto;align-self:flex-start;padding:8px 12px;border-radius:8px;background:var(--oae-green);color:white;border:0;cursor:pointer;font-weight:700}
+
+    /* ===== FOOTER ===== */
+    footer{margin-top:36px;background:linear-gradient(180deg,var(--oae-dark),#12382b);color:white;padding:28px 20px;border-radius:10px;max-width:1200px;margin-left:auto;margin-right:auto}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .small{font-size:0.9rem;color:rgba(255,255,255,0.9)}
+
+    /* ===== Mobile & small ===== */
+    .mobile-toggle{display:none}
+    #mobile-menu{display:none !important}
+    #mobile-menu.show{display:block !important}
+    @media (max-width:900px){
+      .hero{flex-direction:column;gap:16px}
+      .hero-right{max-width:100%;width:100%}
+      .search{min-width:140px}
+      .navbar{padding:10px}
+      .nav-links{display:none}
+      .mobile-toggle{display:block}
+    }
+    @media (max-width:560px){
+      .search{display:none}
+      .brand h1{font-size:0.95rem}
+      /* mobile logo override removed so global CSS controls logo size */
+      .hero h2{font-size:1.45rem}
+      .dropdown-menu{left:auto;right:0;min-width:220px}
+      footer{padding:20px}
+    }
+
+    /* small niceties */
+    a { color:inherit }
+    .muted{color:var(--muted);font-size:0.95rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* Reveal animations for scroll */
+   /*   .reveal{opacity:0;transform:translateY(18px);transition:opacity 640ms cubic-bezier(.2,.9,.2,1),transform 640ms cubic-bezier(.2,.9,.2,1);will-change:opacity,transform}
+    .reveal.reveal-left{transform:translateX(-24px)}
+    .reveal.reveal-right{transform:translateX(24px)}
+    .reveal.in-view{opacity:1;transform:none} */

@@ -1,0 +1,63 @@
+@import url('auth.css');
+
+/* Login page overrides — muted, professional accent */
+.auth-card{ border-left:6px solid rgba(17,59,47,0.12); }
+.auth-card h2{ color:var(--oae-dark); }
+.auth-card .subtitle{ color:var(--muted); }
+.btn-primary{ background: linear-gradient(90deg,green,green); }
+.signup-msg{ font-weight:600 }
+
+/* password wrapper */
+.password-wrapper{display:flex;align-items:center;gap:8px}
+.password-wrapper input{flex:1}
+.password-toggle{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
+.password-toggle:hover{background:rgba(0,0,0,0.03)}
+
+/* button hover / focus niceties */
+.btn-primary:hover{filter:brightness(.95);transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(0,0,0,0.08);padding:8px 12px;border-radius:8px}
+
+@media (max-width:640px){
+	.auth-card{padding:16px}
+	.password-toggle{padding:6px 8px}
+}
+
+/* Enhanced visuals */
+.auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.auth-brand .logo{width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--oae-dark),var(--oae-green));display:grid;place-items:center;color:white;font-weight:800}
+.auth-brand .brand-title{font-weight:700;color:var(--oae-dark)}
+.auth-card{transition:transform .18s ease,box-shadow .18s ease}
+.auth-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(10,30,20,0.12)}
+.auth-card h2{font-size:1.55rem;margin-bottom:6px}
+.auth-card .subtitle{margin-bottom:14px}
+.btn-primary{padding:12px 18px;border-radius:12px}
+.btn-outline{padding:10px 14px;border-radius:12px}
+
+@media (max-width:480px){
+	.auth-card{max-width:92%;padding:14px}
+	.auth-brand .brand-title{font-size:0.95rem}
+	.auth-card h2{font-size:1.25rem}
+}
+
+	/* Page-level background and glass card */
+	body{background:linear-gradient(180deg,#f3fbf8,#ffffff);}
+	.auth-container{padding:48px 20px;display:flex;align-items:center;justify-content:center}
+	.auth-card{background:linear-gradient(180deg,rgba(255,255,255,0.9),#ffffff);border-radius:14px;padding:26px;max-width:520px;box-shadow:0 16px 48px rgba(12,30,20,0.08);border:1px solid rgba(10,30,20,0.04)}
+
+	/* input addon */
+	.input-addon{display:flex;align-items:center;gap:10px;background:transparent;border-radius:10px;padding:6px}
+	.input-addon svg{opacity:0.95}
+	.input-addon input{border:0;padding:10px 6px;background:transparent}
+
+	.actions{display:flex;gap:10px;align-items:center;margin-top:14px}
+	.actions .btn-outline{background:transparent;border:1px solid rgba(10,30,20,0.06)}
+
+	/* focus / validation */
+	.auth-form input:focus{box-shadow:0 12px 30px rgba(31,185,128,0.06)}
+	.auth-form input.invalid{border-color:#b00020}
+	.signup-msg{margin-top:10px}
+
+	/* subtle form entrance */
+	.auth-card{opacity:0;transform:translateY(8px);animation:cardIn .42s forwards cubic-bezier(.2,.9,.3,1)}
+	@keyframes cardIn{to{opacity:1;transform:none}}
+

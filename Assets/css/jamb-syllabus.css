@@ -1,0 +1,263 @@
+ /* Syllabus Page Specific Styles */
+    .syllabus-header {
+      background: white;
+      padding: 40px 6%;
+      text-align: center;
+      border-bottom: 2px solid #0a8a2f;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .syllabus-header h1 {
+      color: #0a8a2f;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .syllabus-header .underline {
+      width: 100px;
+      height: 3px;
+      background: #0a8a2f;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .intro-section {
+      padding: 40px 6%;
+      background: white;
+      max-width: 1000px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .intro-section p {
+      color: #333;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .explanation-section,
+    .guidance-section,
+    .notes-section {
+      padding: 40px 6%;
+      background: #f9fafb;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    .explanation-section h2,
+    .guidance-section h2,
+    .notes-section h2 {
+      color: #0a8a2f;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .explanation-section p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .guidance-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .guidance-list li {
+      color: #333;
+      font-size: 1rem;
+      padding: 12px 0 12px 40px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .guidance-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #0a8a2f;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .subjects-section {
+      padding: 40px 6%;
+      background: white;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    .subjects-section h2 {
+      color: #0a8a2f;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 6%;
+    }
+
+    .subject-card {
+      background: white;
+      border: 2px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .subject-card:hover {
+      border-color: #0a8a2f;
+      box-shadow: 0 8px 20px rgba(10, 138, 47, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .subject-card h3 {
+      color: #0a8a2f;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .subject-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .subject-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .subject-card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #0a8a2f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .subject-card a:hover {
+      text-decoration: underline;
+    }
+
+    .notes-content {
+      background: white;
+      padding: 20px;
+      border-left: 4px solid #0a8a2f;
+      margin: 16px 0;
+      border-radius: 4px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .notes-content strong {
+      color: #0a8a2f;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .notes-content p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .cta-section {
+      padding: 40px 6%;
+      background: #f9fafb;
+      text-align: center;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #0a8a2f;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background: #066426;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(10, 138, 47, 0.2);
+    }
+
+    .cta-section h2 {
+      color: #0a8a2f;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .cta-section p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .syllabus-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .subjects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-section,
+      .explanation-section,
+      .guidance-section,
+      .notes-section,
+      .cta-section {
+        padding: 30px 4%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .syllabus-header {
+        padding: 25px 4%;
+      }
+
+      .syllabus-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .explanation-section h2,
+      .guidance-section h2,
+      .notes-section h2,
+      .subjects-section h2 {
+        font-size: 1.4rem;
+      }
+
+      .guidance-list li {
+        padding: 10px 0 10px 35px;
+        font-size: 0.95rem;
+      }
+    }

@@ -1,0 +1,129 @@
+﻿<!-- STANDARD OAE NAVBAR AND FOOTER TEMPLATE -->
+
+<!-- ADD THIS IN HEAD: -->
+<!-- <link rel="stylesheet" href="Assets/css/navbar-footer.css"> -->
+
+<!-- ADD THIS NAVBAR IN BODY (right after <body> opening tag): -->
+
+<header class="navbar" role="banner">
+  <a class="brand" href="Index.htm" aria-label="OAE home">
+    <div class="logo"><img src="OAE.png" alt="OAE Logo" class="logo-img"></div>
+  </a>
+
+  <div class="nav-actions" style="flex:1;justify-content:flex-end">
+    <div class="search" role="search" aria-label="Search OAE">
+      <input id="site-search" type="search" placeholder="Search lessons, exams, careers..." aria-label="Search input" />
+      <button id="search-btn" title="Search">Search</button>
+    </div>
+
+    <!-- desktop nav links -->
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-link dropdown" style="margin-right:6px">
+        <button class="nav-link-trigger" type="button" aria-controls="services-menu" aria-haspopup="true" aria-expanded="false">Services ▾</button>
+        <div id="services-menu" class="dropdown-menu" aria-hidden="true">
+          <div class="menu-section">
+            <h4>Quick Services</h4>
+            <a class="menu-item" href="Quizzes/index.htm">📝 Smart Quiz Arena</a>
+            <a class="menu-item" href="jamb.htm">🎯 JAMB Prep</a>
+            <a class="menu-item" href="learning-hub.htm">📚 Learning Hub</a>
+            <a class="menu-item" href="tech-careers.htm">💼 Tech Careers</a>
+            <a class="menu-item" href="resources.htm">🎁 Resources</a>
+            <a class="menu-item" href="communities.htm">👥 Community</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-link dropdown" style="margin-right:6px">
+        <button class="nav-link-trigger" type="button" aria-controls="explore-menu" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+        <div id="explore-menu" class="dropdown-menu" aria-hidden="true">
+          <div style="display:flex;gap:12px">
+            <div class="menu-section" style="min-width:190px">
+              <h4>Learning Hub</h4>
+              <a class="menu-item" href="learning-hub.htm#science">Science →</a>
+              <a class="menu-item" href="learning-hub.htm#art">Art →</a>
+              <a class="menu-item" href="learning-hub.htm#commercial">Commercial →</a>
+            </div>
+            <div class="menu-section">
+              <h4>Exams & Tutorials</h4>
+              <a class="menu-item" href="jamb.htm">JAMB</a>
+              <a class="menu-item" href="exams.htm#waec">WAEC</a>
+              <a class="menu-item" href="exams.htm#neco">NECO</a>
+              <a class="menu-item" href="exams.htm#gce">GCE</a>
+              <a class="menu-item" href="exams.htm#post-utme">POST UTME</a>
+            </div>
+            <div class="menu-section">
+              <h4>Tech Careers</h4>
+              <a class="menu-item" href="tech-careers.htm#web-development">Web Development</a>
+              <a class="menu-item" href="tech-careers.htm#mobile-development">Mobile Development</a>
+              <a class="menu-item" href="tech-careers.htm#data-science">Data Science</a>
+              <a class="menu-item" href="tech-careers.htm#cybersecurity">Cybersecurity</a>
+              <a class="menu-item" href="tech-careers.htm#ai-ml">AI & ML</a>
+              <a class="menu-item" href="tech-careers.htm#ui-ux-design">UI/UX Design</a>
+              <a class="menu-item" href="tech-careers.htm#cloud-devops">Cloud & DevOps</a>
+              <a class="menu-item" href="tech-careers.htm#blockchain-web3">Blockchain & Web3</a>
+              <a class="menu-item" href="tech-careers.htm#game-development">Game Development</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="nav-link" href="media.htm">Media TV</a>
+      <a class="nav-link" href="communities.htm">Community</a>
+      <a class="nav-link" href="resources.htm">Resources</a>
+      <button class="cta" onclick="location.href='signup.htm'">Join OAE</button>
+    </nav>
+
+    <!-- mobile menu toggle -->
+    <button class="mobile-toggle" aria-label="Open menu" onclick="openMobileMenu()">☰</button>
+  </div>
+</header>
+
+<!-- MOBILE sliding menu -->
+<div id="mobile-menu" style="display:none;position:fixed;right:0;top:0;height:100%;width:92%;max-width:420px;background:white;box-shadow:-8px 0 36px rgba(10,30,20,0.12);z-index:1001;padding:18px;border-radius:8px;box-sizing:border-box;overflow-y:auto;">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="logo" style="width:40px;height:40px">OAE</div>
+      <div>
+        <strong>OAE</strong><div class="muted" style="font-size:12px">Learn • Build • Excel</div>
+      </div>
+    </div>
+    <button onclick="closeMobileMenu()" style="background:transparent;border:0;font-size:20px;cursor:pointer;color:#333">✕</button>
+  </div>
+
+  <hr style="margin:12px 0;border:none;border-top:1px solid #eee" />
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <a class="menu-item" href="JambQuiz/index.htm" style="color:#113b2f">📝 Smart Quiz Arena</a>
+    <a class="menu-item" href="jamb.htm" style="color:#113b2f">🎯 JAMB Prep</a>
+    <a class="menu-item" href="learning-hub.htm" style="color:#113b2f">📚 Learning Hub</a>
+    <a class="menu-item" href="tech-careers.htm" style="color:#113b2f">💼 Tech Careers</a>
+    <a class="menu-item" href="resources.htm" style="color:#113b2f">🎁 Resources</a>
+    <a class="menu-item" href="communities.htm" style="color:#113b2f">👥 Community</a>
+    <a class="menu-item" href="media.htm" style="color:#113b2f">📺 Media TV</a>
+    <hr style="margin:8px 0;border:none;border-top:1px solid #eee" />
+    <a class="menu-item" href="login.htm" style="color:#113b2f">Login</a>
+    <a class="menu-item" href="signup.htm" style="color:#113b2f">Sign Up</a>
+  </div>
+</div>
+
+<!-- ADD THIS FOOTER BEFORE </body> closing tag: -->
+
+<footer role="contentinfo">
+  <div class="foot-grid">
+    <div>
+      <strong>Oluwatosin Academy of Excellence (OAE)</strong>
+      <p class="small" style="margin-top:6px">OAE is building an educational platform focused on JAMB, WAEC, NECO, and career training in tech.</p>
+    </div>
+    <div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="About.htm" style="text-decoration:none;color:white">About</a>
+        <a href="contact.htm" style="text-decoration:none;color:white">Contact</a>
+        <a href="terms.htm" style="text-decoration:none;color:white">Terms</a>
+        <a href="privacy.htm" style="text-decoration:none;color:white">Privacy</a>
+      </div>
+      <p class="small" style="margin-top:10px">&copy; 2025 Oluwatosin Academy of Excellence. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ADD THIS BEFORE </body> closing tag: -->
+<!-- <script src="Assets/js/navbar.js" defer></script> -->

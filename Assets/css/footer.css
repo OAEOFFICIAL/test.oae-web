@@ -1,0 +1,230 @@
+/* =========================================
+   FOOTER STYLING - PRIMARY & OFFICIAL
+   Purpose: 
+   - Footer (.oae-footer) styling for ALL pages
+   - Connect bar, mission, newsletter, grid, contact
+   - Footer-specific colors & layout
+   
+   STATUS: PROTECTED - DO NOT MODIFY
+   This is the single source of truth for footer
+   ========================================= */
+
+.oae-footer {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #fcf6f6;
+  color: #222;
+  padding: 0;
+  border-top: 3px solid #008000;
+}
+
+/* CONNECT WITH US BAR */
+.footer-connect {
+  width: 100%;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-connect h3 {
+  font-size: 18px;
+  color: #008000;
+  margin-bottom: 8px;
+}
+
+.footer-connect hr {
+  width: 80px;
+  height: 2px;
+  background: #008000;
+  border: none;
+  margin: 0 auto 15px auto;
+}
+
+.socials-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.socials-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #fff;
+  background: #008000;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.socials-bar a:hover {
+  background: #005500;
+  transform: scale(1.1);
+}
+
+/* TOP SECTION */
+.footer-top {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+}
+
+.mission-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mission-img {
+  max-width: 150px;
+  border-radius: 75px 75px 75px 75px;
+
+}
+
+.mission-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.footer-mission-summary {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.short-about {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  background: #008000;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  opacity: 0.8;
+}
+
+/* GRID SECTION */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin: 20px;
+}
+
+.footer-col h3 {
+  color: #008000;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  display: block;
+  color: #222;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #008000;
+}
+
+/* CONTACT */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.contact-item:hover {
+  background: #e0f0e0;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+  line-height: 1.6;
+  padding-bottom: 20px;
+  color: #008000;
+}
+
+.legal-links a {
+  margin: 0 10px;
+  color: #008000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .mission-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mission-text {
+    max-width: 100%;
+  }
+
+  .socials-bar {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+}
